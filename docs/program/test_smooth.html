@@ -1,0 +1,1517 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_smooth &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>test_smooth      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="19.0% of total for programs.">88 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/prg.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/prg.f90~2.html'>prg.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">test_smooth</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/test_smooth.html#variable-dx">dx</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-dy">dy</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-dz">dz</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-ext_heights">ext_heights</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-fft_cutoff">fft_cutoff</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-heights">heights</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-heights_copy">heights_copy</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-heights_out">heights_out</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-mask">mask</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-n_th">n_th</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-nx">nx</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-nx2">nx2</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-ny">ny</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-ny2">ny2</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-pad">pad</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-scal_mask">scal_mask</a>
+            <a class="list-group-item" href="../program/test_smooth.html#variable-scal_surf">scal_surf</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/test_smooth.html#src">test_smooth</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item"><a href='../module/filter.html'>filter</a></li>
+                  <li class="list-inline-item">fftw3</li>
+                  <li class="list-inline-item">miscellaneous</li>
+                  <li class="list-inline-item">surfile</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_smooth~~UsesGraph Pages: 1 -->
+<svg id="programtest_smoothUsesGraph" width="394pt" height="228pt"
+ viewBox="0.00 0.00 394.00 228.39" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_smooth~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 224.39)">
+<title>program~~test_smooth~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-224.39 390,-224.39 390,4 -4,4"/>
+<!-- program~test_smooth -->
+<g id="program~~test_smooth~~UsesGraph_node1" class="node">
+<title>program~test_smooth</title>
+<polygon fill="none" stroke="black" points="386,-125 315,-125 315,-101 386,-101 386,-125"/>
+<text text-anchor="middle" x="350.5" y="-110.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_smooth</text>
+</g>
+<!-- data_arch -->
+<g id="program~~test_smooth~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-144 3,-144 3,-120 64,-120 64,-144"/>
+<text text-anchor="middle" x="33.5" y="-129.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- program~test_smooth&#45;&gt;data_arch -->
+<g id="program~~test_smooth~~UsesGraph_edge1" class="edge">
+<title>program~test_smooth&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M238,-212C179.6,-228.15 157.98,-218.46 103,-193 82.47,-183.49 63.62,-165.74 50.92,-151.83"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="53.41,-149.37 44.18,-144.18 48.16,-154 53.41,-149.37"/>
+</g>
+<!-- fftw3 -->
+<g id="program~~test_smooth~~UsesGraph_node3" class="node">
+<title>fftw3</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-184 106,-184 106,-160 160,-160 160,-184"/>
+<text text-anchor="middle" x="133" y="-169.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw3</text>
+</g>
+<!-- program~test_smooth&#45;&gt;fftw3 -->
+<g id="program~~test_smooth~~UsesGraph_edge2" class="edge">
+<title>program~test_smooth&#45;&gt;fftw3</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M341.78,-125.28C326.09,-148.73 287.92,-198.75 240,-212"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M238,-212C209.45,-219.9 177.84,-204.03 157.05,-190.01"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="159.03,-187.12 148.85,-184.19 154.98,-192.83 159.03,-187.12"/>
+</g>
+<!-- miscellaneous -->
+<g id="program~~test_smooth~~UsesGraph_node4" class="node">
+<title>miscellaneous</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="279,-146 199,-146 199,-122 279,-122 279,-146"/>
+<text text-anchor="middle" x="239" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">miscellaneous</text>
+</g>
+<!-- program~test_smooth&#45;&gt;miscellaneous -->
+<g id="program~~test_smooth~~UsesGraph_edge3" class="edge">
+<title>program~test_smooth&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M314.85,-119.64C306.75,-121.2 297.96,-122.88 289.35,-124.54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="288.54,-121.13 279.38,-126.45 289.86,-128 288.54,-121.13"/>
+</g>
+<!-- module~filter -->
+<g id="program~~test_smooth~~UsesGraph_node5" class="node">
+<title>module~filter</title>
+<g id="a_program~~test_smooth~~UsesGraph_node5"><a xlink:href="../module/filter.html" xlink:title="filter">
+<polygon fill="#337ab7" stroke="#337ab7" points="266,-104 212,-104 212,-80 266,-80 266,-104"/>
+<text text-anchor="middle" x="239" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">filter</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;module~filter -->
+<g id="program~~test_smooth~~UsesGraph_edge4" class="edge">
+<title>program~test_smooth&#45;&gt;module~filter</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M314.85,-106.36C302.52,-103.99 288.6,-101.32 276.14,-98.93"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="276.57,-95.45 266.09,-97 275.25,-102.32 276.57,-95.45"/>
+</g>
+<!-- surfile -->
+<g id="program~~test_smooth~~UsesGraph_node6" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-24 106,-24 106,0 160,0 160,-24"/>
+<text text-anchor="middle" x="133" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- program~test_smooth&#45;&gt;surfile -->
+<g id="program~~test_smooth~~UsesGraph_edge5" class="edge">
+<title>program~test_smooth&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M331.08,-100.98C317.1,-92.12 297.24,-80.08 279,-71 242.71,-52.94 199.49,-35.9 169.73,-24.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="170.78,-21.47 160.19,-21.29 168.36,-28.04 170.78,-21.47"/>
+</g>
+<!-- module~filter&#45;&gt;data_arch -->
+<g id="program~~test_smooth~~UsesGraph_edge6" class="edge">
+<title>module~filter&#45;&gt;data_arch</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M211.82,-100.21C197.51,-104.47 179.4,-109.51 163,-113 133.44,-119.3 99.61,-124.21 74.08,-127.46"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="73.53,-124 64.03,-128.71 74.39,-130.95 73.53,-124"/>
+</g>
+<!-- module~filter&#45;&gt;fftw3 -->
+<g id="program~~test_smooth~~UsesGraph_edge7" class="edge">
+<title>module~filter&#45;&gt;fftw3</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M213.1,-104.21C208.29,-106.9 203.39,-109.88 199,-113 181.31,-125.58 179.08,-131.42 163,-146 160.5,-148.27 157.86,-150.65 155.25,-153"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="152.71,-150.58 147.6,-159.86 157.38,-155.79 152.71,-150.58"/>
+</g>
+<!-- module~filter&#45;&gt;surfile -->
+<g id="program~~test_smooth~~UsesGraph_edge10" class="edge">
+<title>module~filter&#45;&gt;surfile</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M222.2,-79.85C205,-66.62 177.3,-45.31 157.54,-30.1"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="159.66,-27.33 149.6,-24 155.4,-32.87 159.66,-27.33"/>
+</g>
+<!-- module~stat_mom -->
+<g id="program~~test_smooth~~UsesGraph_node7" class="node">
+<title>module~stat_mom</title>
+<g id="a_program~~test_smooth~~UsesGraph_node7"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="163,-104 103,-104 103,-80 163,-80 163,-104"/>
+<text text-anchor="middle" x="133" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- module~filter&#45;&gt;module~stat_mom -->
+<g id="program~~test_smooth~~UsesGraph_edge8" class="edge">
+<title>module~filter&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M211.76,-92C200.08,-92 186.08,-92 173.19,-92"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="173.17,-88.5 163.17,-92 173.17,-95.5 173.17,-88.5"/>
+</g>
+<!-- sort_arrays -->
+<g id="program~~test_smooth~~UsesGraph_node8" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-83 0,-83 0,-59 67,-59 67,-83"/>
+<text text-anchor="middle" x="33.5" y="-68.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~filter&#45;&gt;sort_arrays -->
+<g id="program~~test_smooth~~UsesGraph_edge9" class="edge">
+<title>module~filter&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M211.99,-82.83C197.73,-78.28 179.61,-73.28 163,-71 134.67,-67.11 102.49,-67.11 77.42,-68.09"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="76.98,-64.61 67.15,-68.56 77.3,-71.6 76.98,-64.61"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="program~~test_smooth~~UsesGraph_edge11" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.75,-104C93.58,-107.76 83.3,-111.98 73.57,-115.97"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="71.99,-112.84 64.07,-119.87 74.65,-119.31 71.99,-112.84"/>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="program~~test_smooth~~UsesGraph_edge12" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.75,-85.7C94.68,-83.96 85.77,-82.04 77.12,-80.18"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="77.66,-76.72 67.14,-78.03 76.18,-83.56 77.66,-76.72"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_smooth~~CallsGraph Pages: 1 -->
+<svg id="programtest_smoothCallsGraph" width="641pt" height="516pt"
+ viewBox="0.00 0.00 641.00 516.09" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_smooth~~CallsGraph" class="graph" transform="scale(0.97 0.97) rotate(0) translate(4 529)">
+<title>program~~test_smooth~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-529 658,-529 658,4 -4,4"/>
+<!-- program~test_smooth -->
+<g id="program~~test_smooth~~CallsGraph_node1" class="node">
+<title>program~test_smooth</title>
+<polygon fill="none" stroke="black" points="71,-272 0,-272 0,-248 71,-248 71,-272"/>
+<text text-anchor="middle" x="35.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_smooth</text>
+</g>
+<!-- end_fftw3 -->
+<g id="program~~test_smooth~~CallsGraph_node2" class="node">
+<title>end_fftw3</title>
+<polygon fill="#777777" stroke="#777777" points="200.5,-520 141.5,-520 141.5,-496 200.5,-496 200.5,-520"/>
+<text text-anchor="middle" x="171" y="-505.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">end_fftw3</text>
+</g>
+<!-- program~test_smooth&#45;&gt;end_fftw3 -->
+<g id="program~~test_smooth~~CallsGraph_edge1" class="edge">
+<title>program~test_smooth&#45;&gt;end_fftw3</title>
+<path fill="none" stroke="#ff0000" d="M36.9,-272.08C38.75,-308.58 49.11,-419.04 107,-482 113.72,-489.31 122.79,-494.61 131.96,-498.45"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="130.87,-501.78 141.46,-501.94 133.28,-495.21 130.87,-501.78"/>
+</g>
+<!-- extend -->
+<g id="program~~test_smooth~~CallsGraph_node3" class="node">
+<title>extend</title>
+<polygon fill="#777777" stroke="#777777" points="363,-525 309,-525 309,-501 363,-501 363,-525"/>
+<text text-anchor="middle" x="336" y="-510.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">extend</text>
+</g>
+<!-- program~test_smooth&#45;&gt;extend -->
+<g id="program~~test_smooth~~CallsGraph_edge2" class="edge">
+<title>program~test_smooth&#45;&gt;extend</title>
+<path fill="none" stroke="#ff0000" d="M37.35,-272.24C40.36,-305.74 53.39,-399.68 107,-449 110.61,-452.32 235.59,-486.27 298.94,-503.33"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="298.35,-506.79 308.92,-506.01 300.17,-500.03 298.35,-506.79"/>
+</g>
+<!-- fftw_plan_with_nthreads -->
+<g id="program~~test_smooth~~CallsGraph_node4" class="node">
+<title>fftw_plan_with_nthreads</title>
+<polygon fill="#777777" stroke="#777777" points="235,-398 107,-398 107,-374 235,-374 235,-398"/>
+<text text-anchor="middle" x="171" y="-383.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw_plan_with_nthreads</text>
+</g>
+<!-- program~test_smooth&#45;&gt;fftw_plan_with_nthreads -->
+<g id="program~~test_smooth~~CallsGraph_edge3" class="edge">
+<title>program~test_smooth&#45;&gt;fftw_plan_with_nthreads</title>
+<path fill="none" stroke="#ff0000" d="M41.52,-272.3C51.05,-294.13 73.8,-339.73 107,-365 108.86,-366.42 110.83,-367.74 112.87,-368.98"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="111.7,-372.32 122.18,-373.87 114.95,-366.13 111.7,-372.32"/>
+</g>
+<!-- init_fftw3 -->
+<g id="program~~test_smooth~~CallsGraph_node5" class="node">
+<title>init_fftw3</title>
+<polygon fill="#777777" stroke="#777777" points="198.5,-356 143.5,-356 143.5,-332 198.5,-332 198.5,-356"/>
+<text text-anchor="middle" x="171" y="-341.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_fftw3</text>
+</g>
+<!-- program~test_smooth&#45;&gt;init_fftw3 -->
+<g id="program~~test_smooth~~CallsGraph_edge4" class="edge">
+<title>program~test_smooth&#45;&gt;init_fftw3</title>
+<path fill="none" stroke="#ff0000" d="M47.31,-272.31C60.24,-286.36 83.14,-309.17 107,-323 115.2,-327.76 124.64,-331.63 133.67,-334.68"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="132.64,-338.03 143.23,-337.69 134.74,-331.35 132.64,-338.03"/>
+</g>
+<!-- omp_get_max_threads -->
+<g id="program~~test_smooth~~CallsGraph_node6" class="node">
+<title>omp_get_max_threads</title>
+<polygon fill="#777777" stroke="#777777" points="232.5,-314 109.5,-314 109.5,-290 232.5,-290 232.5,-314"/>
+<text text-anchor="middle" x="171" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">omp_get_max_threads</text>
+</g>
+<!-- program~test_smooth&#45;&gt;omp_get_max_threads -->
+<g id="program~~test_smooth~~CallsGraph_edge5" class="edge">
+<title>program~test_smooth&#45;&gt;omp_get_max_threads</title>
+<path fill="none" stroke="#ff0000" d="M71.23,-270.93C86.73,-275.8 105.25,-281.63 122.04,-286.91"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="121.1,-290.28 131.69,-289.95 123.2,-283.61 121.1,-290.28"/>
+</g>
+<!-- proc~fft_filter -->
+<g id="program~~test_smooth~~CallsGraph_node7" class="node">
+<title>proc~fft_filter</title>
+<g id="a_program~~test_smooth~~CallsGraph_node7"><a xlink:href="../proc/fft_filter.html" xlink:title="fft_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="198,-440 144,-440 144,-416 198,-416 198,-440"/>
+<text text-anchor="middle" x="171" y="-425.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fft_filter</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~fft_filter -->
+<g id="program~~test_smooth~~CallsGraph_edge6" class="edge">
+<title>program~test_smooth&#45;&gt;proc~fft_filter</title>
+<path fill="none" stroke="#ff0000" d="M38.96,-272.23C45.2,-300.21 64.33,-369.37 107,-407 114.57,-413.68 124.34,-418.24 133.91,-421.36"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="133.14,-424.78 143.71,-424.12 135.03,-418.04 133.14,-424.78"/>
+</g>
+<!-- proc~median_filter -->
+<g id="program~~test_smooth~~CallsGraph_node8" class="node">
+<title>proc~median_filter</title>
+<g id="a_program~~test_smooth~~CallsGraph_node8"><a xlink:href="../proc/median_filter.html" xlink:title="median_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="208,-192 134,-192 134,-168 208,-168 208,-192"/>
+<text text-anchor="middle" x="171" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">median_filter</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~median_filter -->
+<g id="program~~test_smooth~~CallsGraph_edge7" class="edge">
+<title>program~test_smooth&#45;&gt;proc~median_filter</title>
+<path fill="none" stroke="#ff0000" d="M50.05,-247.89C63.71,-236.1 85.76,-218.23 107,-206 113.27,-202.39 120.15,-199.02 126.98,-195.98"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="128.37,-199.19 136.2,-192.05 125.63,-192.75 128.37,-199.19"/>
+</g>
+<!-- proc~median_smooth -->
+<g id="program~~test_smooth~~CallsGraph_node9" class="node">
+<title>proc~median_smooth</title>
+<g id="a_program~~test_smooth~~CallsGraph_node9"><a xlink:href="../proc/median_smooth.html" xlink:title="median_smooth">
+<polygon fill="#d9534f" stroke="#d9534f" points="380.5,-231 291.5,-231 291.5,-207 380.5,-207 380.5,-231"/>
+<text text-anchor="middle" x="336" y="-216.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">median_smooth</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~median_smooth -->
+<g id="program~~test_smooth~~CallsGraph_edge8" class="edge">
+<title>program~test_smooth&#45;&gt;proc~median_smooth</title>
+<path fill="none" stroke="#ff0000" d="M71.3,-248.12C82.57,-244.68 95.21,-241.25 107,-239 165.97,-227.75 234.74,-222.81 281.21,-220.66"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="281.52,-224.15 291.36,-220.21 281.21,-217.15 281.52,-224.15"/>
+</g>
+<!-- proc~morpho_filter -->
+<g id="program~~test_smooth~~CallsGraph_node10" class="node">
+<title>proc~morpho_filter</title>
+<g id="a_program~~test_smooth~~CallsGraph_node10"><a xlink:href="../proc/morpho_filter.html" xlink:title="morpho_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="209,-272 133,-272 133,-248 209,-248 209,-272"/>
+<text text-anchor="middle" x="171" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">morpho_filter</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~morpho_filter -->
+<g id="program~~test_smooth~~CallsGraph_edge9" class="edge">
+<title>program~test_smooth&#45;&gt;proc~morpho_filter</title>
+<path fill="none" stroke="#ff0000" d="M71.23,-260C86.84,-260 105.51,-260 122.4,-260"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="122.64,-263.5 132.64,-260 122.64,-256.5 122.64,-263.5"/>
+</g>
+<!-- proc~soften -->
+<g id="program~~test_smooth~~CallsGraph_node11" class="node">
+<title>proc~soften</title>
+<g id="a_program~~test_smooth~~CallsGraph_node11"><a xlink:href="../proc/soften.html" xlink:title="soften">
+<polygon fill="#d9534f" stroke="#d9534f" points="198,-150 144,-150 144,-126 198,-126 198,-150"/>
+<text text-anchor="middle" x="171" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">soften</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~soften -->
+<g id="program~~test_smooth~~CallsGraph_edge10" class="edge">
+<title>program~test_smooth&#45;&gt;proc~soften</title>
+<path fill="none" stroke="#ff0000" d="M41.81,-247.84C51.62,-226.71 74.62,-183.19 107,-159 114.95,-153.06 124.68,-148.74 134.09,-145.62"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="135.09,-148.98 143.7,-142.79 133.11,-142.26 135.09,-148.98"/>
+</g>
+<!-- read_surf -->
+<g id="program~~test_smooth~~CallsGraph_node12" class="node">
+<title>read_surf</title>
+<polygon fill="#777777" stroke="#777777" points="200,-108 142,-108 142,-84 200,-84 200,-108"/>
+<text text-anchor="middle" x="171" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_surf</text>
+</g>
+<!-- program~test_smooth&#45;&gt;read_surf -->
+<g id="program~~test_smooth~~CallsGraph_edge11" class="edge">
+<title>program~test_smooth&#45;&gt;read_surf</title>
+<path fill="none" stroke="#ff0000" d="M39.16,-247.69C45.72,-220.2 65.28,-153.39 107,-117 114.15,-110.77 123.2,-106.37 132.21,-103.28"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="133.28,-106.61 141.86,-100.4 131.28,-99.9 133.28,-106.61"/>
+</g>
+<!-- unit2iuf -->
+<g id="program~~test_smooth~~CallsGraph_node13" class="node">
+<title>unit2iuf</title>
+<polygon fill="#777777" stroke="#777777" points="198,-66 144,-66 144,-42 198,-42 198,-66"/>
+<text text-anchor="middle" x="171" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit2iuf</text>
+</g>
+<!-- program~test_smooth&#45;&gt;unit2iuf -->
+<g id="program~~test_smooth~~CallsGraph_edge12" class="edge">
+<title>program~test_smooth&#45;&gt;unit2iuf</title>
+<path fill="none" stroke="#ff0000" d="M37.61,-247.67C41.24,-214.8 55.64,-124.23 107,-75 114.35,-67.95 124.13,-63.27 133.78,-60.16"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="134.97,-63.46 143.69,-57.45 133.12,-56.71 134.97,-63.46"/>
+</g>
+<!-- write_surf -->
+<g id="program~~test_smooth~~CallsGraph_node14" class="node">
+<title>write_surf</title>
+<polygon fill="#777777" stroke="#777777" points="200.5,-24 141.5,-24 141.5,0 200.5,0 200.5,-24"/>
+<text text-anchor="middle" x="171" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">write_surf</text>
+</g>
+<!-- program~test_smooth&#45;&gt;write_surf -->
+<g id="program~~test_smooth~~CallsGraph_edge13" class="edge">
+<title>program~test_smooth&#45;&gt;write_surf</title>
+<path fill="none" stroke="#ff0000" d="M36.6,-247.99C37.57,-210.7 45.64,-95.64 107,-33 113.64,-26.23 122.51,-21.64 131.5,-18.53"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="132.58,-21.86 141.2,-15.7 130.62,-15.14 132.58,-21.86"/>
+</g>
+<!-- proc~fft_filter&#45;&gt;extend -->
+<g id="program~~test_smooth~~CallsGraph_edge16" class="edge">
+<title>proc~fft_filter&#45;&gt;extend</title>
+<path fill="none" stroke="#00ff4e" d="M198.08,-435.96C209.93,-440.27 223.78,-446.3 235,-454 254.18,-467.17 251.35,-479.55 271,-492 279.5,-497.39 289.53,-501.53 299.09,-504.65"/>
+<polygon fill="#00ff4e" stroke="#00ff4e" points="298.21,-508.04 308.79,-507.54 300.21,-501.33 298.21,-508.04"/>
+</g>
+<!-- calc_fftw3_real_bwd -->
+<g id="program~~test_smooth~~CallsGraph_node15" class="node">
+<title>calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="390.5,-483 281.5,-483 281.5,-459 390.5,-459 390.5,-483"/>
+<text text-anchor="middle" x="336" y="-468.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;calc_fftw3_real_bwd -->
+<g id="program~~test_smooth~~CallsGraph_edge14" class="edge">
+<title>proc~fft_filter&#45;&gt;calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#00ff4e" d="M198.19,-434.91C220.07,-440.68 252.02,-449.11 279.55,-456.37"/>
+<polygon fill="#00ff4e" stroke="#00ff4e" points="278.9,-459.82 289.46,-458.99 280.68,-453.05 278.9,-459.82"/>
+</g>
+<!-- calc_fftw3_real_fwd -->
+<g id="program~~test_smooth~~CallsGraph_node16" class="node">
+<title>calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="389,-441 283,-441 283,-417 389,-417 389,-441"/>
+<text text-anchor="middle" x="336" y="-426.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;calc_fftw3_real_fwd -->
+<g id="program~~test_smooth~~CallsGraph_edge15" class="edge">
+<title>proc~fft_filter&#45;&gt;calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#00ff4e" d="M198.19,-428.16C218.29,-428.28 246.89,-428.46 272.74,-428.62"/>
+<polygon fill="#00ff4e" stroke="#00ff4e" points="272.85,-432.12 282.87,-428.68 272.89,-425.12 272.85,-432.12"/>
+</g>
+<!-- proc~gaussian_filter -->
+<g id="program~~test_smooth~~CallsGraph_node20" class="node">
+<title>proc~gaussian_filter</title>
+<g id="a_program~~test_smooth~~CallsGraph_node20"><a xlink:href="../proc/gaussian_filter.html" xlink:title="gaussian_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="377,-399 295,-399 295,-375 377,-375 377,-399"/>
+<text text-anchor="middle" x="336" y="-384.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gaussian_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_filter&#45;&gt;proc~gaussian_filter -->
+<g id="program~~test_smooth~~CallsGraph_edge17" class="edge">
+<title>proc~fft_filter&#45;&gt;proc~gaussian_filter</title>
+<path fill="none" stroke="#00ff4e" d="M198.19,-421.41C221.53,-415.54 256.34,-406.78 285.01,-399.57"/>
+<polygon fill="#00ff4e" stroke="#00ff4e" points="286.02,-402.93 294.86,-397.1 284.31,-396.14 286.02,-402.93"/>
+</g>
+<!-- tab_calc_fftw3_real_bwd -->
+<g id="program~~test_smooth~~CallsGraph_node23" class="node">
+<title>tab_calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="401,-357 271,-357 271,-333 401,-333 401,-357"/>
+<text text-anchor="middle" x="336" y="-342.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;tab_calc_fftw3_real_bwd -->
+<g id="program~~test_smooth~~CallsGraph_edge18" class="edge">
+<title>proc~fft_filter&#45;&gt;tab_calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#00ff4e" d="M198.23,-422.58C210.12,-419.31 223.95,-414.33 235,-407 255.2,-393.59 250.76,-379.36 271,-366 273.55,-364.31 276.25,-362.75 279.04,-361.31"/>
+<polygon fill="#00ff4e" stroke="#00ff4e" points="280.57,-364.46 288.18,-357.09 277.64,-358.1 280.57,-364.46"/>
+</g>
+<!-- tab_calc_fftw3_real_fwd -->
+<g id="program~~test_smooth~~CallsGraph_node24" class="node">
+<title>tab_calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="399.5,-315 272.5,-315 272.5,-291 399.5,-291 399.5,-315"/>
+<text text-anchor="middle" x="336" y="-300.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;tab_calc_fftw3_real_fwd -->
+<g id="program~~test_smooth~~CallsGraph_edge19" class="edge">
+<title>proc~fft_filter&#45;&gt;tab_calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#00ff4e" d="M198.13,-424.36C210.56,-421.46 224.88,-416.27 235,-407 264.65,-379.84 241.29,-351.09 271,-324 272.46,-322.67 274,-321.42 275.61,-320.26"/>
+<polygon fill="#00ff4e" stroke="#00ff4e" points="277.44,-323.24 284.16,-315.06 273.8,-317.26 277.44,-323.24"/>
+</g>
+<!-- proc~median_filter&#45;&gt;proc~median_smooth -->
+<g id="program~~test_smooth~~CallsGraph_edge22" class="edge">
+<title>proc~median_filter&#45;&gt;proc~median_smooth</title>
+<path fill="none" stroke="#00ffc4" d="M208.17,-188.66C229.68,-193.8 257.35,-200.42 281.36,-206.17"/>
+<polygon fill="#00ffc4" stroke="#00ffc4" points="280.85,-209.64 291.39,-208.57 282.48,-202.84 280.85,-209.64"/>
+</g>
+<!-- proc~calc_median -->
+<g id="program~~test_smooth~~CallsGraph_node18" class="node">
+<title>proc~calc_median</title>
+<g id="a_program~~test_smooth~~CallsGraph_node18"><a xlink:href="../proc/calc_median.html" xlink:title="calc_median">
+<polygon fill="#d9534f" stroke="#d9534f" points="530.5,-192 457.5,-192 457.5,-168 530.5,-168 530.5,-192"/>
+<text text-anchor="middle" x="494" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_median</text>
+</a>
+</g>
+</g>
+<!-- proc~median_filter&#45;&gt;proc~calc_median -->
+<g id="program~~test_smooth~~CallsGraph_edge20" class="edge">
+<title>proc~median_filter&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#00ffc4" d="M208.2,-180C266.91,-180 382.79,-180 447.17,-180"/>
+<polygon fill="#00ffc4" stroke="#00ffc4" points="447.42,-183.5 457.42,-180 447.42,-176.5 447.42,-183.5"/>
+</g>
+<!-- proc~calc_moments -->
+<g id="program~~test_smooth~~CallsGraph_node19" class="node">
+<title>proc~calc_moments</title>
+<g id="a_program~~test_smooth~~CallsGraph_node19"><a xlink:href="../proc/calc_moments.html" xlink:title="calc_moments">
+<polygon fill="#d9534f" stroke="#d9534f" points="377,-151 295,-151 295,-127 377,-127 377,-151"/>
+<text text-anchor="middle" x="336" y="-136.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
+</a>
+</g>
+</g>
+<!-- proc~median_filter&#45;&gt;proc~calc_moments -->
+<g id="program~~test_smooth~~CallsGraph_edge21" class="edge">
+<title>proc~median_filter&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#00ffc4" d="M208.17,-170.9C230.76,-165.22 260.16,-157.83 284.96,-151.59"/>
+<polygon fill="#00ffc4" stroke="#00ffc4" points="286.08,-154.91 294.92,-149.08 284.37,-148.13 286.08,-154.91"/>
+</g>
+<!-- omp_get_num_procs -->
+<g id="program~~test_smooth~~CallsGraph_node17" class="node">
+<title>omp_get_num_procs</title>
+<polygon fill="#777777" stroke="#777777" points="551,-272 437,-272 437,-248 551,-248 551,-272"/>
+<text text-anchor="middle" x="494" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">omp_get_num_procs</text>
+</g>
+<!-- proc~median_smooth&#45;&gt;omp_get_num_procs -->
+<g id="program~~test_smooth~~CallsGraph_edge23" class="edge">
+<title>proc~median_smooth&#45;&gt;omp_get_num_procs</title>
+<path fill="none" stroke="#00c4ff" d="M380.87,-230.53C398.44,-235.15 418.89,-240.52 437.47,-245.41"/>
+<polygon fill="#00c4ff" stroke="#00c4ff" points="436.73,-248.83 447.29,-247.99 438.5,-242.06 436.73,-248.83"/>
+</g>
+<!-- proc~median_smooth&#45;&gt;proc~calc_median -->
+<g id="program~~test_smooth~~CallsGraph_edge24" class="edge">
+<title>proc~median_smooth&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#00c4ff" d="M380.87,-208.03C401.63,-202.84 426.4,-196.65 447.37,-191.41"/>
+<polygon fill="#00c4ff" stroke="#00c4ff" points="448.48,-194.74 457.33,-188.92 446.78,-187.95 448.48,-194.74"/>
+</g>
+<!-- sort_array2 -->
+<g id="program~~test_smooth~~CallsGraph_node22" class="node">
+<title>sort_array2</title>
+<polygon fill="#777777" stroke="#777777" points="654,-212 587,-212 587,-188 654,-188 654,-212"/>
+<text text-anchor="middle" x="620.5" y="-197.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</g>
+<!-- proc~median_smooth&#45;&gt;sort_array2 -->
+<g id="program~~test_smooth~~CallsGraph_edge25" class="edge">
+<title>proc~median_smooth&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#00c4ff" d="M380.52,-216.07C433.92,-212.48 523.86,-206.43 576.85,-202.87"/>
+<polygon fill="#00c4ff" stroke="#00c4ff" points="577.2,-206.35 586.94,-202.19 576.73,-199.37 577.2,-206.35"/>
+</g>
+<!-- proc~roll_smooth -->
+<g id="program~~test_smooth~~CallsGraph_node21" class="node">
+<title>proc~roll_smooth</title>
+<g id="a_program~~test_smooth~~CallsGraph_node21"><a xlink:href="../proc/roll_smooth.html" xlink:title="roll_smooth">
+<polygon fill="#d9534f" stroke="#d9534f" points="370,-273 302,-273 302,-249 370,-249 370,-273"/>
+<text text-anchor="middle" x="336" y="-258.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">roll_smooth</text>
+</a>
+</g>
+</g>
+<!-- proc~morpho_filter&#45;&gt;proc~roll_smooth -->
+<g id="program~~test_smooth~~CallsGraph_edge26" class="edge">
+<title>proc~morpho_filter&#45;&gt;proc~roll_smooth</title>
+<path fill="none" stroke="#004eff" d="M209.4,-260.23C233.93,-260.38 266.1,-260.58 291.73,-260.73"/>
+<polygon fill="#004eff" stroke="#004eff" points="291.9,-264.24 301.92,-260.8 291.94,-257.24 291.9,-264.24"/>
+</g>
+<!-- proc~calc_median&#45;&gt;sort_array2 -->
+<g id="program~~test_smooth~~CallsGraph_edge27" class="edge">
+<title>proc~calc_median&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#33ff00" d="M530.68,-185.73C545.04,-188.04 561.72,-190.72 576.73,-193.13"/>
+<polygon fill="#33ff00" stroke="#33ff00" points="576.37,-196.62 586.8,-194.75 577.48,-189.71 576.37,-196.62"/>
+</g>
+<!-- proc~calc_moments_1d -->
+<g id="program~~test_smooth~~CallsGraph_node25" class="node">
+<title>proc~calc_moments_1d</title>
+<g id="a_program~~test_smooth~~CallsGraph_node25"><a xlink:href="../proc/calc_moments_1d.html" xlink:title="calc_moments_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="544.5,-150 443.5,-150 443.5,-126 544.5,-126 544.5,-150"/>
+<text text-anchor="middle" x="494" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments_1D</text>
+</a>
+</g>
+</g>
+<!-- proc~calc_moments&#45;&gt;proc~calc_moments_1d -->
+<g id="program~~test_smooth~~CallsGraph_edge28" class="edge">
+<title>proc~calc_moments&#45;&gt;proc~calc_moments_1d</title>
+<path fill="none" stroke="#00ff66" d="M377.17,-138.74C394.24,-138.63 414.48,-138.5 433.24,-138.38"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="433.5,-141.88 443.48,-138.32 433.46,-134.88 433.5,-141.88"/>
+</g>
+<!-- proc~roll_smooth&#45;&gt;omp_get_num_procs -->
+<g id="program~~test_smooth~~CallsGraph_edge29" class="edge">
+<title>proc~roll_smooth&#45;&gt;omp_get_num_procs</title>
+<path fill="none" stroke="#0066ff" d="M370.08,-260.79C386.61,-260.68 407.22,-260.55 426.81,-260.42"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="426.96,-263.92 436.94,-260.36 426.91,-256.92 426.96,-263.92"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprogramtest_smoothCallsGraph = svgPanZoom('#programtest_smoothCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dx"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dy"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dz"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dz</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ext_heights"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>ext_heights</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fft_cutoff"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>fft_cutoff</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-heights"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>heights</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-heights_copy"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>heights_copy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-heights_out"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>heights_out</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_th"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n_th</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx2"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny2"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pad"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pad</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal_mask"></span>
+              type(SCALE_SURF)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal_mask</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal_surf"></span>
+              type(SCALE_SURF)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal_surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">test_smooth</span>
+<span class="k">use </span><span class="n">data_arch</span><span class="p">,</span><span class="w">     </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">I4</span><span class="p">,</span><span class="w"> </span><span class="n">R8</span>
+<span class="k">use </span><span class="n">miscellaneous</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">get_unit</span>
+<span class="k">use </span><span class="n">surfile</span><span class="p">,</span><span class="w">       </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">read_surf</span><span class="p">,</span><span class="w"> </span><span class="n">write_surf</span><span class="p">,</span><span class="w"> </span><span class="n">init_scal</span><span class="p">,</span><span class="w"> </span><span class="n">SCALE_SURF</span><span class="p">,</span><span class="w"> </span><span class="n">unit2IUf</span>
+<span class="k">use </span><span class="n">filter</span><span class="p">,</span><span class="w">        </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">median_smooth</span><span class="p">,</span><span class="w"> </span><span class="n">median_filter</span><span class="p">,</span><span class="w"> </span><span class="n">soften</span><span class="p">,</span><span class="w"> </span><span class="n">morpho_filter</span><span class="p">,</span><span class="w"> </span><span class="n">fft_filter</span><span class="p">,</span><span class="w"> </span><span class="n">PAD_FFT_FILTER</span>
+<span class="k">use </span><span class="n">fftw3</span><span class="p">,</span><span class="w">         </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">fftw_plan_with_nthreads</span><span class="p">,</span><span class="w"> </span><span class="n">init_fftw3</span><span class="p">,</span><span class="w"> </span><span class="n">end_fftw3</span><span class="p">,</span><span class="w"> </span><span class="n">extend</span>
+<span class="c">!$ use omp_lib</span>
+
+<span class="k">implicit none</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w"> </span><span class="n">heights_out</span><span class="p">,</span><span class="w"> </span><span class="n">heights_copy</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">ext_heights</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">dz</span><span class="p">,</span><span class="w"> </span><span class="n">fft_cutoff</span><span class="p">,</span><span class="w"> </span><span class="n">pad</span>
+
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w"> </span><span class="n">nx2</span><span class="p">,</span><span class="w"> </span><span class="n">ny2</span><span class="p">,</span><span class="w"> </span><span class="n">n_th</span>
+
+<span class="k">type</span><span class="p">(</span><span class="n">SCALE_SURF</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">,</span><span class="w"> </span><span class="n">scal_mask</span>
+
+<span class="c">!========================================================================= padding / windowing</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/AB-Zinv-ART-8-21-200x200.sur&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                  </span><span class="n">tab_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w">                            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                   </span><span class="n">scal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">! OUT</span>
+
+<span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span>
+<span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span>
+
+<span class="n">pad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5</span><span class="c">!PAD_FFT_FILTER</span>
+
+<span class="n">nx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">pad</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nx</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+<span class="n">ny2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">pad</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">ext_heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">extend</span><span class="p">(</span><span class="w">   </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">              </span><span class="n">tab_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ext_heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny2</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">nx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx2</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">ny2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny2</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;constant&#39;</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="n">type_apo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hann__&#39;</span><span class="p">)</span><span class="w">                        </span><span class="c">!</span>
+
+<span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx2</span>
+<span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny2</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_extend.sur&quot;</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ext_heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny2</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                      </span><span class="c">!</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">ext_heights</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">!========================================================================= fft_filter 5 µm</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/AB-Zinv-ART-8-21-200x200.sur&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                  </span><span class="n">tab_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w">                            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                   </span><span class="n">scal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">! OUT</span>
+
+<span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span>
+<span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span>
+
+<span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">unit2IUf</span><span class="p">(</span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dx_unit</span><span class="p">)</span>
+<span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">unit2IUf</span><span class="p">(</span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dy_unit</span><span class="p">)</span>
+<span class="n">dz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;nx, ny = &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;dx, dy = &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+
+<span class="n">n_th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_max_threads</span><span class="p">()</span>
+<span class="k">call </span><span class="n">fftw_plan_with_nthreads</span><span class="p">(</span><span class="n">nthreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_th</span><span class="p">)</span>
+
+<span class="n">nx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">PAD_FFT_FILTER</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nx</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+<span class="n">ny2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">PAD_FFT_FILTER</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+
+<span class="n">fft_cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">5.e-6</span>
+
+<span class="k">call </span><span class="n">init_fftw3</span><span class="p">(</span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx2</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny2</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">fft_filter</span><span class="p">(</span><span class="n">tab</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">      </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="nb">long</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">cutoff</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">fft_cutoff</span><span class="p">,</span><span class="w">               </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">bf_tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">multi_fft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">FALSE</span><span class="p">.)</span><span class="w">                    </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_fft_filter_005µm.sur&quot;</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;gaussian filter cutoff = 5 µm&#39;</span>
+
+<span class="c">!========================================================================= fft_filter 80 µm</span>
+
+<span class="n">fft_cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="mf">0.e-6</span>
+
+<span class="k">call </span><span class="n">fft_filter</span><span class="p">(</span><span class="n">tab</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">      </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="nb">long</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">cutoff</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">fft_cutoff</span><span class="p">,</span><span class="w">               </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">bf_tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">multi_fft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">FALSE</span><span class="p">.)</span><span class="w">                    </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_fft_filter_080µm.sur&quot;</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;gaussian filter cutoff = 80 µm&#39;</span>
+
+<span class="c">!========================================================================= fft_filter 150 µm</span>
+
+<span class="n">fft_cutoff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">15</span><span class="mf">0.e-6</span>
+
+<span class="k">call </span><span class="n">fft_filter</span><span class="p">(</span><span class="n">tab</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">      </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="nb">long</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                       </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">cutoff</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">fft_cutoff</span><span class="p">,</span><span class="w">               </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">bf_tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">multi_fft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">FALSE</span><span class="p">.)</span><span class="w">                    </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_fft_filter_150µm.sur&quot;</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;gaussian filter cutoff = 150 µm&#39;</span>
+
+<span class="k">call </span><span class="n">end_fftw3</span><span class="p">()</span>
+
+<span class="c">!========================================================================= ROLL +, RAY = 10 µm</span>
+
+<span class="k">call </span><span class="n">morpho_filter</span><span class="p">(</span><span class="w"> </span><span class="n">mtype</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;dilation&quot;</span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabin</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabou</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">scale_xyz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">dz</span><span class="p">],</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">ray</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.e-6_R8</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">nb_div</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">)</span><span class="w">                           </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_roll_smooth_dilation_10µm.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                    </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;morpho filter: dilation disk 10 µm&#39;</span>
+
+<span class="c">!------------------------------------------------------------------------- ROLL -, RAY = 10 µm</span>
+
+<span class="k">call </span><span class="n">morpho_filter</span><span class="p">(</span><span class="w"> </span><span class="n">mtype</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;erosion&quot;</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabin</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabou</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">scale_xyz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">dz</span><span class="p">],</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">ray</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.e-6_R8</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">nb_div</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">)</span><span class="w">                           </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_roll_smooth_erosion_10µm.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                   </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;morpho filter: erosion disk 10 µm&#39;</span>
+
+<span class="c">!------------------------------------------------------------------------- CLOSING, RAY = 10 µm</span>
+
+<span class="k">call </span><span class="n">morpho_filter</span><span class="p">(</span><span class="w"> </span><span class="n">mtype</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;closing&quot;</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabin</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabou</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">scale_xyz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">dz</span><span class="p">],</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">ray</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.e-6_R8</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">nb_div</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">)</span><span class="w">                           </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_roll_smooth_closing_10µm.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                   </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;morpho filter: closing disk 10 µm&#39;</span>
+
+<span class="c">!------------------------------------------------------------------------- OPENING, RAY = 10 µm</span>
+
+<span class="k">call </span><span class="n">morpho_filter</span><span class="p">(</span><span class="w"> </span><span class="n">mtype</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;opening&quot;</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabin</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">tabou</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">scale_xyz</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">dz</span><span class="p">],</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">ray</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.e-6_R8</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">nb_div</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">)</span><span class="w">                           </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_roll_smooth_opening_10µm.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                   </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;morpho filter: opening disk 10 µm&#39;</span>
+
+<span class="c">!========================================================================= KERNEL SIZE = 3</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">heights_copy</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="n">heights_copy</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">median_smooth</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! INOUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="p">)</span><span class="w">                       </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_med_smooth_3.sur&quot;</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                      </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;median filter kernel: 3&#39;</span>
+
+<span class="c">!========================================================================= KERNEL SIZE = 5</span>
+
+<span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights_copy</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">median_smooth</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! INOUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="p">)</span><span class="w">                       </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_med_smooth_5.sur&quot;</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                      </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;median filter kernel: 5&#39;</span>
+
+<span class="c">!========================================================================= KERNEL SIZE = 9</span>
+
+<span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights_copy</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">median_smooth</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! INOUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="p">)</span><span class="w">                       </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_med_smooth_9.sur&quot;</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                      </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;median filter kernel: 9&#39;</span>
+
+<span class="c">!========================================================================= SOFTEN NO MASK</span>
+
+<span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights_copy</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">soften</span><span class="p">(</span><span class="w"> </span><span class="n">tabin</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">             </span><span class="n">tabout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">             </span><span class="nb">long</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">             </span><span class="n">larg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_soften_no_mask.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                         </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;simple smooth with no mask&#39;</span>
+
+<span class="c">!========================================================================= SOFTEN WITH MASK</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/test_mask.sur&quot;</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                  </span><span class="n">tab_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                   </span><span class="n">scal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_mask</span><span class="w"> </span><span class="p">)</span><span class="w">              </span><span class="c">! OUT</span>
+
+<span class="k">call </span><span class="n">soften</span><span class="p">(</span><span class="w"> </span><span class="n">tabin</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">             </span><span class="n">tabout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">             </span><span class="n">mask</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">mask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)),</span><span class="w">      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">             </span><span class="nb">long</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">             </span><span class="n">larg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="p">)</span><span class="w">                            </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_soften_with_mask.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights_out</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                           </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;simple smooth in upper mask&#39;</span>
+
+<span class="c">!========================================================================= MEDIAN FILTER SNB = 10, KERN = 15</span>
+
+<span class="k">call </span><span class="n">median_filter</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! INOUT</span>
+<span class="w">                    </span><span class="nb">long</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">larg</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">kernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">snb</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">                         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">sig</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">3._R8</span><span class="p">,</span><span class="w">                      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                    </span><span class="n">omp</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="p">)</span><span class="w">                       </span><span class="c">! IN</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/test_med_filt_k15_s10.sur&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">             </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                         </span><span class="c">!</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w"> </span><span class="n">heights_copy</span><span class="p">,</span><span class="w"> </span><span class="n">heights_out</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">stop</span>
+<span class="k">endprogram </span><span class="n">test_smooth</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

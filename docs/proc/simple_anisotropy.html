@@ -1,0 +1,734 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>simple_anisotropy &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>simple_anisotropy
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 4.0% of total for procedures.">137 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_anisotropy.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_anisotropy.f90.html'>mod_anisotropy.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/anisotropy.html'>anisotropy</a></li>
+            <li class="breadcrumb-item active" aria-current="page">simple_anisotropy</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/simple_anisotropy.html#src">simple_anisotropy</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine simple_anisotropy(tabin, long, larg, vec_len, vec_pks, vec_slp, scale_xy, multi_fft)  
+</h2>
+    
+
+    <div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Function that returns some anisotropy parameters calculated on a polar representation,
+for each angle from 0 to 179</p>
+</div>
+<ul>
+<li>the excess of length</li>
+<li>the RMS slope</li>
+<li>the mean peak width</li>
+</ul>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabin~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabin</strong></td>
+            <td>
+                <p><em>surface acf array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~24"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+                <p><em>surface length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~24"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+                <p><em>surface width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vec_len"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(0:179)
+            </td>
+            <td>::</td>
+            <td><strong>vec_len</strong></td>
+            <td>
+                <p><em>vector containing path length ratios</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vec_pks"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(0:179)
+            </td>
+            <td>::</td>
+            <td><strong>vec_pks</strong></td>
+            <td>
+                <p><em>vector containing peak mean width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vec_slp"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(0:179)
+            </td>
+            <td>::</td>
+            <td><strong>vec_slp</strong></td>
+            <td>
+                <p><em>vector containing RMS slopes</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scale_xy~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>scale_xy</strong></td>
+            <td>
+                <p><em>lag along x, y</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-multi_fft~2"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>multi_fft</strong></td>
+            <td>
+                <p><em>parallel ffts?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~simple_anisotropy~~CalledByGraph Pages: 1 -->
+<svg id="procsimple_anisotropyCalledByGraph" width="369pt" height="32pt"
+ viewBox="0.00 0.00 369.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~simple_anisotropy~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~simple_anisotropy~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 365,-28 365,4 -4,4"/>
+<!-- proc~simple_anisotropy -->
+<g id="proc~~simple_anisotropy~~CalledByGraph_node1" class="node">
+<title>proc~simple_anisotropy</title>
+<polygon fill="none" stroke="black" points="361,-24 262,-24 262,0 361,0 361,-24"/>
+<text text-anchor="middle" x="311.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">simple_anisotropy</text>
+</g>
+<!-- proc~multiple_anisotropy -->
+<g id="proc~~simple_anisotropy~~CalledByGraph_node2" class="node">
+<title>proc~multiple_anisotropy</title>
+<g id="a_proc~~simple_anisotropy~~CalledByGraph_node2"><a xlink:href="../proc/multiple_anisotropy.html" xlink:title="multiple_anisotropy">
+<polygon fill="#d9534f" stroke="#d9534f" points="226,-24 121,-24 121,0 226,0 226,-24"/>
+<text text-anchor="middle" x="173.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">multiple_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- proc~multiple_anisotropy&#45;&gt;proc~simple_anisotropy -->
+<g id="proc~~simple_anisotropy~~CalledByGraph_edge1" class="edge">
+<title>proc~multiple_anisotropy&#45;&gt;proc~simple_anisotropy</title>
+<path fill="none" stroke="#ff0000" d="M226.3,-12C234.63,-12 243.3,-12 251.77,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="251.97,-15.5 261.97,-12 251.97,-8.5 251.97,-15.5"/>
+</g>
+<!-- program~test_anisotropy -->
+<g id="proc~~simple_anisotropy~~CalledByGraph_node3" class="node">
+<title>program~test_anisotropy</title>
+<g id="a_proc~~simple_anisotropy~~CalledByGraph_node3"><a xlink:href="../program/test_anisotropy.html" xlink:title="test_anisotropy">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="85,-24 0,-24 0,0 85,0 85,-24"/>
+<text text-anchor="middle" x="42.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;proc~multiple_anisotropy -->
+<g id="proc~~simple_anisotropy~~CalledByGraph_edge2" class="edge">
+<title>program~test_anisotropy&#45;&gt;proc~multiple_anisotropy</title>
+<path fill="none" stroke="#ff0000" d="M85.03,-12C93.18,-12 101.89,-12 110.55,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.64,-15.5 120.64,-12 110.64,-8.5 110.64,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">simple_anisotropy</span><span class="p">(</span><span class="n">tabin</span><span class="p">,</span><span class="w"> </span><span class="nb">long</span><span class="p">,</span><span class="w"> </span><span class="n">larg</span><span class="p">,</span><span class="w"> </span><span class="n">vec_len</span><span class="p">,</span><span class="w"> </span><span class="n">vec_pks</span><span class="p">,</span><span class="w"> </span><span class="n">vec_slp</span><span class="p">,</span><span class="w"> </span><span class="n">scale_xy</span><span class="p">,</span><span class="w"> </span><span class="n">multi_fft</span><span class="p">)</span>
+<span class="w">   </span><span class="c">!================================================================================================</span>
+<span class="w">   </span><span class="c">!&lt; @note Function that returns some anisotropy parameters calculated on a polar representation,</span>
+<span class="w">   </span><span class="c">!&lt; for each angle from 0 to 179</span>
+<span class="w">   </span><span class="c">!&lt;</span>
+<span class="w">   </span><span class="c">!&lt; + the excess of length</span>
+<span class="w">   </span><span class="c">!&lt; + the RMS slope</span>
+<span class="w">   </span><span class="c">!&lt; + the mean peak width</span>
+<span class="w">   </span><span class="c">!&lt;</span>
+<span class="w">   </span><span class="c">!  @endnote</span>
+<span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">)</span><span class="w">                             </span><span class="kd">::</span><span class="w"> </span><span class="nb">long</span><span class="w">       </span><span class="c">!! *surface length*</span>
+<span class="w">   </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">)</span><span class="w">                             </span><span class="kd">::</span><span class="w"> </span><span class="n">larg</span><span class="w">       </span><span class="c">!! *surface width*</span>
+<span class="w">   </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">)</span><span class="w">                             </span><span class="kd">::</span><span class="w"> </span><span class="n">multi_fft</span><span class="w">  </span><span class="c">!! *parallel ffts?*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">long</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">larg</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">tabin</span><span class="w">      </span><span class="c">!! *surface acf array*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w">             </span><span class="kd">::</span><span class="w"> </span><span class="n">scale_xy</span><span class="w">   </span><span class="c">!! *lag along x, y*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">179</span><span class="p">)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">vec_len</span><span class="w">    </span><span class="c">!! *vector containing path length ratios*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">179</span><span class="p">)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">vec_pks</span><span class="w">    </span><span class="c">!! *vector containing peak mean width*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">179</span><span class="p">)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">vec_slp</span><span class="w">    </span><span class="c">!! *vector containing RMS slopes*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">la</span><span class="p">,</span><span class="w"> </span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w"> </span><span class="n">ird</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">nb_cross</span><span class="p">,</span><span class="w"> </span><span class="n">nb_peak</span>
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">scx</span><span class="p">,</span><span class="w"> </span><span class="n">scy</span><span class="p">,</span><span class="w"> </span><span class="n">dr</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">c</span>
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">my</span><span class="p">,</span><span class="w"> </span><span class="n">reg_a</span><span class="p">,</span><span class="w"> </span><span class="n">reg_b</span>
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">h1</span><span class="p">,</span><span class="w"> </span><span class="n">h2</span><span class="p">,</span><span class="w"> </span><span class="n">h3</span><span class="p">,</span><span class="w"> </span><span class="n">h4</span><span class="p">,</span><span class="w"> </span><span class="n">hh</span>
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">inc_a</span><span class="p">,</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">xb</span><span class="p">,</span><span class="w"> </span><span class="n">yb</span><span class="p">,</span><span class="w"> </span><span class="n">xm</span><span class="p">,</span><span class="w"> </span><span class="n">ym</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="p">,</span><span class="w"> </span><span class="n">yp</span><span class="p">,</span><span class="w"> </span><span class="n">tmp</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">height_disc</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">cross</span><span class="p">,</span><span class="w"> </span><span class="n">peaks</span>
+
+<span class="w">      </span><span class="c">! lags in micron</span>
+<span class="w">      </span><span class="n">scx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scale_xy</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">  </span><span class="c">! x lag</span>
+<span class="w">      </span><span class="n">scy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scale_xy</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="c">! y lag</span>
+
+<span class="w">      </span><span class="c">! define the surface center location</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">long</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nb">long</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">long</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">long</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">endif</span>
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">larg</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">larg</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">larg</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">larg</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">endif</span>
+
+<span class="w">      </span><span class="c">! define the square length embedded in the surface</span>
+<span class="w">      </span><span class="n">ll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">lo</span><span class="p">,</span><span class="w"> </span><span class="n">la</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">height_disc</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">359</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">cross</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">slope</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">peaks</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="c">! angle increment</span>
+<span class="w">      </span><span class="n">inc_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI_R8</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">360</span>
+
+<span class="w">      </span><span class="c">! determination of heights on a diameter of the rosette, obtained by linear interpolation:</span>
+<span class="w">      </span><span class="c">! a point &quot;falls&quot; into a rectangular element [h1,h2,h3,h4], its height is determined by linear interpolation.</span>
+<span class="w">      </span><span class="c">!* Calculate heights along the radius for each angular position.</span>
+
+<span class="w">      </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ll</span><span class="w">                </span><span class="c">! point number on a radius</span>
+<span class="w">         </span><span class="n">ird</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w">                  </span><span class="c">! point radius</span>
+
+<span class="w">         </span><span class="k">do </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">359</span><span class="w">            </span><span class="c">! point angular location (°)</span>
+<span class="w">            </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">inc_a</span><span class="w">     </span><span class="c">! angular location (rad)</span>
+
+<span class="w">            </span><span class="c">! projection on x and y of the point determined by its radius and angle</span>
+<span class="w">            </span><span class="c">! by taking the floor, we get the number of the lower row and the left column of the rectangle</span>
+<span class="w">            </span><span class="c">! the remainder (x-nx) thus represents the abscissa of the point in the rectangle with sides=1</span>
+
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ird</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="nb">nint</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.e-3_R8</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">               </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">else</span>
+
+<span class="k">               </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">floor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">endif</span>
+<span class="k">            </span><span class="n">xb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">nx</span>
+
+<span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ird</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="nb">nint</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.e-3_R8</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">               </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">else</span>
+
+<span class="k">               </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">floor</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">endif</span>
+<span class="k">            </span><span class="n">yb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ny</span>
+
+<span class="w">            </span><span class="n">xm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UN</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">xb</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xb</span>
+<span class="w">            </span><span class="n">ym</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UN</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">yb</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yb</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nx</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nb">long</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">ny</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">larg</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w">      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">nx</span><span class="w">   </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">ny</span><span class="w">   </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="w">               </span><span class="c">! note ird may be greater than lo or la</span>
+<span class="w">               </span><span class="n">h1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tabin</span><span class="p">(</span><span class="n">nx</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w">    </span><span class="p">)</span>
+<span class="w">               </span><span class="n">h2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tabin</span><span class="p">(</span><span class="n">nx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w">    </span><span class="p">)</span>
+<span class="w">               </span><span class="n">h3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tabin</span><span class="p">(</span><span class="n">nx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">               </span><span class="n">h4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tabin</span><span class="p">(</span><span class="n">nx</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+
+<span class="w">               </span><span class="n">hh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">h1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xm</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ym</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                    </span><span class="n">h2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ym</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                    </span><span class="n">h3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                    </span><span class="n">h4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">xm</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">yp</span><span class="w">       </span><span class="c">!</span>
+
+<span class="w">               </span><span class="n">height_disc</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hh</span>
+
+<span class="w">            </span><span class="k">endif</span>
+
+<span class="k">         enddo</span><span class="w"> </span><span class="c">! q = 0, 359</span>
+
+<span class="w">      </span><span class="k">enddo</span><span class="w"> </span><span class="c">! p = 0, ll</span>
+
+<span class="w">      </span><span class="c">! centering</span>
+<span class="w">      </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">height_disc</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">359</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">360</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">height_disc</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">359</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_disc</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">359</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tmp</span>
+
+<span class="w">      </span><span class="c">! for each degree, determine the mean peak width and the path length ratio</span>
+<span class="w">      </span><span class="k">do </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">359</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">180</span>
+
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_disc</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">180</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">enddo</span><span class="w"> </span><span class="c">! left part of the height vector</span>
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height_disc</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w">      </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">enddo</span><span class="w"> </span><span class="c">! right part</span>
+
+<span class="w">         </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">inc_a</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="w">         </span><span class="c">! element length, usually scx=scy</span>
+<span class="w">         </span><span class="n">dr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scx</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scy</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">         </span><span class="c">! path relative length  -----------------------------------------------------------------------------------------------</span>
+<span class="w">         </span><span class="c">!</span>
+<span class="w">         </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span>
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+
+<span class="w">            </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="n">dr</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">         </span><span class="k">enddo</span>
+
+<span class="k">         </span><span class="n">vec_len</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="o">*</span><span class="n">dr</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1.</span>
+
+<span class="w">         </span><span class="c">! path absolute slope  ------------------------------------------------------------------------------------------------</span>
+<span class="w">         </span><span class="c">!</span>
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+
+<span class="w">            </span><span class="n">slope</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dr</span>
+
+<span class="w">         </span><span class="k">enddo</span>
+<span class="k">         </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">slope</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span>
+<span class="w">         </span><span class="n">slope</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slope</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tmp</span>
+
+<span class="w">         </span><span class="n">vec_slp</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">slope</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span>
+
+<span class="w">         </span><span class="c">! find each abscissa point where the height crosses z=0 -----------------------------------------------------------------</span>
+<span class="w">         </span><span class="c">!</span>
+
+<span class="w">         </span><span class="c">!------- subtract mean profile (least square)</span>
+<span class="w">         </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dr</span><span class="w">                       </span><span class="c">! x mean x = 0, dr, 2*dr, ..., 2*ll*dr</span>
+<span class="w">         </span><span class="n">my</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c">! y mean</span>
+
+<span class="w">         </span><span class="n">reg_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">         </span><span class="n">tmp</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+
+<span class="w">            </span><span class="n">reg_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg_a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mx</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">my</span><span class="p">)</span>
+<span class="w">            </span><span class="n">tmp</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="w">   </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mx</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="w">         </span><span class="k">enddo</span>
+<span class="k">         </span><span class="n">reg_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reg_a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">tmp</span><span class="w">        </span><span class="c">! first regressor</span>
+
+<span class="w">         </span><span class="n">reg_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">reg_a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mx</span><span class="w">    </span><span class="c">! second regressor</span>
+
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+
+<span class="w">            </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">reg_a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">reg_b</span><span class="p">)</span>
+
+<span class="w">         </span><span class="k">enddo</span>
+
+<span class="w">         </span><span class="c">!------- find peaks</span>
+<span class="w">         </span><span class="n">cross</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">         </span><span class="n">peaks</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="w">         </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">         </span><span class="n">cross</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="c">! the height crosses z=0</span>
+
+<span class="w">               </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">               </span><span class="n">cross</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span>
+
+<span class="w">            </span><span class="k">endif</span>
+
+<span class="k">         enddo</span>
+<span class="k">         </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">         </span><span class="n">cross</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+<span class="w">         </span><span class="n">nb_cross</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span>
+
+<span class="w">         </span><span class="c">! determine the peak width</span>
+<span class="w">         </span><span class="c">!</span>
+<span class="w">         </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">         </span><span class="k">do </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nb_cross</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">cross</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cross</span><span class="p">(</span><span class="n">p</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="c">! it must be a peak</span>
+
+<span class="w">               </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="w">               </span><span class="n">peaks</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cross</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cross</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">endif</span>
+
+<span class="k">         enddo</span>
+<span class="k">         </span><span class="n">nb_peak</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span>
+
+<span class="w">         </span><span class="c">! mean peak width</span>
+<span class="w">         </span><span class="c">!</span>
+<span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nb_peak</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">            </span><span class="n">vec_pks</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">peaks</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nb_peak</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">nb_peak</span>
+
+<span class="w">         </span><span class="k">else</span>
+
+<span class="k">            </span><span class="n">vec_pks</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dr</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">ll</span>
+
+<span class="w">         </span><span class="k">endif</span>
+
+<span class="k">      enddo</span>
+
+<span class="k">      deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">height_disc</span><span class="p">,</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">cross</span><span class="p">,</span><span class="w"> </span><span class="n">peaks</span><span class="p">,</span><span class="w"> </span><span class="n">slope</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">   </span><span class="k">return</span>
+<span class="k">   endsubroutine </span><span class="n">simple_anisotropy</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

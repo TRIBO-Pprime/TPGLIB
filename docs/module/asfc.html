@@ -1,0 +1,2408 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>asfc &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>asfc
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> may, 03 2019</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="36.1% of total for modules and submodules.">1274 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_asfc.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_asfc.f90.html'>mod_asfc.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">asfc</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/asfc.html#variable-hermite">hermite</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-kx">kx</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-ky">ky</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-larg0">larg0</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-lin_all">lin_all</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-live">live</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-long0">long0</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-method_asfc">method_asfc</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-nb_beta">nb_beta</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-npp">npp</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-out_her">out_her</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-out_lin">out_lin</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-out_spl">out_spl</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-out_ter">out_ter</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-spl_all">spl_all</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-unit_out_her">unit_out_her</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-unit_out_lin">unit_out_lin</a>
+            <a class="list-group-item" href="../module/asfc.html#variable-unit_out_spl">unit_out_spl</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/asfc.html#proc-df_boltz">df_boltz</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-dn_i">dn_i</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-dnq_et_i">dnq_et_i</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-dnq_xi_et_i">dnq_xi_et_i</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-dnq_xi_i">dnq_xi_i</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-f_boltz">f_boltz</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-locate">locate</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-locate2">locate2</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-n_i">n_i</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-nq_i">nq_i</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/asfc.html#proc-calcul_aire">calcul_aire</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-calcul_asfc">calcul_asfc</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-calcul_asfc_hermite">calcul_asfc_hermite</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-calcul_asfc_lin_all">calcul_asfc_lin_all</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-calcul_asfc_spl_all">calcul_asfc_spl_all</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-indice_fractal">indice_fractal</a>
+            <a class="list-group-item" href="../module/asfc.html#proc-init_beta_boltz">init_beta_boltz</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+       <strong>A fast and accurate way of determining the area-scale fractal analysis complexity parameter Asfc</strong>
+ </span></p>
+<h2 id="principle">Principle</h2>
+<p>The ISO 25178-2:2012(E) states that</p>
+<p><em>“The observed area is calculated as a function of scale by a series of
+virtual tiling exercises covering the measured surface in a patchwork fashion. The areas of the tiles, or patches,
+represent the areal scales of observation. The tiling exercises are repeated with tiles of progressively smaller areas to
+determine the observed areas to determine the observed areas as a function of the areal scales of observation.</em></p>
+<p>Then, the function log(relative area)=f(log(element area)) can be determined.
+The area-scale fractal analysis complexity parameter <em>Asfc</em> is defined as a thousand times minus the line slope:.</p>
+<p style="text-align:center;"><img src="../media/Asfc.png" alt="25178-2:2012(E) Asfc" width="500px"/></p>
+
+<h2 id="determining-the-steepest-part-of-the-curve-in-a-robust-way">Determining the steepest part of the curve in a robust way</h2>
+<p>It can be reasonably stated that most of relative area plots are S-shaped, even if the trail can be more linear
+than curved. Instead of arbitrarily defining a “central” region where to calculate the maximum of the slope, the whole
+curve is fitted with a family <em>Tn</em>, of monotonic functions.
+<script type="math/tex; mode=display">
+   Tn(x) = y_0 +a \cdot \tanh \left( \dfrac{x -x_0}{b} \right)^n
+</script>
+</p>
+<p>In most cases <script type="math/tex">n=1</script> leads to an accurate fit, especially in the linear part of the curve, where the studied surface exhibits
+self-similarity properties.</p>
+<p>The proposed model is parsimonious — only four parameters have to be determined, with a
+least square procedure for instance — and then doesn’t suffer from overfitting. Some surfaces have better fit results with
+<script type="math/tex">n=2</script> but it doesn’t change much the <em>Asfc</em> value. The location <script type="math/tex">x_s</script> of the steepest part is analytically determined by
+canceling the second derivative of <em>Tn</em>. A simple calculus yields:</p>
+<p>
+<script type="math/tex; mode=display">
+   x_s = x_0 +b \cdot \text{atanh} \left( \sqrt{\dfrac{x -x_0}{b}} \right)
+</script>
+</p>
+<p>when <script type="math/tex">n=1</script>, it reduces to <script type="math/tex">x_s = x_0</script>.</p>
+<p>To address the computation efficiency question — induced by the series of tiling exercises — the surface itself
+isn’t tiled as explained in ISO 25178. The different scales are those of the grids that are used to discretize the surface.</p>
+<p>The grids are chosen regular with lateral steps from <em>(hx, hy)</em> for the finest grid to <em>(Hx, Hy)</em> for the largest grid. The finest
+grid is the one of the original surface, and the coarsest grid is an 8 × 8 grid.</p>
+<p>The original grid is the only one for which the surface points match the grid points, for the other grids the surface heights are obtained by interpolation.</p>
+<p>The intermediate grids are defined so that the element size has a geometric progression, hence its location is evenly spaced on a logarithm axis.</p>
+<p>Three surface interpolation methods are tested: linear (linear Finite Elements), interpolant cubic splines, and Hermite
+(Hermite Finite Elements)</p>
+<p style="text-align:center;"><img src="../media/Asfc_interp.png" alt="Asfc interpolations" width="500px"/></p>
+
+<p>The chosen interpolation methods are: left, linear FE - middle, Hermite FE -  right, cubic spline. “dof” stands for “degree of
+freedom”. In the upper part, one can see that from left to right, the smoothness increases. Below, calling <em>u</em> the unknown, it can be
+seen that increasing smoothness requires to take into account more derivatives. As the spline method guarantees curvature continuity,
+the unknown and its derivatives must be computed globally.</p>
+<p>The surface heights are computed on the different grids with one of the three interpolation procedures that are
+proposed – linear (finite element style), Hermite (finite element style) and cubic spline. 128 grids are used to draw the
+relative area curve.
+Provided the interpolating function <em>f(x,y)</em>, the area of a surface element defined on <script type="math/tex">[x_i,x_i+hx]\times[y_j,y_j+hy]</script> is obtained
+by integration of</p>
+<p>
+<script type="math/tex; mode=display">
+   \sqrt{ 1 + \left(\dfrac{\partial f}{\partial x}\right)^2 + \left(\dfrac{\partial f}{\partial y}\right)^2 }
+</script>
+</p>
+<p>Such an expression being barely easy to analytically integrate, the Gauss integrating method is used with two points in each direction,
+which ensures the exact integration of a third degree polynomial on both directions.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item">miscellaneous</li>
+                  <li class="list-inline-item">least_squares</li>
+                  <li class="list-inline-item">surfile</li>
+                  <li class="list-inline-item"><a href='stat_mom.html'>stat_mom</a></li>
+                  <li class="list-inline-item">bspline</li>
+                  <li class="list-inline-item">minpack</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~asfc~~UsesGraph Pages: 1 -->
+<svg id="moduleasfcUsesGraph" width="281pt" height="280pt"
+ viewBox="0.00 0.00 281.00 280.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~asfc~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 276)">
+<title>module~~asfc~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-276 277,-276 277,4 -4,4"/>
+<!-- module~asfc -->
+<g id="module~~asfc~~UsesGraph_node1" class="node">
+<title>module~asfc</title>
+<polygon fill="none" stroke="black" points="273,-150 219,-150 219,-126 273,-126 273,-150"/>
+<text text-anchor="middle" x="246" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">asfc</text>
+</g>
+<!-- bspline -->
+<g id="module~~asfc~~UsesGraph_node2" class="node">
+<title>bspline</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="170,-272 116,-272 116,-248 170,-248 170,-272"/>
+<text text-anchor="middle" x="143" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">bspline</text>
+</g>
+<!-- module~asfc&#45;&gt;bspline -->
+<g id="module~~asfc~~UsesGraph_edge1" class="edge">
+<title>module~asfc&#45;&gt;bspline</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M239.28,-150.02C229.67,-169.36 208.76,-207.86 183,-234 180.19,-236.85 177.02,-239.57 173.73,-242.1"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="171.58,-239.33 165.44,-247.96 175.63,-245.04 171.58,-239.33"/>
+</g>
+<!-- data_arch -->
+<g id="module~~asfc~~UsesGraph_node3" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-170 3,-170 3,-146 64,-146 64,-170"/>
+<text text-anchor="middle" x="33.5" y="-155.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- module~asfc&#45;&gt;data_arch -->
+<g id="module~~asfc~~UsesGraph_edge2" class="edge">
+<title>module~asfc&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M237.57,-150.08C227.42,-165.29 207.63,-190.68 183,-201 150.21,-214.74 137.17,-210.84 103,-201 86.12,-196.14 69.37,-185.76 56.67,-176.41"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="58.62,-173.5 48.56,-170.19 54.36,-179.06 58.62,-173.5"/>
+</g>
+<!-- least_squares -->
+<g id="module~~asfc~~UsesGraph_node4" class="node">
+<title>least_squares</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="182.5,-192 103.5,-192 103.5,-168 182.5,-168 182.5,-192"/>
+<text text-anchor="middle" x="143" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">least_squares</text>
+</g>
+<!-- module~asfc&#45;&gt;least_squares -->
+<g id="module~~asfc~~UsesGraph_edge3" class="edge">
+<title>module~asfc&#45;&gt;least_squares</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.99,-148.82C207.92,-153.42 194.78,-158.88 182.62,-163.94"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="181.02,-160.82 173.13,-167.89 183.71,-167.28 181.02,-160.82"/>
+</g>
+<!-- minpack -->
+<g id="module~~asfc~~UsesGraph_node5" class="node">
+<title>minpack</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="170,-150 116,-150 116,-126 170,-126 170,-150"/>
+<text text-anchor="middle" x="143" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">minpack</text>
+</g>
+<!-- module~asfc&#45;&gt;minpack -->
+<g id="module~~asfc~~UsesGraph_edge4" class="edge">
+<title>module~asfc&#45;&gt;minpack</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.99,-138C207.3,-138 193.3,-138 180.58,-138"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="180.27,-134.5 170.27,-138 180.27,-141.5 180.27,-134.5"/>
+</g>
+<!-- miscellaneous -->
+<g id="module~~asfc~~UsesGraph_node6" class="node">
+<title>miscellaneous</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="183,-108 103,-108 103,-84 183,-84 183,-108"/>
+<text text-anchor="middle" x="143" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">miscellaneous</text>
+</g>
+<!-- module~asfc&#45;&gt;miscellaneous -->
+<g id="module~~asfc~~UsesGraph_edge5" class="edge">
+<title>module~asfc&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.99,-127.18C207.92,-122.58 194.78,-117.12 182.62,-112.06"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="183.71,-108.72 173.13,-108.11 181.02,-115.18 183.71,-108.72"/>
+</g>
+<!-- module~stat_mom -->
+<g id="module~~asfc~~UsesGraph_node7" class="node">
+<title>module~stat_mom</title>
+<g id="a_module~~asfc~~UsesGraph_node7"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="173,-66 113,-66 113,-42 173,-42 173,-66"/>
+<text text-anchor="middle" x="143" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- module~asfc&#45;&gt;module~stat_mom -->
+<g id="module~~asfc~~UsesGraph_edge6" class="edge">
+<title>module~asfc&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M234.95,-125.78C223.4,-112.24 203.38,-90.29 183,-75 181.39,-73.79 179.69,-72.6 177.95,-71.46"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="179.39,-68.23 169.03,-66.03 175.76,-74.22 179.39,-68.23"/>
+</g>
+<!-- surfile -->
+<g id="module~~asfc~~UsesGraph_node8" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="170,-24 116,-24 116,0 170,0 170,-24"/>
+<text text-anchor="middle" x="143" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- module~asfc&#45;&gt;surfile -->
+<g id="module~~asfc~~UsesGraph_edge7" class="edge">
+<title>module~asfc&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M240.41,-125.89C231.89,-104.75 211.84,-60.73 183,-33 181.59,-31.64 180.07,-30.34 178.48,-29.11"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="180.36,-26.16 170.11,-23.48 176.45,-31.97 180.36,-26.16"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="module~~asfc~~UsesGraph_edge8" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M115.92,-66.21C111.42,-68.82 106.92,-71.78 103,-75 80.99,-93.07 60.9,-119.05 48.26,-137.11"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="45.1,-135.52 42.35,-145.75 50.88,-139.47 45.1,-135.52"/>
+</g>
+<!-- sort_arrays -->
+<g id="module~~asfc~~UsesGraph_node9" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-66 0,-66 0,-42 67,-42 67,-66"/>
+<text text-anchor="middle" x="33.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="module~~asfc~~UsesGraph_edge9" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M112.91,-54C101.94,-54 89.23,-54 77.27,-54"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="77.02,-50.5 67.02,-54 77.02,-57.5 77.02,-50.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~asfc~~UsedByGraph Pages: 1 -->
+<svg id="moduleasfcUsedByGraph" width="153pt" height="32pt"
+ viewBox="0.00 0.00 153.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~asfc~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~asfc~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 149,-28 149,4 -4,4"/>
+<!-- module~asfc -->
+<g id="module~~asfc~~UsedByGraph_node1" class="node">
+<title>module~asfc</title>
+<polygon fill="none" stroke="black" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">asfc</text>
+</g>
+<!-- program~test_asfc -->
+<g id="module~~asfc~~UsedByGraph_node2" class="node">
+<title>program~test_asfc</title>
+<g id="a_module~~asfc~~UsedByGraph_node2"><a xlink:href="../program/test_asfc.html" xlink:title="test_asfc">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="145,-24 90,-24 90,0 145,0 145,-24"/>
+<text text-anchor="middle" x="117.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_asfc</text>
+</a>
+</g>
+</g>
+<!-- program~test_asfc&#45;&gt;module~asfc -->
+<g id="module~~asfc~~UsedByGraph_edge1" class="edge">
+<title>program~test_asfc&#45;&gt;module~asfc</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M89.95,-12C81.91,-12 72.94,-12 64.38,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.23,-8.5 54.23,-12 64.23,-15.5 64.23,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hermite"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>hermite</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                <p><em>Hermite interpolation between grids</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kx"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>kx</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                <p><em>x bspline order</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ky"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ky</strong></td>
+<td> =</td>
+                <td>3</td>
+            <td>
+                <p><em>y bspline order</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg0"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>larg0</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p><em>roughest grid</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lin_all"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>lin_all</strong></td>
+<td> =</td>
+                <td>0</td>
+            <td>
+                <p><em>linear interpolation between grids</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-live"></span>
+              logical(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>live</strong></td>
+<td> =</td>
+                <td>.false.</td>
+            <td>
+                <p><em>default for file outputs</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long0"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>long0</strong></td>
+<td> =</td>
+                <td>8</td>
+            <td>
+                <p><em>roughest grid</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-method_asfc"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>method_asfc</strong></td>
+<td> =</td>
+                <td>hermite</td>
+            <td>
+                <p><em>default</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_beta"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>nb_beta</strong></td>
+<td> =</td>
+                <td>4</td>
+            <td>
+                <p><em>number of parameters to be determined when optimizing</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npp"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>npp</strong></td>
+<td> =</td>
+                <td>128</td>
+            <td>
+                <p><em>number of points for the asfc determination</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-out_her"></span>
+              logical(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>out_her</strong></td>
+<td> =</td>
+                <td>live</td>
+            <td>
+                <p><em>default for file outputs, Hermite case</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-out_lin"></span>
+              logical(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>out_lin</strong></td>
+<td> =</td>
+                <td>live</td>
+            <td>
+                <p><em>default for file outputs, linear case</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-out_spl"></span>
+              logical(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>out_spl</strong></td>
+<td> =</td>
+                <td>live</td>
+            <td>
+                <p><em>default for file outputs, spline case</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-out_ter"></span>
+              logical(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>out_ter</strong></td>
+<td> =</td>
+                <td>live</td>
+            <td>
+                <p><em>default for terminal output</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-spl_all"></span>
+              integer(kind=I4),
+            </td>
+              <td>private,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>spl_all</strong></td>
+<td> =</td>
+                <td>2</td>
+            <td>
+                <p><em>spline interpolation between grids</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-unit_out_her"></span>
+              integer(kind=I4),
+            </td>
+              <td>private</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>unit_out_her</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>output unit for the Hermite case</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-unit_out_lin"></span>
+              integer(kind=I4),
+            </td>
+              <td>private</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>unit_out_lin</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>output unit for the linear case</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-unit_out_spl"></span>
+              integer(kind=I4),
+            </td>
+              <td>private</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>unit_out_spl</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><em>output unit for the spline case</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-df_boltz"></span> <h3>private  function <a href='../proc/df_boltz.html'>df_boltz</a>(xi, beta, n_beta, ivar)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Fitting function partial derivatives.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+<p><em>data point</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~5"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1:n_beta)
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+<p><em>parameter vector</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_beta~2"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n_beta</strong></td>
+            <td>
+<p><em>number of parameters</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ivar"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ivar</strong></td>
+            <td>
+<p><em>parameter number</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-dn_i"></span> <h3>private  function <a href='../proc/dn_i.html'>dn_i</a>(xi, i)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>1D shape function derivative, quadratic case.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~6"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~30"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-dnq_et_i"></span> <h3>private  function <a href='../proc/dnq_et_i.html'>dnq_et_i</a>(xi, et, i, j)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>2D shape function <script type="math/tex">\eta</script> derivative, quadratic case.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~9"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-et~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>et</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~33"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~24"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-dnq_xi_et_i"></span> <h3>private  function <a href='../proc/dnq_xi_et_i.html'>dnq_xi_et_i</a>(xi, et, i, j)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>2D shape function <script type="math/tex">\xi</script>, <script type="math/tex">\eta</script> derivative, quadratic case.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~10"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-et~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>et</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~34"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~25"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-dnq_xi_i"></span> <h3>private  function <a href='../proc/dnq_xi_i.html'>dnq_xi_i</a>(xi, et, i, j)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>2D shape function <script type="math/tex">\xi</script> derivative, quadratic case.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~8"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-et~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>et</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~32"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~23"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-f_boltz"></span> <h3>private  function <a href='../proc/f_boltz.html'>f_boltz</a>(xi, beta, n_beta)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Fitting function.</p><a href="../proc/f_boltz.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+<p><em>data point</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-beta~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1:n_beta)
+            </td>
+            <td>::</td>
+            <td><strong>beta</strong></td>
+            <td>
+<p><em>parameter vector</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_beta"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n_beta</strong></td>
+            <td>
+<p><em>number of parameters</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-locate"></span> <h3>private  function <a href='../proc/locate.html'>locate</a>(n, xx, x)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns the location of an element in a vector.</p><a href="../proc/locate.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~4"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+<p><em>vector length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xx~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:n)
+            </td>
+            <td>::</td>
+            <td><strong>xx</strong></td>
+            <td>
+<p><em>vector</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~14"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+<p><em>value to locate</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=i4)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-locate2"></span> <h3>private  function <a href='../proc/locate2.html'>locate2</a>(n, xx, x, eps)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns the location of an element in a vector.</p><a href="../proc/locate2.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~5"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+<p><em>vector length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xx~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:n)
+            </td>
+            <td>::</td>
+            <td><strong>xx</strong></td>
+            <td>
+<p><em>vector</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~15"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+<p><em>value to locate</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eps~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>eps</strong></td>
+            <td>
+<p><em>small value for comparisons of reals</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>integer(kind=i4)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-n_i"></span> <h3>private  function <a href='../proc/n_i.html'>n_i</a>(xi, i)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>1D shape function, quadratic case.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~5"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~29"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-nq_i"></span> <h3>private  function <a href='../proc/nq_i.html'>nq_i</a>(xi, et, i, j)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>2D shape function, quadratic case.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xi~7"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xi</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-et"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>et</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~31"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~22"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calcul_aire"></span> <h3>private  subroutine <a href='../proc/calcul_aire.html'>calcul_aire</a>(tab_in, long, larg, hx, hy, aire)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return the area of a surface</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long,1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>surface array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~10"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~10"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hx~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hx</strong></td>
+            <td>
+<p><em>increment along x</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-hy~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>hy</strong></td>
+            <td>
+<p><em>increment along y</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-aire~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>aire</strong></td>
+            <td>
+<p><em>computed area</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calcul_asfc"></span> <h3>private  subroutine <a href='../proc/calcul_asfc.html'>calcul_asfc</a>(tab_in, scal, asfc_res, omp)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return the <em>asfc</em> of a surface regarding the default parameter <em>method_asfc</em></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~9"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:scal%xres, 1:scal%yres)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>input surface</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal~5"></span>
+              type(SCALE_SURF),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal</strong></td>
+            <td>
+<p><em>surface characteristics</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asfc_res~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>asfc_res</strong></td>
+            <td>
+<p><em>result: asfc, adjustment factor</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omp~3"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omp</strong></td>
+            <td>
+<p><em>with openmp ?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calcul_asfc_hermite"></span> <h3>public  subroutine <a href='../proc/calcul_asfc_hermite.html'>calcul_asfc_hermite</a>(tab_in, scal, asfc_res, omp)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return the <em>asfc</em> of a surface. The different grids are obtained by Hermite interpolation</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~6"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:scal%xres, 1:scal%yres)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>input surface</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal~4"></span>
+              type(SCALE_SURF),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal</strong></td>
+            <td>
+<p><em>surface characteristics</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asfc_res~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>asfc_res</strong></td>
+            <td>
+<p><em>result: asfc, adjustment factor</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omp~2"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omp</strong></td>
+            <td>
+<p><em>with openmp ?</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calcul_asfc_lin_all"></span> <h3>private  subroutine <a href='../proc/calcul_asfc_lin_all.html'>calcul_asfc_lin_all</a>(tab_in, scal, asfc_res)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return the <em>asfc</em> of a surface. The different grids are obtained by linear interpolation</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:scal%xres, 1:scal%yres)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>input surface</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal~2"></span>
+              type(SCALE_SURF),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal</strong></td>
+            <td>
+<p><em>surface characteristics</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asfc_res"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>asfc_res</strong></td>
+            <td>
+<p><em>result: asfc, adjustment factor</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calcul_asfc_spl_all"></span> <h3>private  subroutine <a href='../proc/calcul_asfc_spl_all.html'>calcul_asfc_spl_all</a>(tab_in, scal, asfc_res)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Return the <em>asfc</em> of a surface. The different grids are obtained by spline of degree 3</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~5"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:scal%xres, 1:scal%yres)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>input surface</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal~3"></span>
+              type(SCALE_SURF),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal</strong></td>
+            <td>
+<p><em>surface characteristics</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-asfc_res~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>asfc_res</strong></td>
+            <td>
+<p><em>result: asfc, adjustment factor</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-indice_fractal"></span> <h3>public  subroutine <a href='../proc/indice_fractal.html'>indice_fractal</a>(tab_in, long, larg, indf)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that returns the fractal dimension with the box counting method</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab_in~10"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab_in</strong></td>
+            <td>
+<p><em>surface array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~16"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>surface array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~16"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>surface array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-indf"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(3)
+            </td>
+            <td>::</td>
+            <td><strong>indf</strong></td>
+            <td>
+<p><em>result: ordinate at origin, slope, R2</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-init_beta_boltz"></span> <h3>private  subroutine <a href='../proc/init_beta_boltz.html'>init_beta_boltz</a>(bt, n_bt, v_x, v_y, n_pt)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function that initializes the fitting <em>tanh</em> function <a href="../proc/f_boltz.html">f_boltz</a> parameters.</p><a href="../proc/init_beta_boltz.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bt~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:n_bt)
+            </td>
+            <td>::</td>
+            <td><strong>bt</strong></td>
+            <td>
+<p><em>vector <script type="math/tex">\beta</script> of parameters</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_bt~4"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n_bt</strong></td>
+            <td>
+<p><em>number of parameters</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_x~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:n_pt)
+            </td>
+            <td>::</td>
+            <td><strong>v_x</strong></td>
+            <td>
+<p><em>x data to fit</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_y~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:n_pt)
+            </td>
+            <td>::</td>
+            <td><strong>v_y</strong></td>
+            <td>
+<p><em>y data to fit</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_pt~4"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n_pt</strong></td>
+            <td>
+<p><em>data vector length</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1270 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>stat_mom &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>stat_mom
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> may, 03 2019</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 6.6% of total for modules and submodules.">234 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_stat_mom.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_stat_mom.f90.html'>mod_stat_mom.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">stat_mom</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/stat_mom.html#type-moment_stat">moment_stat</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/stat_mom.html#proc-random_normal">random_normal</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-rnorm">rnorm</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-rnorm_vec">rnorm_vec</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/stat_mom.html#proc-calc_median">calc_median</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-calc_moments">calc_moments</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-calc_moments_1d">calc_moments_1D</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-scramble">scramble</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+      <strong>Routines to calculate statistical moments, and some utilities</strong>
+</span></p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item">sort_arrays</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~stat_mom~~UsesGraph Pages: 1 -->
+<svg id="modulestat_momUsesGraph" width="171pt" height="74pt"
+ viewBox="0.00 0.00 171.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~stat_mom~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
+<title>module~~stat_mom~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 167,-70 167,4 -4,4"/>
+<!-- module~stat_mom -->
+<g id="module~~stat_mom~~UsesGraph_node1" class="node">
+<title>module~stat_mom</title>
+<polygon fill="none" stroke="black" points="163,-45 103,-45 103,-21 163,-21 163,-45"/>
+<text text-anchor="middle" x="133" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">stat_mom</text>
+</g>
+<!-- data_arch -->
+<g id="module~~stat_mom~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-66 3,-66 3,-42 64,-42 64,-66"/>
+<text text-anchor="middle" x="33.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="module~~stat_mom~~UsesGraph_edge1" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.75,-39.3C93.67,-41.26 83.52,-43.44 73.87,-45.52"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="73.11,-42.1 64.07,-47.63 74.58,-48.95 73.11,-42.1"/>
+</g>
+<!-- sort_arrays -->
+<g id="module~~stat_mom~~UsesGraph_node3" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-24 0,-24 0,0 67,0 67,-24"/>
+<text text-anchor="middle" x="33.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="module~~stat_mom~~UsesGraph_edge2" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.75,-26.7C94.68,-24.96 85.77,-23.04 77.12,-21.18"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="77.66,-17.72 67.14,-19.03 76.18,-24.56 77.66,-17.72"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~stat_mom~~UsedByGraph Pages: 1 -->
+<svg id="modulestat_momUsedByGraph" width="388pt" height="319pt"
+ viewBox="0.00 0.00 388.00 319.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~stat_mom~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 315)">
+<title>module~~stat_mom~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-315 384,-315 384,4 -4,4"/>
+<!-- module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_node1" class="node">
+<title>module~stat_mom</title>
+<polygon fill="none" stroke="black" points="60,-146 0,-146 0,-122 60,-122 60,-146"/>
+<text text-anchor="middle" x="30" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50">stat_mom</text>
+</g>
+<!-- module~abbott -->
+<g id="module~~stat_mom~~UsedByGraph_node2" class="node">
+<title>module~abbott</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node2"><a xlink:href="../module/abbott.html" xlink:title="abbott">
+<polygon fill="#337ab7" stroke="#337ab7" points="150,-290 96,-290 96,-266 150,-266 150,-290"/>
+<text text-anchor="middle" x="123" y="-275.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">abbott</text>
+</a>
+</g>
+</g>
+<!-- module~abbott&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge1" class="edge">
+<title>module~abbott&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M114.24,-265.72C98.66,-241.07 63.42,-185.3 44.16,-154.83"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="47.04,-152.83 38.74,-146.25 41.12,-156.57 47.04,-152.83"/>
+</g>
+<!-- module~anisotropy -->
+<g id="module~~stat_mom~~UsedByGraph_node3" class="node">
+<title>module~anisotropy</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node3"><a xlink:href="../module/anisotropy.html" xlink:title="anisotropy">
+<polygon fill="#337ab7" stroke="#337ab7" points="253.5,-185 191.5,-185 191.5,-161 253.5,-161 253.5,-185"/>
+<text text-anchor="middle" x="222.5" y="-170.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">anisotropy</text>
+</a>
+</g>
+</g>
+<!-- module~anisotropy&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge2" class="edge">
+<title>module~anisotropy&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M191.31,-170.13C165.72,-167.35 128.17,-162.45 96,-155 87.45,-153.02 78.4,-150.43 69.87,-147.75"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="70.74,-144.35 60.15,-144.59 68.58,-151.01 70.74,-144.35"/>
+</g>
+<!-- module~filter -->
+<g id="module~~stat_mom~~UsedByGraph_node5" class="node">
+<title>module~filter</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node5"><a xlink:href="../module/filter.html" xlink:title="filter">
+<polygon fill="#337ab7" stroke="#337ab7" points="150,-227 96,-227 96,-203 150,-203 150,-227"/>
+<text text-anchor="middle" x="123" y="-212.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">filter</text>
+</a>
+</g>
+</g>
+<!-- module~anisotropy&#45;&gt;module~filter -->
+<g id="module~~stat_mom~~UsedByGraph_edge11" class="edge">
+<title>module~anisotropy&#45;&gt;module~filter</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M193.56,-185.04C183.03,-189.57 170.9,-194.8 159.75,-199.6"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="158.07,-196.51 150.27,-203.68 160.84,-202.94 158.07,-196.51"/>
+</g>
+<!-- module~asfc -->
+<g id="module~~stat_mom~~UsedByGraph_node4" class="node">
+<title>module~asfc</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node4"><a xlink:href="../module/asfc.html" xlink:title="asfc">
+<polygon fill="#337ab7" stroke="#337ab7" points="150,-146 96,-146 96,-122 150,-122 150,-146"/>
+<text text-anchor="middle" x="123" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">asfc</text>
+</a>
+</g>
+</g>
+<!-- module~asfc&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge3" class="edge">
+<title>module~asfc&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M95.68,-134C87.77,-134 78.91,-134 70.35,-134"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="70.13,-130.5 60.13,-134 70.13,-137.5 70.13,-130.5"/>
+</g>
+<!-- module~filter&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge4" class="edge">
+<title>module~filter&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M108.18,-202.7C93.39,-189.54 69.75,-168.49 52.53,-153.16"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="54.45,-150.19 44.65,-146.15 49.8,-155.42 54.45,-150.19"/>
+</g>
+<!-- module~morpho -->
+<g id="module~~stat_mom~~UsedByGraph_node6" class="node">
+<title>module~morpho</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node6"><a xlink:href="../module/morpho.html" xlink:title="morpho">
+<polygon fill="#337ab7" stroke="#337ab7" points="150,-66 96,-66 96,-42 150,-42 150,-66"/>
+<text text-anchor="middle" x="123" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">morpho</text>
+</a>
+</g>
+</g>
+<!-- module~morpho&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge5" class="edge">
+<title>module~morpho&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M108.18,-66.15C93.39,-79.15 69.75,-99.93 52.53,-115.08"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="49.85,-112.77 44.65,-122 54.47,-118.02 49.85,-112.77"/>
+</g>
+<!-- program~test_morpho -->
+<g id="module~~stat_mom~~UsedByGraph_node7" class="node">
+<title>program~test_morpho</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node7"><a xlink:href="../program/test_morpho.html" xlink:title="test_morpho">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="259,-84 186,-84 186,-60 259,-60 259,-84"/>
+<text text-anchor="middle" x="222.5" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_morpho</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge6" class="edge">
+<title>program~test_morpho&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M185.67,-83.66C152.61,-94.42 103.65,-110.35 69.71,-121.4"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="68.55,-118.1 60.13,-124.52 70.72,-124.75 68.55,-118.1"/>
+</g>
+<!-- program~test_morpho&#45;&gt;module~morpho -->
+<g id="module~~stat_mom~~UsedByGraph_edge14" class="edge">
+<title>program~test_morpho&#45;&gt;module~morpho</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M185.75,-65.4C177.4,-63.86 168.51,-62.22 160.15,-60.67"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="160.75,-57.23 150.28,-58.85 159.48,-64.11 160.75,-57.23"/>
+</g>
+<!-- program~test_stat -->
+<g id="module~~stat_mom~~UsedByGraph_node8" class="node">
+<title>program~test_stat</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node8"><a xlink:href="../program/test_stat.html" xlink:title="test_stat">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="150,-24 96,-24 96,0 150,0 150,-24"/>
+<text text-anchor="middle" x="123" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_stat</text>
+</a>
+</g>
+</g>
+<!-- program~test_stat&#45;&gt;module~stat_mom -->
+<g id="module~~stat_mom~~UsedByGraph_edge7" class="edge">
+<title>program~test_stat&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M105.34,-24.13C102.07,-26.87 98.79,-29.89 96,-33 73.53,-58.03 53.57,-91.61 41.88,-113.04"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="38.74,-111.48 37.11,-121.95 44.91,-114.78 38.74,-111.48"/>
+</g>
+<!-- module~grad_curv -->
+<g id="module~~stat_mom~~UsedByGraph_node9" class="node">
+<title>module~grad_curv</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node9"><a xlink:href="../module/grad_curv.html" xlink:title="grad_curv">
+<polygon fill="#337ab7" stroke="#337ab7" points="253,-269 192,-269 192,-245 253,-245 253,-269"/>
+<text text-anchor="middle" x="222.5" y="-254.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">grad_curv</text>
+</a>
+</g>
+</g>
+<!-- module~grad_curv&#45;&gt;module~filter -->
+<g id="module~~stat_mom~~UsedByGraph_edge12" class="edge">
+<title>module~grad_curv&#45;&gt;module~filter</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M193.56,-244.96C183.03,-240.43 170.9,-235.2 159.75,-230.4"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="160.84,-227.06 150.27,-226.32 158.07,-233.49 160.84,-227.06"/>
+</g>
+<!-- program~test_abbott -->
+<g id="module~~stat_mom~~UsedByGraph_node10" class="node">
+<title>program~test_abbott</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node10"><a xlink:href="../program/test_abbott.html" xlink:title="test_abbott">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="255.5,-311 189.5,-311 189.5,-287 255.5,-287 255.5,-311"/>
+<text text-anchor="middle" x="222.5" y="-296.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_abbott</text>
+</a>
+</g>
+</g>
+<!-- program~test_abbott&#45;&gt;module~abbott -->
+<g id="module~~stat_mom~~UsedByGraph_edge8" class="edge">
+<title>program~test_abbott&#45;&gt;module~abbott</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M189.3,-292.07C180.02,-290.07 169.82,-287.87 160.3,-285.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="160.83,-282.35 150.31,-283.67 159.35,-289.19 160.83,-282.35"/>
+</g>
+<!-- program~test_anisotropy -->
+<g id="module~~stat_mom~~UsedByGraph_node11" class="node">
+<title>program~test_anisotropy</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node11"><a xlink:href="../program/test_anisotropy.html" xlink:title="test_anisotropy">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="380,-185 295,-185 295,-161 380,-161 380,-185"/>
+<text text-anchor="middle" x="337.5" y="-170.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;module~anisotropy -->
+<g id="module~~stat_mom~~UsedByGraph_edge9" class="edge">
+<title>program~test_anisotropy&#45;&gt;module~anisotropy</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M294.74,-173C284.67,-173 273.91,-173 263.9,-173"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="263.79,-169.5 253.79,-173 263.79,-176.5 263.79,-169.5"/>
+</g>
+<!-- program~test_asfc -->
+<g id="module~~stat_mom~~UsedByGraph_node12" class="node">
+<title>program~test_asfc</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node12"><a xlink:href="../program/test_asfc.html" xlink:title="test_asfc">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="250,-143 195,-143 195,-119 250,-119 250,-143"/>
+<text text-anchor="middle" x="222.5" y="-128.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_asfc</text>
+</a>
+</g>
+</g>
+<!-- program~test_asfc&#45;&gt;module~asfc -->
+<g id="module~~stat_mom~~UsedByGraph_edge10" class="edge">
+<title>program~test_asfc&#45;&gt;module~asfc</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M194.86,-131.82C184.24,-132.15 171.84,-132.53 160.42,-132.88"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="160.16,-129.39 150.27,-133.19 160.38,-136.38 160.16,-129.39"/>
+</g>
+<!-- program~test_smooth -->
+<g id="module~~stat_mom~~UsedByGraph_node13" class="node">
+<title>program~test_smooth</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node13"><a xlink:href="../program/test_smooth.html" xlink:title="test_smooth">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="258,-227 187,-227 187,-203 258,-203 258,-227"/>
+<text text-anchor="middle" x="222.5" y="-212.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_smooth</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;module~filter -->
+<g id="module~~stat_mom~~UsedByGraph_edge13" class="edge">
+<title>program~test_smooth&#45;&gt;module~filter</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M186.85,-215C178.29,-215 169.09,-215 160.45,-215"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="160.26,-211.5 150.26,-215 160.26,-218.5 160.26,-211.5"/>
+</g>
+<!-- program~test_grad_curv -->
+<g id="module~~stat_mom~~UsedByGraph_node14" class="node">
+<title>program~test_grad_curv</title>
+<g id="a_module~~stat_mom~~UsedByGraph_node14"><a xlink:href="../program/test_grad_curv.html" xlink:title="test_grad_curv">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="379.5,-269 295.5,-269 295.5,-245 379.5,-245 379.5,-269"/>
+<text text-anchor="middle" x="337.5" y="-254.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_grad_curv</text>
+</a>
+</g>
+</g>
+<!-- program~test_grad_curv&#45;&gt;module~grad_curv -->
+<g id="module~~stat_mom~~UsedByGraph_edge15" class="edge">
+<title>program~test_grad_curv&#45;&gt;module~grad_curv</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M295.38,-257C284.88,-257 273.6,-257 263.17,-257"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="263.08,-253.5 253.08,-257 263.08,-260.5 263.08,-253.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-moment_stat"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/moment_stat.html'>moment_stat</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>statistical moments</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kk"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Kk</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>sixth moment</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ku"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Ku</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>kurtosis</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sk"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Sk</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>skewness</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ss"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>Ss</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>fifth moment</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mu~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mu</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>mean</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-si~2"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>si</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>standard deviation</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-va"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>va</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+<p><em>variance</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-random_normal"></span> <h3>public  function <a href='../proc/random_normal.html'>random_normal</a>()  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    <div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Adapted from the following fortran 77 code
+     algorithm 712, collected algorithms from acm.
+     this work published in transactions on mathematical software,
+     vol. 18, no. 4, december, 1992, pp. 434-435.</p>
+<ul>
+<li>The function random_normal() returns a normally distributed pseudo-random
+    number with zero mean and unit variance.</li>
+<li>
+<p>The algorithm uses the ratio of uniforms method of a.j. kinderman
+   and j.f. monahan augmented with quadratic bounding curves.</p>
+<p>Author:</p>
+<ul>
+<li>Alan Miller</li>
+<li>csiro division of mathematical &amp; information sciences</li>
+<li>private bag 10, clayton south mdc</li>
+<li>clayton 3169, victoria, australia</li>
+</ul>
+</li>
+</ul>
+</div>
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-rnorm"></span> <h3>public  function <a href='../proc/rnorm.html'>rnorm</a>() result(fn_val)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Generate a random normal deviate using the polar method.</p><a href="../proc/rnorm.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+    <em>None</em>
+    <h4>
+    Return Value
+    <small>real(kind=R8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-rnorm_vec"></span> <h3>public  function <a href='../proc/rnorm_vec.html'>rnorm_vec</a>(n, mu, sigma) result(variates)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Vector of reals that follow a normal law</p><a href="../proc/rnorm_vec.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n~7"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n</strong></td>
+            <td>
+<p><em>vector size</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mu~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mu</strong></td>
+            <td>
+<p><em>distribution mean</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sigma~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sigma</strong></td>
+            <td>
+<p><em>distribution std</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=R8), dimension(1:n)</small>
+    </h4>
+    <p><em>output vector</em></p>
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calc_median"></span> <h3>public  subroutine <a href='../proc/calc_median.html'>calc_median</a>(tab, mask, md)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function to calculate the median value of a series.</p><a href="../proc/calc_median.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~14"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>series 1D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~4"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+            <td>
+<p><em>mask</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-md"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>md</strong></td>
+            <td>
+<p><em>result: series median value</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calc_moments"></span> <h3>public  subroutine <a href='../proc/calc_moments.html'>calc_moments</a>(tab, mask, mx, nb_mom)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function to calculate the statistical moments of an array with mask, of shape dim. 1 or 2</p><a href="../proc/calc_moments.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~12"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(..)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>1D or 2D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~2"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(..)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+            <td>
+<p><em>1D or 2D mask</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mx~2"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mx</strong></td>
+            <td>
+<p><a href="../type/moment_stat.html">moment_stat</a> <em>result</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_mom"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_mom</strong></td>
+            <td>
+<p><em>number of desired moments</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-calc_moments_1d"></span> <h3>private  subroutine <a href='../proc/calc_moments_1d.html'>calc_moments_1D</a>(tab, mask, mx, nb_mom)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function to calculate the statistical moments of a 1D array with mask, see <a href="../proc/calc_moments.html">calc_moments</a></p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~13"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>1D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~3"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+            <td>
+<p><em>1D mask</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mx~3"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mx</strong></td>
+            <td>
+<p><a href="../type/moment_stat.html">moment_stat</a> <em>result</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_mom~2"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_mom</strong></td>
+            <td>
+<p><em>number of desired moments</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-scramble"></span> <h3>public  subroutine <a href='../proc/scramble.html'>scramble</a>(tab, lg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>scramble a vector of reals</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~11"></span>
+              real(kind=r8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1:lg)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lg~2"></span>
+              integer(kind=i4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>lg</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

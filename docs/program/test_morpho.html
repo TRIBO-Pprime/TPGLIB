@@ -1,0 +1,1718 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_morpho &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>test_morpho      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> april, 06 2023</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="22.2% of total for programs.">103 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/prg.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/prg.f90~5.html'>prg.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">test_morpho</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/test_morpho.html#variable-angle~2">angle</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-area">area</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-array~3">array</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-c1">c1</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-c2">c2</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-cp">cp</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-dx~10">dx</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-dy~10">dy</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-i~46">i</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-ii~7">ii</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-imask">imask</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-j~32">j</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-jj~5">jj</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-k~19">k</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-mask~6">mask</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-maxtab~2">maxtab</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-median_size">median_size</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-mintab~2">mintab</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-mom~3">mom</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-nb_cells">nb_cells</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-ni">ni</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-nj">nj</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-nnx~2">nnx</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-nny~2">nny</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-res_hori">res_hori</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-scal_surf~4">scal_surf</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-sp">sp</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-t~3">t</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-topo~3">topo</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-ua~3">ua</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-vec~2">vec</a>
+            <a class="list-group-item" href="../program/test_morpho.html#variable-vec_tmp">vec_tmp</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/test_morpho.html#proc-plane">plane</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/test_morpho.html#src">test_morpho</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item">miscellaneous</li>
+                  <li class="list-inline-item">sort_arrays</li>
+                  <li class="list-inline-item">surfile</li>
+                  <li class="list-inline-item"><a href='../module/stat_mom.html'>stat_mom</a></li>
+                  <li class="list-inline-item"><a href='../module/morpho.html'>morpho</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_morpho~~UsesGraph Pages: 1 -->
+<svg id="programtest_morphoUsesGraph" width="390pt" height="222pt"
+ viewBox="0.00 0.00 390.00 221.65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_morpho~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 217.65)">
+<title>program~~test_morpho~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-217.65 386,-217.65 386,4 -4,4"/>
+<!-- program~test_morpho -->
+<g id="program~~test_morpho~~UsesGraph_node1" class="node">
+<title>program~test_morpho</title>
+<polygon fill="none" stroke="black" points="382,-84 309,-84 309,-60 382,-60 382,-84"/>
+<text text-anchor="middle" x="345.5" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_morpho</text>
+</g>
+<!-- data_arch -->
+<g id="program~~test_morpho~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-134 3,-134 3,-110 64,-110 64,-134"/>
+<text text-anchor="middle" x="33.5" y="-119.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- program~test_morpho&#45;&gt;data_arch -->
+<g id="program~~test_morpho~~UsesGraph_edge1" class="edge">
+<title>program~test_morpho&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245,-202C185.47,-224.6 160.87,-209.56 103,-183 82.43,-173.56 63.59,-155.8 50.9,-141.87"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="53.39,-139.41 44.17,-134.2 48.13,-144.03 53.39,-139.41"/>
+</g>
+<!-- miscellaneous -->
+<g id="program~~test_morpho~~UsesGraph_node3" class="node">
+<title>miscellaneous</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="183,-174 103,-174 103,-150 183,-150 183,-174"/>
+<text text-anchor="middle" x="143" y="-159.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">miscellaneous</text>
+</g>
+<!-- program~test_morpho&#45;&gt;miscellaneous -->
+<g id="program~~test_morpho~~UsesGraph_edge2" class="edge">
+<title>program~test_morpho&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M340.43,-84.21C330.18,-112.53 300.28,-181.77 247,-202"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245,-202C231.63,-207.08 198.67,-192.11 174.01,-179.06"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.48,-175.87 165.02,-174.19 172.15,-182.03 175.48,-175.87"/>
+</g>
+<!-- module~morpho -->
+<g id="program~~test_morpho~~UsesGraph_node4" class="node">
+<title>module~morpho</title>
+<g id="a_program~~test_morpho~~UsesGraph_node4"><a xlink:href="../module/morpho.html" xlink:title="morpho">
+<polygon fill="#337ab7" stroke="#337ab7" points="273,-124 219,-124 219,-100 273,-100 273,-124"/>
+<text text-anchor="middle" x="246" y="-109.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">morpho</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;module~morpho -->
+<g id="program~~test_morpho~~UsesGraph_edge3" class="edge">
+<title>program~test_morpho&#45;&gt;module~morpho</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M315.25,-84C305.03,-88.19 293.44,-92.95 282.75,-97.34"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="281.17,-94.2 273.25,-101.23 283.83,-100.67 281.17,-94.2"/>
+</g>
+<!-- module~stat_mom -->
+<g id="program~~test_morpho~~UsesGraph_node5" class="node">
+<title>module~stat_mom</title>
+<g id="a_program~~test_morpho~~UsesGraph_node5"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="173,-94 113,-94 113,-70 173,-70 173,-94"/>
+<text text-anchor="middle" x="143" y="-79.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;module~stat_mom -->
+<g id="program~~test_morpho~~UsesGraph_edge4" class="edge">
+<title>program~test_morpho&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245,-52C221.71,-50.82 196.58,-58.25 177.21,-66.01"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.77,-62.82 167.92,-69.93 178.49,-69.27 175.77,-62.82"/>
+</g>
+<!-- sort_arrays -->
+<g id="program~~test_morpho~~UsesGraph_node6" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-73 0,-73 0,-49 67,-49 67,-73"/>
+<text text-anchor="middle" x="33.5" y="-58.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- program~test_morpho&#45;&gt;sort_arrays -->
+<g id="program~~test_morpho~~UsesGraph_edge5" class="edge">
+<title>program~test_morpho&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M308.72,-61.96C290.43,-57.51 267.71,-53.05 247,-52"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245,-52C186.95,-49.05 119.87,-53.23 77.33,-56.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="76.98,-53.34 67.32,-57.7 77.59,-60.31 76.98,-53.34"/>
+</g>
+<!-- surfile -->
+<g id="program~~test_morpho~~UsesGraph_node7" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="273,-24 219,-24 219,0 273,0 273,-24"/>
+<text text-anchor="middle" x="246" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- program~test_morpho&#45;&gt;surfile -->
+<g id="program~~test_morpho~~UsesGraph_edge6" class="edge">
+<title>program~test_morpho&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M324.77,-59.86C310.63,-51.16 291.37,-39.3 275.55,-29.57"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="277.05,-26.38 266.7,-24.12 273.38,-32.35 277.05,-26.38"/>
+</g>
+<!-- module~morpho&#45;&gt;data_arch -->
+<g id="program~~test_morpho~~UsesGraph_edge7" class="edge">
+<title>module~morpho&#45;&gt;data_arch</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M218.77,-113.25C182.49,-114.97 116.72,-118.09 74.35,-120.11"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="73.94,-116.62 64.12,-120.59 74.27,-123.61 73.94,-116.62"/>
+</g>
+<!-- module~morpho&#45;&gt;miscellaneous -->
+<g id="program~~test_morpho~~UsesGraph_edge8" class="edge">
+<title>module~morpho&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M220.55,-124.1C207.74,-130.44 191.86,-138.31 177.88,-145.23"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="175.98,-142.26 168.57,-149.83 179.09,-148.53 175.98,-142.26"/>
+</g>
+<!-- module~morpho&#45;&gt;module~stat_mom -->
+<g id="program~~test_morpho~~UsesGraph_edge9" class="edge">
+<title>module~morpho&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M218.99,-104.27C208.03,-101.02 195.04,-97.16 182.98,-93.58"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="183.71,-90.14 173.13,-90.65 181.72,-96.85 183.71,-90.14"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="program~~test_morpho~~UsesGraph_edge10" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M112.91,-92.82C100.92,-97.29 86.84,-102.53 73.94,-107.32"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="72.51,-104.12 64.36,-110.89 74.96,-110.68 72.51,-104.12"/>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="program~~test_morpho~~UsesGraph_edge11" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M112.91,-76.32C101.83,-74.15 88.97,-71.64 76.91,-69.29"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="77.51,-65.84 67.02,-67.35 76.17,-72.71 77.51,-65.84"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+      <strong>Morphological operations.  Example of use.</strong>
+</span></p>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_morpho~~CallsGraph Pages: 1 -->
+<svg id="programtest_morphoCallsGraph" width="447pt" height="473pt"
+ viewBox="0.00 0.00 447.00 472.92" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_morpho~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 468.92)">
+<title>program~~test_morpho~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-468.92 443,-468.92 443,4 -4,4"/>
+<!-- program~test_morpho -->
+<g id="program~~test_morpho~~CallsGraph_node1" class="node">
+<title>program~test_morpho</title>
+<polygon fill="none" stroke="black" points="73,-251 0,-251 0,-227 73,-227 73,-251"/>
+<text text-anchor="middle" x="36.5" y="-236.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_morpho</text>
+</g>
+<!-- get_unit -->
+<g id="program~~test_morpho~~CallsGraph_node2" class="node">
+<title>get_unit</title>
+<polygon fill="#777777" stroke="#777777" points="312.5,-439 258.5,-439 258.5,-415 312.5,-415 312.5,-439"/>
+<text text-anchor="middle" x="285.5" y="-424.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_unit</text>
+</g>
+<!-- program~test_morpho&#45;&gt;get_unit -->
+<g id="program~~test_morpho~~CallsGraph_edge1" class="edge">
+<title>program~test_morpho&#45;&gt;get_unit</title>
+<path fill="none" stroke="#ff0000" d="M37.23,-251C37.12,-288.11 42.45,-401.36 109,-449 151.17,-479.19 214.09,-459.97 252.03,-443.39"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="253.91,-446.38 261.56,-439.05 251.01,-440.01 253.91,-446.38"/>
+</g>
+<!-- init_scal -->
+<g id="program~~test_morpho~~CallsGraph_node3" class="node">
+<title>init_scal</title>
+<polygon fill="#777777" stroke="#777777" points="181,-440 127,-440 127,-416 181,-416 181,-440"/>
+<text text-anchor="middle" x="154" y="-425.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_scal</text>
+</g>
+<!-- program~test_morpho&#45;&gt;init_scal -->
+<g id="program~~test_morpho~~CallsGraph_edge2" class="edge">
+<title>program~test_morpho&#45;&gt;init_scal</title>
+<path fill="none" stroke="#ff0000" d="M39.61,-251.2C45.42,-281.35 64.27,-360.3 109,-407 111.61,-409.73 114.65,-412.14 117.89,-414.27"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="116.33,-417.41 126.76,-419.25 119.76,-411.31 116.33,-417.41"/>
+</g>
+<!-- proc~calc_moments -->
+<g id="program~~test_morpho~~CallsGraph_node4" class="node">
+<title>proc~calc_moments</title>
+<g id="a_program~~test_morpho~~CallsGraph_node4"><a xlink:href="../proc/calc_moments.html" xlink:title="calc_moments">
+<polygon fill="#d9534f" stroke="#d9534f" points="195,-356 113,-356 113,-332 195,-332 195,-356"/>
+<text text-anchor="middle" x="154" y="-341.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~calc_moments -->
+<g id="program~~test_morpho~~CallsGraph_edge3" class="edge">
+<title>program~test_morpho&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M45.44,-251.26C57.43,-269 81.67,-301.99 109,-323 110.61,-324.24 112.31,-325.43 114.06,-326.57"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="112.72,-329.84 123.12,-331.85 116.24,-323.79 112.72,-329.84"/>
+</g>
+<!-- proc~calcul_normales -->
+<g id="program~~test_morpho~~CallsGraph_node5" class="node">
+<title>proc~calcul_normales</title>
+<g id="a_program~~test_morpho~~CallsGraph_node5"><a xlink:href="../proc/calcul_normales.html" xlink:title="calcul_normales">
+<polygon fill="#d9534f" stroke="#d9534f" points="199,-398 109,-398 109,-374 199,-374 199,-398"/>
+<text text-anchor="middle" x="154" y="-383.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calcul_normales</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~calcul_normales -->
+<g id="program~~test_morpho~~CallsGraph_edge4" class="edge">
+<title>program~test_morpho&#45;&gt;proc~calcul_normales</title>
+<path fill="none" stroke="#ff0000" d="M41.63,-251.36C50.41,-275.96 73.11,-331.57 109,-365 110.12,-366.05 111.31,-367.05 112.54,-368.01"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.93,-371.14 121.2,-373.75 114.8,-365.31 110.93,-371.14"/>
+</g>
+<!-- proc~count_cell -->
+<g id="program~~test_morpho~~CallsGraph_node6" class="node">
+<title>proc~count_cell</title>
+<g id="a_program~~test_morpho~~CallsGraph_node6"><a xlink:href="../proc/count_cell.html" xlink:title="count_cell">
+<polygon fill="#d9534f" stroke="#d9534f" points="184.5,-314 123.5,-314 123.5,-290 184.5,-290 184.5,-314"/>
+<text text-anchor="middle" x="154" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">count_cell</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~count_cell -->
+<g id="program~~test_morpho~~CallsGraph_edge5" class="edge">
+<title>program~test_morpho&#45;&gt;proc~count_cell</title>
+<path fill="none" stroke="#ff0000" d="M56.97,-251.05C71.2,-259.7 91.07,-271.48 109,-281 111.75,-282.46 114.62,-283.94 117.52,-285.39"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="116.24,-288.66 126.76,-289.93 119.32,-282.38 116.24,-288.66"/>
+</g>
+<!-- proc~def_masque -->
+<g id="program~~test_morpho~~CallsGraph_node7" class="node">
+<title>proc~def_masque</title>
+<g id="a_program~~test_morpho~~CallsGraph_node7"><a xlink:href="../proc/def_masque.html" xlink:title="def_masque">
+<polygon fill="#d9534f" stroke="#d9534f" points="190,-272 118,-272 118,-248 190,-248 190,-272"/>
+<text text-anchor="middle" x="154" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">def_masque</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~def_masque -->
+<g id="program~~test_morpho~~CallsGraph_edge6" class="edge">
+<title>program~test_morpho&#45;&gt;proc~def_masque</title>
+<path fill="none" stroke="#ff0000" d="M73.1,-245.47C84.07,-247.47 96.3,-249.69 107.82,-251.79"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.26,-255.24 117.72,-253.59 108.51,-248.35 107.26,-255.24"/>
+</g>
+<!-- proc~erode_dilate -->
+<g id="program~~test_morpho~~CallsGraph_node8" class="node">
+<title>proc~erode_dilate</title>
+<g id="a_program~~test_morpho~~CallsGraph_node8"><a xlink:href="../proc/erode_dilate.html" xlink:title="erode_dilate">
+<polygon fill="#d9534f" stroke="#d9534f" points="190,-230 118,-230 118,-206 190,-206 190,-230"/>
+<text text-anchor="middle" x="154" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">erode_dilate</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~erode_dilate -->
+<g id="program~~test_morpho~~CallsGraph_edge7" class="edge">
+<title>program~test_morpho&#45;&gt;proc~erode_dilate</title>
+<path fill="none" stroke="#ff0000" d="M73.1,-232.53C84.07,-230.53 96.3,-228.31 107.82,-226.21"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="108.51,-229.65 117.72,-224.41 107.26,-222.76 108.51,-229.65"/>
+</g>
+<!-- proc~plane -->
+<g id="program~~test_morpho~~CallsGraph_node9" class="node">
+<title>proc~plane</title>
+<g id="a_program~~test_morpho~~CallsGraph_node9"><a xlink:href="../proc/plane.html" xlink:title="plane">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="181,-188 127,-188 127,-164 181,-164 181,-188"/>
+<text text-anchor="middle" x="154" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">plane</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~plane -->
+<g id="program~~test_morpho~~CallsGraph_edge8" class="edge">
+<title>program~test_morpho&#45;&gt;proc~plane</title>
+<path fill="none" stroke="#ff0000" d="M56.97,-226.95C71.2,-218.3 91.07,-206.52 109,-197 111.75,-195.54 114.62,-194.06 117.52,-192.61"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="119.32,-195.62 126.76,-188.07 116.24,-189.34 119.32,-195.62"/>
+</g>
+<!-- proc~surf_area -->
+<g id="program~~test_morpho~~CallsGraph_node10" class="node">
+<title>proc~surf_area</title>
+<g id="a_program~~test_morpho~~CallsGraph_node10"><a xlink:href="../proc/surf_area.html" xlink:title="surf_area">
+<polygon fill="#d9534f" stroke="#d9534f" points="183,-146 125,-146 125,-122 183,-122 183,-146"/>
+<text text-anchor="middle" x="154" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surf_area</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~surf_area -->
+<g id="program~~test_morpho~~CallsGraph_edge9" class="edge">
+<title>program~test_morpho&#45;&gt;proc~surf_area</title>
+<path fill="none" stroke="#ff0000" d="M45.44,-226.74C57.43,-209 81.67,-176.01 109,-155 111.26,-153.26 113.7,-151.61 116.21,-150.06"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="117.93,-153.11 124.97,-145.19 114.53,-147 117.93,-153.11"/>
+</g>
+<!-- read_surf -->
+<g id="program~~test_morpho~~CallsGraph_node11" class="node">
+<title>read_surf</title>
+<polygon fill="#777777" stroke="#777777" points="183,-104 125,-104 125,-80 183,-80 183,-104"/>
+<text text-anchor="middle" x="154" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_surf</text>
+</g>
+<!-- program~test_morpho&#45;&gt;read_surf -->
+<g id="program~~test_morpho~~CallsGraph_edge10" class="edge">
+<title>program~test_morpho&#45;&gt;read_surf</title>
+<path fill="none" stroke="#ff0000" d="M41.63,-226.64C50.41,-202.04 73.11,-146.43 109,-113 111.15,-111 113.52,-109.15 116.02,-107.46"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="118,-110.36 124.85,-102.28 114.46,-104.32 118,-110.36"/>
+</g>
+<!-- sort_array2 -->
+<g id="program~~test_morpho~~CallsGraph_node12" class="node">
+<title>sort_array2</title>
+<polygon fill="#777777" stroke="#777777" points="439,-189 372,-189 372,-165 439,-165 439,-189"/>
+<text text-anchor="middle" x="405.5" y="-174.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</g>
+<!-- program~test_morpho&#45;&gt;sort_array2 -->
+<g id="program~~test_morpho~~CallsGraph_edge11" class="edge">
+<title>program~test_morpho&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#ff0000" d="M38.34,-226.87C41.3,-194.7 54.27,-107.19 109,-71 201.59,-9.78 333.88,-113.06 384.11,-157.84"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="381.95,-160.61 391.71,-164.74 386.66,-155.43 381.95,-160.61"/>
+</g>
+<!-- write_surf -->
+<g id="program~~test_morpho~~CallsGraph_node13" class="node">
+<title>write_surf</title>
+<polygon fill="#777777" stroke="#777777" points="183.5,-24 124.5,-24 124.5,0 183.5,0 183.5,-24"/>
+<text text-anchor="middle" x="154" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">write_surf</text>
+</g>
+<!-- program~test_morpho&#45;&gt;write_surf -->
+<g id="program~~test_morpho~~CallsGraph_edge12" class="edge">
+<title>program~test_morpho&#45;&gt;write_surf</title>
+<path fill="none" stroke="#ff0000" d="M38.93,-226.72C43.42,-192.98 60,-97.44 109,-38 111.4,-35.09 114.21,-32.43 117.24,-30.02"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="119.39,-32.78 125.61,-24.2 115.4,-27.04 119.39,-32.78"/>
+</g>
+<!-- proc~calc_moments_1d -->
+<g id="program~~test_morpho~~CallsGraph_node15" class="node">
+<title>proc~calc_moments_1d</title>
+<g id="a_program~~test_morpho~~CallsGraph_node15"><a xlink:href="../proc/calc_moments_1d.html" xlink:title="calc_moments_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="336,-356 235,-356 235,-332 336,-332 336,-356"/>
+<text text-anchor="middle" x="285.5" y="-341.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments_1D</text>
+</a>
+</g>
+</g>
+<!-- proc~calc_moments&#45;&gt;proc~calc_moments_1d -->
+<g id="program~~test_morpho~~CallsGraph_edge13" class="edge">
+<title>proc~calc_moments&#45;&gt;proc~calc_moments_1d</title>
+<path fill="none" stroke="#ffff00" d="M195.26,-344C204.52,-344 214.56,-344 224.46,-344"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="224.68,-347.5 234.68,-344 224.67,-340.5 224.68,-347.5"/>
+</g>
+<!-- proc~calcul_normales&#45;&gt;get_unit -->
+<g id="program~~test_morpho~~CallsGraph_edge14" class="edge">
+<title>proc~calcul_normales&#45;&gt;get_unit</title>
+<path fill="none" stroke="#7fff00" d="M193.15,-398.08C210.74,-403.65 231.5,-410.22 248.78,-415.69"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="247.91,-419.09 258.5,-418.77 250.02,-412.41 247.91,-419.09"/>
+</g>
+<!-- proc~calc_median -->
+<g id="program~~test_morpho~~CallsGraph_node14" class="node">
+<title>proc~calc_median</title>
+<g id="a_program~~test_morpho~~CallsGraph_node14"><a xlink:href="../proc/calc_median.html" xlink:title="calc_median">
+<polygon fill="#d9534f" stroke="#d9534f" points="322,-314 249,-314 249,-290 322,-290 322,-314"/>
+<text text-anchor="middle" x="285.5" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_median</text>
+</a>
+</g>
+</g>
+<!-- proc~count_cell&#45;&gt;proc~calc_median -->
+<g id="program~~test_morpho~~CallsGraph_edge15" class="edge">
+<title>proc~count_cell&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#00ff00" d="M184.71,-302C200.76,-302 220.93,-302 238.93,-302"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="238.94,-305.5 248.94,-302 238.94,-298.5 238.94,-305.5"/>
+</g>
+<!-- proc~flood -->
+<g id="program~~test_morpho~~CallsGraph_node16" class="node">
+<title>proc~flood</title>
+<g id="a_program~~test_morpho~~CallsGraph_node16"><a xlink:href="../proc/flood.html" xlink:title="flood">
+<polygon fill="#d9534f" stroke="#d9534f" points="312.5,-272 258.5,-272 258.5,-248 312.5,-248 312.5,-272"/>
+<text text-anchor="middle" x="285.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">flood</text>
+</a>
+</g>
+</g>
+<!-- proc~count_cell&#45;&gt;proc~flood -->
+<g id="program~~test_morpho~~CallsGraph_edge16" class="edge">
+<title>proc~count_cell&#45;&gt;proc~flood</title>
+<path fill="none" stroke="#00ff00" d="M184.71,-292.36C203.75,-286.19 228.57,-278.14 248.69,-271.61"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="250,-274.87 258.44,-268.45 247.84,-268.21 250,-274.87"/>
+</g>
+<!-- proc~calc_median&#45;&gt;sort_array2 -->
+<g id="program~~test_morpho~~CallsGraph_edge17" class="edge">
+<title>proc~calc_median&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#ff0000" d="M322.06,-289.97C327.03,-287.44 331.84,-284.47 336,-281 363.34,-258.21 383.85,-221.72 395,-198.58"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="398.29,-199.81 399.33,-189.27 391.94,-196.86 398.29,-199.81"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-angle~2"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>angle</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-area"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>area</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-array~3"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>array</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c1"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c2"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cp"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dx~10"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dy~10"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i~46"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ii~7"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ii</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-imask"></span>
+              integer(kind=I4),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>imask</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-j~32"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>j</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-jj~5"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>jj</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-k~19"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>k</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~6"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-maxtab~2"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>maxtab</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-median_size"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>median_size</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mintab~2"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mintab</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mom~3"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mom</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_cells"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_cells</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ni"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ni</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nj"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nj</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nnx~2"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nnx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nny~2"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nny</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-res_hori"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>res_hori</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal_surf~4"></span>
+              type(SCALE_SURF)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal_surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sp"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t~3"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>t</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-topo~3"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>topo</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ua~3"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ua</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vec~2"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vec</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vec_tmp"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vec_tmp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+ 
+    <section>
+    <h2>Functions</h2>
+      <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-plane"></span> <h3> function <a href='../proc/plane.html'>plane</a>(a, b, c, x, y)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-a~11"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>a</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-b~9"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>b</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-c~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>c</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-x~20"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>x</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-y~9"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>y</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=r8)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+    </section>
+    <br>
+
+
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">test_morpho</span>
+<span class="k">use </span><span class="n">data_arch</span><span class="p">,</span><span class="w">     </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">I4</span><span class="p">,</span><span class="w"> </span><span class="n">R8</span><span class="p">,</span><span class="w"> </span><span class="n">PI_R8</span>
+<span class="k">use </span><span class="n">miscellaneous</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">get_unit</span>
+<span class="k">use </span><span class="n">surfile</span><span class="p">,</span><span class="w">       </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">init_scal</span><span class="p">,</span><span class="w"> </span><span class="n">read_surf</span><span class="p">,</span><span class="w"> </span><span class="n">write_surf</span><span class="p">,</span><span class="w"> </span><span class="n">SCALE_SURF</span>
+<span class="k">use </span><span class="n">sort_arrays</span><span class="p">,</span><span class="w">   </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">sort_array2</span>
+<span class="k">use </span><span class="n">stat_mom</span><span class="p">,</span><span class="w">      </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">calc_moments</span><span class="p">,</span><span class="w"> </span><span class="n">moment_stat</span>
+<span class="k">use </span><span class="n">morpho</span><span class="p">,</span><span class="w">        </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">calcul_normales</span><span class="p">,</span><span class="w"> </span><span class="n">surf_area</span><span class="p">,</span><span class="w"> </span><span class="n">count_cell</span><span class="p">,</span><span class="w"> </span><span class="n">erode_dilate</span><span class="p">,</span><span class="w"> </span><span class="n">def_masque</span>
+<span class="k">implicit none</span>
+
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="k">array</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">vec</span><span class="p">,</span><span class="w"> </span><span class="n">vec_tmp</span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">imask</span>
+
+<span class="k">type</span><span class="p">(</span><span class="n">SCALE_SURF</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">scal_surf</span>
+
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w"> </span><span class="n">nb_cells</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">median_size</span><span class="p">,</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="n">topo</span><span class="p">,</span><span class="w"> </span><span class="n">mintab</span><span class="p">,</span><span class="w"> </span><span class="n">maxtab</span>
+
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ni</span><span class="p">,</span><span class="w"> </span><span class="n">nj</span><span class="p">,</span><span class="w"> </span><span class="n">ii</span><span class="p">,</span><span class="w"> </span><span class="n">jj</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">ua</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">cp</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="p">,</span><span class="w"> </span><span class="n">res_hori</span><span class="p">,</span><span class="w"> </span><span class="n">area</span>
+<span class="k">type</span><span class="p">(</span><span class="n">moment_stat</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mom</span>
+
+<span class="c">!----------------------------------------------------------------------------------</span>
+<span class="c">!---------- Returns the number of cells of a given mask ---------------------------</span>
+<span class="c">!----------------------------------------------------------------------------------</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/mask.sur&quot;</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w">              </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">           </span><span class="c">!</span>
+
+<span class="n">nnx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span>
+<span class="n">nny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">count_cell</span><span class="p">(</span><span class="w">  </span><span class="n">msk</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="nb">long</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">larg</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">nbr_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_cells</span><span class="p">,</span><span class="w">             </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">med_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median_size</span><span class="w"> </span><span class="p">)</span><span class="w">            </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/res_count_cell.sur&quot;</span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R8</span><span class="w"> </span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                  </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(a, T25, I3, a, E12.4, a)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;initial mask:&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">nb_cells</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; cells, &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">median_size</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; % surface&#39;</span>
+
+<span class="c">!----------------------------------------------------------------------------------</span>
+<span class="c">!---- Returns the number of cells of a given mask after erosion -------------------</span>
+<span class="c">!----------------------------------------------------------------------------------</span>
+
+<span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">erode_dilate</span><span class="p">(</span><span class="w"> </span><span class="n">msk</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">val</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">act</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;erode&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">                </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">count_cell</span><span class="p">(</span><span class="w">  </span><span class="n">msk</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="nb">long</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">larg</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">nbr_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_cells</span><span class="p">,</span><span class="w">             </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">med_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median_size</span><span class="w"> </span><span class="p">)</span><span class="w">            </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/res_count_cell_erode.sur&quot;</span><span class="p">,</span><span class="w">           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R8</span><span class="w"> </span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                  </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(a, T25, I3, a, E12.4, a)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;mask after erode:&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">nb_cells</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; cells, &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">median_size</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; % surface&#39;</span>
+
+<span class="c">!----------------------------------------------------------------------------------</span>
+<span class="c">!----- Returns the number of cells of a given mask after erosion and dilation -----</span>
+<span class="c">!----------------------------------------------------------------------------------</span>
+
+<span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="k">call </span><span class="n">erode_dilate</span><span class="p">(</span><span class="w"> </span><span class="n">msk</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">val</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">act</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;dilat&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">                </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">count_cell</span><span class="p">(</span><span class="w">  </span><span class="n">msk</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="nb">long</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">larg</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">nbr_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_cells</span><span class="p">,</span><span class="w">             </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">med_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">median_size</span><span class="w"> </span><span class="p">)</span><span class="w">            </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/res_count_cell_erode_dilat.sur&quot;</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R8</span><span class="w"> </span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                  </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(a, T25, I3, a, E12.4, a)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;mask erode + dilate:&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">nb_cells</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; cells, &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">median_size</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; % surface&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;--------------------------------------------------------&#39;</span>
+
+<span class="c">!----------------------------------------------------------------------------------</span>
+<span class="c">!---------- Returns the % age of heights above c2, once c1 heights are removed ----</span>
+<span class="c">!----------------------------------------------------------------------------------</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="k">allocate</span><span class="p">(</span><span class="w">   </span><span class="n">vec</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">! thresholds</span>
+<span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.15_R8</span>
+<span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.85_R8</span>
+
+<span class="c">! surface made of increasing integers</span>
+<span class="n">vec</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nnx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span>
+
+<span class="n">mintab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">minval</span><span class="p">(</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="n">maxtab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">maxval</span><span class="p">(</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">! heights rescaled between 0 and 1</span>
+<span class="n">vec_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mintab</span><span class="w"> </span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="w"> </span><span class="n">maxtab</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mintab</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">! shuffle heights</span>
+<span class="k">call </span><span class="nb">random_number</span><span class="p">(</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">sort_array2</span><span class="p">(</span><span class="n">tab_inout</span><span class="w"> </span><span class="o">=</span><span class="w">     </span><span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="n">tab1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                         </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="k">array</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w"> </span><span class="n">vec_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="n">nny</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">! mask heights above c2, when heights below c1 are ignored</span>
+<span class="k">call </span><span class="n">def_masque</span><span class="p">(</span><span class="w"> </span><span class="n">msk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="w"> </span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">               </span><span class="n">crit1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c1</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">               </span><span class="n">crit2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">top</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo</span><span class="w"> </span><span class="p">)</span><span class="w">                   </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/mask_after_threshold.sur&quot;</span><span class="p">,</span><span class="w">           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="w"> </span><span class="n">imask</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="nb">kind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R8</span><span class="w"> </span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                                  </span><span class="c">!</span>
+
+<span class="c">! topo is the fraction of heights that are involved</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;percentage of heights abobe 85%, without the first 15%: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">topo</span><span class="w"> </span><span class="c">! = 100. - 100 * ( c1 + c2 * (1. - c1) )</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;--------------------------------------------------------&#39;</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">imask</span><span class="p">,</span><span class="w"> </span><span class="n">vec</span><span class="p">,</span><span class="w"> </span><span class="n">vec_tmp</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">!----------------------------------------------------------------------------------</span>
+<span class="c">!--------- Returns the % age of surface nearly horizontal -------------------------</span>
+<span class="c">!----------------------------------------------------------------------------------</span>
+
+<span class="n">nnx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="k">allocate</span><span class="p">(</span><span class="w">   </span><span class="n">vec</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="p">)</span>
+
+<span class="c">! the domain is divided into 4x4 patches</span>
+<span class="n">ni</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span>
+<span class="n">nj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="c">! cone half angle</span>
+<span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5._R8</span>
+
+<span class="c">! lag along x and y</span>
+<span class="n">dx</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.e-7_R8</span>
+<span class="n">dy</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mf">1.e-7_R8</span>
+
+<span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">   </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="w">      </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c">! subdomain number</span>
+
+<span class="w">      </span><span class="c">! the subdomain is a plane of equation: z = -a.x -b.y -c</span>
+<span class="w">      </span><span class="c">! the normal coordinates are (-a, -b, +1)/sqrt(a**2 + b**2 + 1)</span>
+<span class="w">      </span><span class="c">! and the scalar product with \vec{k} is 1/sqrt(a**2 + b**2 + 1)</span>
+<span class="w">      </span><span class="c">! which is also cos(\theta).</span>
+<span class="w">      </span><span class="c">! Therefore a**2 + b**2 = tan(\theta)**2, so if a = cos(\phi).tan(\theta)</span>
+<span class="w">      </span><span class="c">! b = sin(\phi).tan(\theta), the relationship is satisfied (whatever \phi).</span>
+<span class="w">      </span><span class="c">! With \theta = k * 0.11 * angle, 9 subdomains are concerned.</span>
+
+<span class="w">      </span><span class="n">t</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">tan</span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.11</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI_R8</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">180</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">call </span><span class="nb">random_number</span><span class="p">(</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="n">cp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">cp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="w">      </span><span class="k">call </span><span class="nb">random_number</span><span class="p">(</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="p">)</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.5_R8</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">         </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="mf">1._R8</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cp</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         </span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="mf">1._R8</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cp</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      do </span><span class="n">ii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ni</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ni</span>
+<span class="w">      </span><span class="k">do </span><span class="n">jj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nj</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nj</span>
+
+<span class="w">         </span><span class="k">array</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span><span class="w"> </span><span class="n">jj</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plane</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                                </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w">                 </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                                </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0._R8</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                                </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w">                </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                                </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jj</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="p">)</span><span class="w">                  </span><span class="c">!</span>
+
+<span class="w">      </span><span class="k">enddo</span>
+<span class="k">      enddo</span>
+
+<span class="k">   enddo</span>
+<span class="k">enddo</span>
+
+<span class="k">call </span><span class="n">calc_moments</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="n">nnx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="p">]</span><span class="w"> </span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">mx</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">mom</span><span class="p">,</span><span class="w">                                           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                   </span><span class="n">nb_mom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w">                                               </span><span class="c">!</span>
+
+<span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mom</span><span class="p">%</span><span class="n">mu</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">mom</span><span class="p">%</span><span class="n">si</span>
+
+<span class="k">call </span><span class="n">init_scal</span><span class="p">(</span><span class="w"> </span><span class="n">scal</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">nx</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">ny</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">          </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">lx</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">ly</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">unit_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;m &#39;</span><span class="w"> </span><span class="p">)</span><span class="w">           </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/hori.sur&quot;</span><span class="p">,</span><span class="w">      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">             </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">calcul_normales</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="nb">long</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="n">larg</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="n">scale_xyz</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">mom</span><span class="p">%</span><span class="n">si</span><span class="p">],</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="n">cone_angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w">                </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="n">print_mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                      </span><span class="n">hori</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">res_hori</span><span class="w"> </span><span class="p">)</span><span class="w">               </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">surf_area</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="nb">long</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">scale_xyz</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="p">,</span><span class="w"> </span><span class="n">mom</span><span class="p">%</span><span class="n">si</span><span class="p">],</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">aire</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">)</span><span class="w">                   </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">get_unit</span><span class="p">(</span><span class="n">ua</span><span class="p">)</span>
+<span class="k">open</span><span class="p">(</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ua</span><span class="p">,</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/mask_angle.txt&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="k">read</span><span class="p">(</span><span class="w"> </span><span class="n">ua</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nnx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="w"> </span><span class="p">)</span>
+<span class="k">close</span><span class="p">(</span><span class="w"> </span><span class="n">ua</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/mask_hori.sur&quot;</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w"> </span><span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="o">*</span><span class="n">nny</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="n">nny</span><span class="p">]</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                               </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Percentage of nearly horizontal surface (+/- 5°): &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res_hori</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Relativea area minus 1 and z scale:               &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">area</span><span class="p">,</span><span class="w"> </span><span class="n">mom</span><span class="p">%</span><span class="n">si</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">contains</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="n">plane</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<span class="k">implicit none</span>
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span>
+
+<span class="w">   </span><span class="n">plane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span>
+
+<span class="k">return</span>
+<span class="k">endfunction </span><span class="n">plane</span>
+
+<span class="k">endprogram </span><span class="n">test_morpho</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

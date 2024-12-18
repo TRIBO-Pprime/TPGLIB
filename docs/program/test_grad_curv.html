@@ -1,0 +1,1036 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_grad_curv &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>test_grad_curv      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> may, 3 2024</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.7% of total for programs.">8 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/prg.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/prg.f90.html'>prg.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">test_grad_curv</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/test_grad_curv.html#src">test_grad_curv</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/grad_curv.html'>grad_curv</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_grad_curv~~UsesGraph Pages: 1 -->
+<svg id="programtest_grad_curvUsesGraph" width="478pt" height="266pt"
+ viewBox="0.00 0.00 478.00 266.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_grad_curv~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 262.32)">
+<title>program~~test_grad_curv~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-262.32 474,-262.32 474,4 -4,4"/>
+<!-- program~test_grad_curv -->
+<g id="program~~test_grad_curv~~UsesGraph_node1" class="node">
+<title>program~test_grad_curv</title>
+<polygon fill="none" stroke="black" points="470,-141.16 386,-141.16 386,-117.16 470,-117.16 470,-141.16"/>
+<text text-anchor="middle" x="428" y="-126.76" font-family="Helvetica,sans-Serif" font-size="10.50">test_grad_curv</text>
+</g>
+<!-- module~grad_curv -->
+<g id="program~~test_grad_curv~~UsesGraph_node2" class="node">
+<title>module~grad_curv</title>
+<g id="a_program~~test_grad_curv~~UsesGraph_node2"><a xlink:href="../module/grad_curv.html" xlink:title="grad_curv">
+<polygon fill="#337ab7" stroke="#337ab7" points="350,-141.16 289,-141.16 289,-117.16 350,-117.16 350,-141.16"/>
+<text text-anchor="middle" x="319.5" y="-126.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">grad_curv</text>
+</a>
+</g>
+</g>
+<!-- program~test_grad_curv&#45;&gt;module~grad_curv -->
+<g id="program~~test_grad_curv~~UsesGraph_edge1" class="edge">
+<title>program~test_grad_curv&#45;&gt;module~grad_curv</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M385.82,-129.16C377.43,-129.16 368.61,-129.16 360.26,-129.16"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="360.01,-125.66 350.01,-129.16 360.01,-132.66 360.01,-125.66"/>
+</g>
+<!-- data_arch -->
+<g id="program~~test_grad_curv~~UsesGraph_node3" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-181.16 3,-181.16 3,-157.16 64,-157.16 64,-181.16"/>
+<text text-anchor="middle" x="33.5" y="-166.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- module~grad_curv&#45;&gt;data_arch -->
+<g id="program~~test_grad_curv~~UsesGraph_edge2" class="edge">
+<title>module~grad_curv&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M225,-249.16C173.42,-267.9 152.63,-253.58 103,-230.16 82.54,-220.5 63.68,-202.77 50.96,-188.9"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="53.46,-186.44 44.21,-181.27 48.22,-191.08 53.46,-186.44"/>
+</g>
+<!-- fftw3 -->
+<g id="program~~test_grad_curv~~UsesGraph_node4" class="node">
+<title>fftw3</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-221.16 106,-221.16 106,-197.16 160,-197.16 160,-221.16"/>
+<text text-anchor="middle" x="133" y="-206.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw3</text>
+</g>
+<!-- module~grad_curv&#45;&gt;fftw3 -->
+<g id="program~~test_grad_curv~~UsesGraph_edge3" class="edge">
+<title>module~grad_curv&#45;&gt;fftw3</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M314.35,-141.3C304.39,-168.09 276.25,-231.26 227,-249.16"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M225,-249.16C200.33,-258.12 172.85,-242.31 154.61,-228"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="156.37,-224.92 146.45,-221.22 151.9,-230.3 156.37,-224.92"/>
+</g>
+<!-- module~filter -->
+<g id="program~~test_grad_curv~~UsesGraph_node5" class="node">
+<title>module~filter</title>
+<g id="a_program~~test_grad_curv~~UsesGraph_node5"><a xlink:href="../module/filter.html" xlink:title="filter">
+<polygon fill="#337ab7" stroke="#337ab7" points="253,-141.16 199,-141.16 199,-117.16 253,-117.16 253,-141.16"/>
+<text text-anchor="middle" x="226" y="-126.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">filter</text>
+</a>
+</g>
+</g>
+<!-- module~grad_curv&#45;&gt;module~filter -->
+<g id="program~~test_grad_curv~~UsesGraph_edge4" class="edge">
+<title>module~grad_curv&#45;&gt;module~filter</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M288.79,-129.16C280.63,-129.16 271.69,-129.16 263.21,-129.16"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="263.17,-125.66 253.17,-129.16 263.17,-132.66 263.17,-125.66"/>
+</g>
+<!-- sort_arrays -->
+<g id="program~~test_grad_curv~~UsesGraph_node6" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-101.16 0,-101.16 0,-77.16 67,-77.16 67,-101.16"/>
+<text text-anchor="middle" x="33.5" y="-86.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~grad_curv&#45;&gt;sort_arrays -->
+<g id="program~~test_grad_curv~~UsesGraph_edge5" class="edge">
+<title>module~grad_curv&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M314.35,-117.01C304.39,-90.23 276.25,-27.05 227,-9.16"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M225,-9.16C173.42,9.58 152.63,-4.73 103,-28.16 82.54,-37.82 63.68,-55.55 50.96,-69.42"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="48.22,-67.24 44.21,-77.04 53.46,-71.87 48.22,-67.24"/>
+</g>
+<!-- surfile -->
+<g id="program~~test_grad_curv~~UsesGraph_node7" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-61.16 106,-61.16 106,-37.16 160,-37.16 160,-61.16"/>
+<text text-anchor="middle" x="133" y="-46.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- module~grad_curv&#45;&gt;surfile -->
+<g id="program~~test_grad_curv~~UsesGraph_edge6" class="edge">
+<title>module~grad_curv&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M225,-9.16C200.33,-0.19 172.85,-16 154.61,-30.31"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="151.9,-28.02 146.45,-37.1 156.37,-33.4 151.9,-28.02"/>
+</g>
+<!-- module~filter&#45;&gt;data_arch -->
+<g id="program~~test_grad_curv~~UsesGraph_edge7" class="edge">
+<title>module~filter&#45;&gt;data_arch</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M198.76,-139.21C187.83,-143.09 174.93,-147.28 163,-150.16 133.62,-157.25 99.78,-162.12 74.2,-165.16"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="73.67,-161.69 64.13,-166.31 74.47,-168.65 73.67,-161.69"/>
+</g>
+<!-- module~filter&#45;&gt;fftw3 -->
+<g id="program~~test_grad_curv~~UsesGraph_edge8" class="edge">
+<title>module~filter&#45;&gt;fftw3</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M211.18,-141.31C196.39,-154.31 172.75,-175.09 155.53,-190.23"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="152.85,-187.93 147.65,-197.16 157.47,-193.18 152.85,-187.93"/>
+</g>
+<!-- module~filter&#45;&gt;sort_arrays -->
+<g id="program~~test_grad_curv~~UsesGraph_edge10" class="edge">
+<title>module~filter&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M198.76,-119.1C187.83,-115.22 174.93,-111.04 163,-108.16 134.68,-101.33 102.21,-96.55 77,-93.5"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="77.36,-90.02 67.02,-92.33 76.55,-96.97 77.36,-90.02"/>
+</g>
+<!-- module~filter&#45;&gt;surfile -->
+<g id="program~~test_grad_curv~~UsesGraph_edge11" class="edge">
+<title>module~filter&#45;&gt;surfile</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M211.18,-117.01C196.39,-104.01 172.75,-83.23 155.53,-68.08"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="157.47,-65.14 147.65,-61.16 152.85,-70.39 157.47,-65.14"/>
+</g>
+<!-- module~stat_mom -->
+<g id="program~~test_grad_curv~~UsesGraph_node8" class="node">
+<title>module~stat_mom</title>
+<g id="a_program~~test_grad_curv~~UsesGraph_node8"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="163,-141.16 103,-141.16 103,-117.16 163,-117.16 163,-141.16"/>
+<text text-anchor="middle" x="133" y="-126.76" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- module~filter&#45;&gt;module~stat_mom -->
+<g id="program~~test_grad_curv~~UsesGraph_edge9" class="edge">
+<title>module~filter&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M198.68,-129.16C190.77,-129.16 181.91,-129.16 173.35,-129.16"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="173.13,-125.66 163.13,-129.16 173.13,-132.66 173.13,-125.66"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="program~~test_grad_curv~~UsesGraph_edge12" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.75,-141.16C93.58,-144.92 83.3,-149.14 73.57,-153.13"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="71.99,-149.99 64.07,-157.03 74.65,-156.47 71.99,-149.99"/>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="program~~test_grad_curv~~UsesGraph_edge13" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M102.75,-117.16C93.58,-113.4 83.3,-109.18 73.57,-105.19"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="74.65,-101.85 64.07,-101.29 71.99,-108.32 74.65,-101.85"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+      <strong>Surface gradients and curvatures. Example of use.</strong>
+</span></p>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_grad_curv~~CallsGraph Pages: 1 -->
+<svg id="programtest_grad_curvCallsGraph" width="641pt" height="493pt"
+ viewBox="0.00 0.00 641.00 492.56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_grad_curv~~CallsGraph" class="graph" transform="scale(0.75 0.75) rotate(0) translate(4 653)">
+<title>program~~test_grad_curv~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-653 851,-653 851,4 -4,4"/>
+<!-- program~test_grad_curv -->
+<g id="program~~test_grad_curv~~CallsGraph_node1" class="node">
+<title>program~test_grad_curv</title>
+<polygon fill="none" stroke="black" points="84,-578 0,-578 0,-554 84,-554 84,-578"/>
+<text text-anchor="middle" x="42" y="-563.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_grad_curv</text>
+</g>
+<!-- proc~test_label_surf_summits -->
+<g id="program~~test_grad_curv~~CallsGraph_node2" class="node">
+<title>proc~test_label_surf_summits</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node2"><a xlink:href="../proc/test_label_surf_summits.html" xlink:title="test_label_surf_summits">
+<polygon fill="#d9534f" stroke="#d9534f" points="267.5,-578 139.5,-578 139.5,-554 267.5,-554 267.5,-578"/>
+<text text-anchor="middle" x="203.5" y="-563.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_label_surf_summits</text>
+</a>
+</g>
+</g>
+<!-- program~test_grad_curv&#45;&gt;proc~test_label_surf_summits -->
+<g id="program~~test_grad_curv~~CallsGraph_edge1" class="edge">
+<title>program~test_grad_curv&#45;&gt;proc~test_label_surf_summits</title>
+<path fill="none" stroke="#ff0000" d="M84.08,-566C97.86,-566 113.67,-566 129.16,-566"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="129.26,-569.5 139.26,-566 129.26,-562.5 129.26,-569.5"/>
+</g>
+<!-- proc~test_labelize_point -->
+<g id="program~~test_grad_curv~~CallsGraph_node3" class="node">
+<title>proc~test_labelize_point</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node3"><a xlink:href="../proc/test_labelize_point.html" xlink:title="test_labelize_point">
+<polygon fill="#d9534f" stroke="#d9534f" points="618.5,-648 517.5,-648 517.5,-624 618.5,-624 618.5,-648"/>
+<text text-anchor="middle" x="568" y="-633.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_labelize_point</text>
+</a>
+</g>
+</g>
+<!-- program~test_grad_curv&#45;&gt;proc~test_labelize_point -->
+<g id="program~~test_grad_curv~~CallsGraph_edge2" class="edge">
+<title>program~test_grad_curv&#45;&gt;proc~test_labelize_point</title>
+<path fill="none" stroke="#ff0000" d="M84.02,-577.77C95.61,-580.94 108.26,-584.25 120,-587 209.53,-608 231.66,-616.38 323,-627 385.5,-634.26 457.56,-636.13 507.08,-636.42"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="507.28,-639.92 517.29,-636.45 507.3,-632.92 507.28,-639.92"/>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures -->
+<g id="program~~test_grad_curv~~CallsGraph_node4" class="node">
+<title>proc~test_peaks_and_pits_curvatures</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node4"><a xlink:href="../proc/test_peaks_and_pits_curvatures.html" xlink:title="test_peaks_and_pits_curvatures">
+<polygon fill="#d9534f" stroke="#d9534f" points="287,-318 120,-318 120,-294 287,-294 287,-318"/>
+<text text-anchor="middle" x="203.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_peaks_and_pits_curvatures</text>
+</a>
+</g>
+</g>
+<!-- program~test_grad_curv&#45;&gt;proc~test_peaks_and_pits_curvatures -->
+<g id="program~~test_grad_curv~~CallsGraph_edge3" class="edge">
+<title>program~test_grad_curv&#45;&gt;proc~test_peaks_and_pits_curvatures</title>
+<path fill="none" stroke="#ff0000" d="M50.48,-553.81C75.7,-512.69 157.83,-378.82 189.7,-326.87"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="192.79,-328.52 195.04,-318.17 186.82,-324.86 192.79,-328.52"/>
+</g>
+<!-- init_scal -->
+<g id="program~~test_grad_curv~~CallsGraph_node8" class="node">
+<title>init_scal</title>
+<polygon fill="#777777" stroke="#777777" points="422,-618 368,-618 368,-594 422,-594 422,-618"/>
+<text text-anchor="middle" x="395" y="-603.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_scal</text>
+</g>
+<!-- proc~test_label_surf_summits&#45;&gt;init_scal -->
+<g id="program~~test_grad_curv~~CallsGraph_edge4" class="edge">
+<title>proc~test_label_surf_summits&#45;&gt;init_scal</title>
+<path fill="none" stroke="#ff0000" d="M261.36,-578C292.68,-584.61 330.61,-592.62 357.88,-598.38"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="357.26,-601.82 367.77,-600.46 358.71,-594.97 357.26,-601.82"/>
+</g>
+<!-- proc~label_surf_summits -->
+<g id="program~~test_grad_curv~~CallsGraph_node16" class="node">
+<title>proc~label_surf_summits</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node16"><a xlink:href="../proc/label_surf_summits.html" xlink:title="label_surf_summits">
+<polygon fill="#d9534f" stroke="#d9534f" points="620.5,-578 515.5,-578 515.5,-554 620.5,-554 620.5,-578"/>
+<text text-anchor="middle" x="568" y="-563.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">label_surf_summits</text>
+</a>
+</g>
+</g>
+<!-- proc~test_label_surf_summits&#45;&gt;proc~label_surf_summits -->
+<g id="program~~test_grad_curv~~CallsGraph_edge5" class="edge">
+<title>proc~test_label_surf_summits&#45;&gt;proc~label_surf_summits</title>
+<path fill="none" stroke="#ff0000" d="M267.64,-566C334.36,-566 438.9,-566 505.13,-566"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="505.42,-569.5 515.42,-566 505.42,-562.5 505.42,-569.5"/>
+</g>
+<!-- write_surf -->
+<g id="program~~test_grad_curv~~CallsGraph_node22" class="node">
+<title>write_surf</title>
+<polygon fill="#777777" stroke="#777777" points="424.5,-538 365.5,-538 365.5,-514 424.5,-514 424.5,-538"/>
+<text text-anchor="middle" x="395" y="-523.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">write_surf</text>
+</g>
+<!-- proc~test_label_surf_summits&#45;&gt;write_surf -->
+<g id="program~~test_grad_curv~~CallsGraph_edge6" class="edge">
+<title>proc~test_label_surf_summits&#45;&gt;write_surf</title>
+<path fill="none" stroke="#ff0000" d="M261.36,-554C291.81,-547.57 328.51,-539.82 355.58,-534.11"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="356.39,-537.52 365.45,-532.03 354.94,-530.67 356.39,-537.52"/>
+</g>
+<!-- proc~deriv_n -->
+<g id="program~~test_grad_curv~~CallsGraph_node12" class="node">
+<title>proc~deriv_n</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node12"><a xlink:href="../proc/deriv_n.html" xlink:title="deriv_N">
+<polygon fill="#d9534f" stroke="#d9534f" points="847,-649 793,-649 793,-625 847,-625 847,-649"/>
+<text text-anchor="middle" x="820" y="-634.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">deriv_N</text>
+</a>
+</g>
+</g>
+<!-- proc~test_labelize_point&#45;&gt;proc~deriv_n -->
+<g id="program~~test_grad_curv~~CallsGraph_edge7" class="edge">
+<title>proc~test_labelize_point&#45;&gt;proc~deriv_n</title>
+<path fill="none" stroke="#00ff00" d="M618.59,-637.19C634.67,-637.52 652.59,-637.84 669,-638 708.11,-638.39 717.89,-638.32 757,-638 765.25,-637.93 774.12,-637.82 782.49,-637.69"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="782.81,-641.18 792.76,-637.52 782.7,-634.18 782.81,-641.18"/>
+</g>
+<!-- proc~labelize_point -->
+<g id="program~~test_grad_curv~~CallsGraph_node17" class="node">
+<title>proc~labelize_point</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node17"><a xlink:href="../proc/labelize_point.html" xlink:title="labelize_point">
+<polygon fill="#d9534f" stroke="#d9534f" points="752,-629 674,-629 674,-605 752,-605 752,-629"/>
+<text text-anchor="middle" x="713" y="-614.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">labelize_point</text>
+</a>
+</g>
+</g>
+<!-- proc~test_labelize_point&#45;&gt;proc~labelize_point -->
+<g id="program~~test_grad_curv~~CallsGraph_edge8" class="edge">
+<title>proc~test_labelize_point&#45;&gt;proc~labelize_point</title>
+<path fill="none" stroke="#00ff00" d="M618.61,-629.41C633.15,-627.48 649.03,-625.37 663.5,-623.44"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="664.3,-626.87 673.75,-622.08 663.38,-619.93 664.3,-626.87"/>
+</g>
+<!-- selectcase -->
+<g id="program~~test_grad_curv~~CallsGraph_node20" class="node">
+<title>selectcase</title>
+<polygon fill="#777777" stroke="#777777" points="744.5,-587 681.5,-587 681.5,-563 744.5,-563 744.5,-587"/>
+<text text-anchor="middle" x="713" y="-572.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">selectcase</text>
+</g>
+<!-- proc~test_labelize_point&#45;&gt;selectcase -->
+<g id="program~~test_grad_curv~~CallsGraph_edge9" class="edge">
+<title>proc~test_labelize_point&#45;&gt;selectcase</title>
+<path fill="none" stroke="#00ff00" d="M597.25,-623.95C619.38,-614.51 650.37,-601.29 674.57,-590.97"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="675.98,-594.17 683.81,-587.03 673.24,-587.73 675.98,-594.17"/>
+</g>
+<!-- end_fftw3 -->
+<g id="program~~test_grad_curv~~CallsGraph_node5" class="node">
+<title>end_fftw3</title>
+<polygon fill="#777777" stroke="#777777" points="424.5,-339 365.5,-339 365.5,-315 424.5,-315 424.5,-339"/>
+<text text-anchor="middle" x="395" y="-324.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">end_fftw3</text>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;end_fftw3 -->
+<g id="program~~test_grad_curv~~CallsGraph_edge10" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;end_fftw3</title>
+<path fill="none" stroke="#0000ff" d="M287.07,-315.15C310.74,-317.77 335.44,-320.51 355.14,-322.69"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="354.91,-326.19 365.23,-323.81 355.68,-319.23 354.91,-326.19"/>
+</g>
+<!-- fftw_plan_with_nthreads -->
+<g id="program~~test_grad_curv~~CallsGraph_node6" class="node">
+<title>fftw_plan_with_nthreads</title>
+<polygon fill="#777777" stroke="#777777" points="459,-297 331,-297 331,-273 459,-273 459,-297"/>
+<text text-anchor="middle" x="395" y="-282.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw_plan_with_nthreads</text>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;fftw_plan_with_nthreads -->
+<g id="program~~test_grad_curv~~CallsGraph_edge11" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;fftw_plan_with_nthreads</title>
+<path fill="none" stroke="#0000ff" d="M287.07,-296.85C298.29,-295.61 309.75,-294.34 320.79,-293.11"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="321.25,-296.58 330.8,-292 320.48,-289.63 321.25,-296.58"/>
+</g>
+<!-- init_fftw3 -->
+<g id="program~~test_grad_curv~~CallsGraph_node7" class="node">
+<title>init_fftw3</title>
+<polygon fill="#777777" stroke="#777777" points="422.5,-255 367.5,-255 367.5,-231 422.5,-231 422.5,-255"/>
+<text text-anchor="middle" x="395" y="-240.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_fftw3</text>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;init_fftw3 -->
+<g id="program~~test_grad_curv~~CallsGraph_edge12" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;init_fftw3</title>
+<path fill="none" stroke="#0000ff" d="M237.03,-293.94C260.75,-285.28 293.73,-273.51 323,-264 334.14,-260.38 346.34,-256.68 357.44,-253.41"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="358.64,-256.71 367.26,-250.55 356.68,-249.99 358.64,-256.71"/>
+</g>
+<!-- omp_get_max_threads -->
+<g id="program~~test_grad_curv~~CallsGraph_node9" class="node">
+<title>omp_get_max_threads</title>
+<polygon fill="#777777" stroke="#777777" points="456.5,-213 333.5,-213 333.5,-189 456.5,-189 456.5,-213"/>
+<text text-anchor="middle" x="395" y="-198.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">omp_get_max_threads</text>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;omp_get_max_threads -->
+<g id="program~~test_grad_curv~~CallsGraph_edge13" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;omp_get_max_threads</title>
+<path fill="none" stroke="#0000ff" d="M218.48,-293.73C239.71,-275.67 281.94,-241.94 323,-222 327.08,-220.02 331.38,-218.19 335.77,-216.5"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="337.22,-219.7 345.45,-213.03 334.86,-213.11 337.22,-219.7"/>
+</g>
+<!-- proc~curv2 -->
+<g id="program~~test_grad_curv~~CallsGraph_node10" class="node">
+<title>proc~curv2</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node10"><a xlink:href="../proc/curv2.html" xlink:title="curv2">
+<polygon fill="#d9534f" stroke="#d9534f" points="422,-171 368,-171 368,-147 422,-147 422,-171"/>
+<text text-anchor="middle" x="395" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">curv2</text>
+</a>
+</g>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;proc~curv2 -->
+<g id="program~~test_grad_curv~~CallsGraph_edge14" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;proc~curv2</title>
+<path fill="none" stroke="#0000ff" d="M212.45,-293.95C229.61,-268.91 272.62,-211.01 323,-180 333.5,-173.54 346.1,-168.97 357.75,-165.78"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="358.8,-169.13 367.66,-163.33 357.11,-162.33 358.8,-169.13"/>
+</g>
+<!-- proc~curvature -->
+<g id="program~~test_grad_curv~~CallsGraph_node11" class="node">
+<title>proc~curvature</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node11"><a xlink:href="../proc/curvature.html" xlink:title="curvature">
+<polygon fill="#d9534f" stroke="#d9534f" points="597,-417 539,-417 539,-393 597,-393 597,-417"/>
+<text text-anchor="middle" x="568" y="-402.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">curvature</text>
+</a>
+</g>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;proc~curvature -->
+<g id="program~~test_grad_curv~~CallsGraph_edge15" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;proc~curvature</title>
+<path fill="none" stroke="#0000ff" d="M218.67,-318.14C239.81,-335.46 281.56,-366.75 323,-381 392.56,-404.92 479.4,-407.48 528.49,-406.62"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="528.75,-410.12 538.67,-406.38 528.59,-403.12 528.75,-410.12"/>
+</g>
+<!-- proc~fft_filter -->
+<g id="program~~test_grad_curv~~CallsGraph_node13" class="node">
+<title>proc~fft_filter</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node13"><a xlink:href="../proc/fft_filter.html" xlink:title="fft_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="422,-129 368,-129 368,-105 422,-105 422,-129"/>
+<text text-anchor="middle" x="395" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fft_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;proc~fft_filter -->
+<g id="program~~test_grad_curv~~CallsGraph_edge16" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;proc~fft_filter</title>
+<path fill="none" stroke="#0000ff" d="M209.66,-293.73C223.32,-262.72 263.54,-180.63 323,-138 333.28,-130.63 346.16,-125.82 358.11,-122.69"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="358.89,-126.1 367.85,-120.45 357.32,-119.28 358.89,-126.1"/>
+</g>
+<!-- proc~gauss_curv -->
+<g id="program~~test_grad_curv~~CallsGraph_node14" class="node">
+<title>proc~gauss_curv</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node14"><a xlink:href="../proc/gauss_curv.html" xlink:title="gauss_curv">
+<polygon fill="#d9534f" stroke="#d9534f" points="746.5,-378 679.5,-378 679.5,-354 746.5,-354 746.5,-378"/>
+<text text-anchor="middle" x="713" y="-363.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gauss_curv</text>
+</a>
+</g>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;proc~gauss_curv -->
+<g id="program~~test_grad_curv~~CallsGraph_edge17" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;proc~gauss_curv</title>
+<path fill="none" stroke="#0000ff" d="M231.16,-318.01C254.77,-328.01 290.44,-341.62 323,-348 446.94,-372.28 597.14,-370.71 669.28,-368.09"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="669.48,-371.58 679.34,-367.69 669.21,-364.59 669.48,-371.58"/>
+</g>
+<!-- proc~gradient -->
+<g id="program~~test_grad_curv~~CallsGraph_node15" class="node">
+<title>proc~gradient</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node15"><a xlink:href="../proc/gradient.html" xlink:title="gradient">
+<polygon fill="#d9534f" stroke="#d9534f" points="847,-418 793,-418 793,-394 847,-394 847,-418"/>
+<text text-anchor="middle" x="820" y="-403.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gradient</text>
+</a>
+</g>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;proc~gradient -->
+<g id="program~~test_grad_curv~~CallsGraph_edge18" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;proc~gradient</title>
+<path fill="none" stroke="#0000ff" d="M214.36,-318.29C232.94,-340.44 275.56,-386.63 323,-407 482.52,-475.48 698.38,-435.49 782.93,-415.4"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="783.92,-418.76 792.81,-413 782.26,-411.96 783.92,-418.76"/>
+</g>
+<!-- proc~peaks_and_pits_curvatures -->
+<g id="program~~test_grad_curv~~CallsGraph_node18" class="node">
+<title>proc~peaks_and_pits_curvatures</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node18"><a xlink:href="../proc/peaks_and_pits_curvatures.html" xlink:title="peaks_and_pits_curvatures">
+<polygon fill="#d9534f" stroke="#d9534f" points="467,-496 323,-496 323,-472 467,-472 467,-496"/>
+<text text-anchor="middle" x="395" y="-481.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">peaks_and_pits_curvatures</text>
+</a>
+</g>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;proc~peaks_and_pits_curvatures -->
+<g id="program~~test_grad_curv~~CallsGraph_edge19" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;proc~peaks_and_pits_curvatures</title>
+<path fill="none" stroke="#0000ff" d="M210.8,-318.12C226.18,-346.57 268.38,-418.19 323,-458 328.15,-461.75 333.9,-465.02 339.84,-467.85"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="338.7,-471.17 349.27,-471.94 341.49,-464.75 338.7,-471.17"/>
+</g>
+<!-- read_surf -->
+<g id="program~~test_grad_curv~~CallsGraph_node19" class="node">
+<title>read_surf</title>
+<polygon fill="#777777" stroke="#777777" points="424,-87 366,-87 366,-63 424,-63 424,-87"/>
+<text text-anchor="middle" x="395" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_surf</text>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;read_surf -->
+<g id="program~~test_grad_curv~~CallsGraph_edge20" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;read_surf</title>
+<path fill="none" stroke="#0000ff" d="M207.79,-293.91C218.2,-258 253.89,-151.01 323,-96 332.41,-88.51 344.43,-83.69 355.89,-80.59"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="356.8,-83.97 365.74,-78.28 355.21,-77.15 356.8,-83.97"/>
+</g>
+<!-- unit2iuf -->
+<g id="program~~test_grad_curv~~CallsGraph_node21" class="node">
+<title>unit2iuf</title>
+<polygon fill="#777777" stroke="#777777" points="422,-45 368,-45 368,-21 422,-21 422,-45"/>
+<text text-anchor="middle" x="395" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit2iuf</text>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;unit2iuf -->
+<g id="program~~test_grad_curv~~CallsGraph_edge21" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;unit2iuf</title>
+<path fill="none" stroke="#0000ff" d="M206.58,-293.89C214.16,-253.43 244.13,-121.71 323,-54 332.75,-45.63 345.72,-40.59 357.9,-37.56"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="358.8,-40.95 367.86,-35.46 357.36,-34.1 358.8,-40.95"/>
+</g>
+<!-- proc~test_peaks_and_pits_curvatures&#45;&gt;write_surf -->
+<g id="program~~test_grad_curv~~CallsGraph_edge22" class="edge">
+<title>proc~test_peaks_and_pits_curvatures&#45;&gt;write_surf</title>
+<path fill="none" stroke="#0000ff" d="M208.31,-318.45C219.65,-353.43 256.64,-453.43 323,-505 332.42,-512.32 344.34,-517.09 355.71,-520.2"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="354.95,-523.62 365.49,-522.53 356.57,-516.81 354.95,-523.62"/>
+</g>
+<!-- proc~curvature&#45;&gt;proc~gauss_curv -->
+<g id="program~~test_grad_curv~~CallsGraph_edge23" class="edge">
+<title>proc~curvature&#45;&gt;proc~gauss_curv</title>
+<path fill="none" stroke="#00ff00" d="M597.25,-397.29C617.91,-391.66 646.27,-383.93 669.63,-377.55"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="670.58,-380.93 679.3,-374.92 668.73,-374.17 670.58,-380.93"/>
+</g>
+<!-- proc~curvature&#45;&gt;proc~gradient -->
+<g id="program~~test_grad_curv~~CallsGraph_edge24" class="edge">
+<title>proc~curvature&#45;&gt;proc~gradient</title>
+<path fill="none" stroke="#00ff00" d="M597.19,-405.11C642.73,-405.29 732.45,-405.65 782.7,-405.85"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="782.78,-409.36 792.8,-405.9 782.81,-402.36 782.78,-409.36"/>
+</g>
+<!-- calc_fftw3_real_bwd -->
+<g id="program~~test_grad_curv~~CallsGraph_node23" class="node">
+<title>calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="622.5,-234 513.5,-234 513.5,-210 622.5,-210 622.5,-234"/>
+<text text-anchor="middle" x="568" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;calc_fftw3_real_bwd -->
+<g id="program~~test_grad_curv~~CallsGraph_edge25" class="edge">
+<title>proc~fft_filter&#45;&gt;calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#00ffa9" d="M422.17,-119.9C436.63,-122.62 454.2,-127.87 467,-138 492.29,-158.02 478.01,-180.61 503,-201 504.77,-202.44 506.64,-203.79 508.58,-205.04"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="507.07,-208.2 517.52,-209.97 510.45,-202.07 507.07,-208.2"/>
+</g>
+<!-- calc_fftw3_real_fwd -->
+<g id="program~~test_grad_curv~~CallsGraph_node24" class="node">
+<title>calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="621,-192 515,-192 515,-168 621,-168 621,-192"/>
+<text text-anchor="middle" x="568" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;calc_fftw3_real_fwd -->
+<g id="program~~test_grad_curv~~CallsGraph_edge26" class="edge">
+<title>proc~fft_filter&#45;&gt;calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#00ffa9" d="M422.16,-123.13C435.8,-126.72 452.6,-131.78 467,-138 484,-145.35 486.11,-151.4 503,-159 507.31,-160.94 511.85,-162.78 516.44,-164.52"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="515.29,-167.83 525.88,-167.93 517.67,-161.25 515.29,-167.83"/>
+</g>
+<!-- extend -->
+<g id="program~~test_grad_curv~~CallsGraph_node25" class="node">
+<title>extend</title>
+<polygon fill="#777777" stroke="#777777" points="595,-150 541,-150 541,-126 595,-126 595,-150"/>
+<text text-anchor="middle" x="568" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">extend</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;extend -->
+<g id="program~~test_grad_curv~~CallsGraph_edge27" class="edge">
+<title>proc~fft_filter&#45;&gt;extend</title>
+<path fill="none" stroke="#00ffa9" d="M422.34,-120.24C451.42,-123.81 498.41,-129.58 530.91,-133.57"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="530.55,-137.05 540.91,-134.8 531.41,-130.1 530.55,-137.05"/>
+</g>
+<!-- proc~gaussian_filter -->
+<g id="program~~test_grad_curv~~CallsGraph_node26" class="node">
+<title>proc~gaussian_filter</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node26"><a xlink:href="../proc/gaussian_filter.html" xlink:title="gaussian_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="609,-108 527,-108 527,-84 609,-84 609,-108"/>
+<text text-anchor="middle" x="568" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gaussian_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_filter&#45;&gt;proc~gaussian_filter -->
+<g id="program~~test_grad_curv~~CallsGraph_edge28" class="edge">
+<title>proc~fft_filter&#45;&gt;proc~gaussian_filter</title>
+<path fill="none" stroke="#00ffa9" d="M422.34,-113.76C447.43,-110.68 485.83,-105.97 516.77,-102.17"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="517.44,-105.61 526.94,-100.92 516.59,-98.66 517.44,-105.61"/>
+</g>
+<!-- tab_calc_fftw3_real_bwd -->
+<g id="program~~test_grad_curv~~CallsGraph_node29" class="node">
+<title>tab_calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="633,-66 503,-66 503,-42 633,-42 633,-66"/>
+<text text-anchor="middle" x="568" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;tab_calc_fftw3_real_bwd -->
+<g id="program~~test_grad_curv~~CallsGraph_edge29" class="edge">
+<title>proc~fft_filter&#45;&gt;tab_calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#00ffa9" d="M422.16,-110.87C435.8,-107.28 452.6,-102.22 467,-96 484,-88.65 486.11,-82.6 503,-75 507.31,-73.06 511.85,-71.22 516.44,-69.48"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="517.67,-72.75 525.88,-66.07 515.29,-66.17 517.67,-72.75"/>
+</g>
+<!-- tab_calc_fftw3_real_fwd -->
+<g id="program~~test_grad_curv~~CallsGraph_node30" class="node">
+<title>tab_calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="631.5,-24 504.5,-24 504.5,0 631.5,0 631.5,-24"/>
+<text text-anchor="middle" x="568" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;tab_calc_fftw3_real_fwd -->
+<g id="program~~test_grad_curv~~CallsGraph_edge30" class="edge">
+<title>proc~fft_filter&#45;&gt;tab_calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#00ffa9" d="M422.17,-114.1C436.63,-111.38 454.2,-106.13 467,-96 492.29,-75.98 478.01,-53.39 503,-33 504.77,-31.56 506.64,-30.21 508.58,-28.96"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="510.45,-31.93 517.52,-24.03 507.07,-25.8 510.45,-31.93"/>
+</g>
+<!-- proc~gauss_curv&#45;&gt;proc~gradient -->
+<g id="program~~test_grad_curv~~CallsGraph_edge31" class="edge">
+<title>proc~gauss_curv&#45;&gt;proc~gradient</title>
+<path fill="none" stroke="#00ffff" d="M745.5,-378C757.42,-382.54 771.06,-387.74 783.34,-392.41"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="782.23,-395.74 792.82,-396.03 784.72,-389.2 782.23,-395.74"/>
+</g>
+<!-- proc~label_surf_summits&#45;&gt;proc~labelize_point -->
+<g id="program~~test_grad_curv~~CallsGraph_edge33" class="edge">
+<title>proc~label_surf_summits&#45;&gt;proc~labelize_point</title>
+<path fill="none" stroke="#0054ff" d="M602.89,-578.09C622.43,-585.05 647.2,-593.89 668.2,-601.38"/>
+<polygon fill="#0054ff" stroke="#0054ff" points="667.26,-604.76 677.86,-604.82 669.62,-598.17 667.26,-604.76"/>
+</g>
+<!-- proc~label_surf_summits&#45;&gt;selectcase -->
+<g id="program~~test_grad_curv~~CallsGraph_edge34" class="edge">
+<title>proc~label_surf_summits&#45;&gt;selectcase</title>
+<path fill="none" stroke="#0054ff" d="M620.63,-569.25C637.14,-570.29 655.18,-571.42 670.84,-572.41"/>
+<polygon fill="#0054ff" stroke="#0054ff" points="671.06,-575.93 681.26,-573.07 671.5,-568.94 671.06,-575.93"/>
+</g>
+<!-- proc~gradient_corner -->
+<g id="program~~test_grad_curv~~CallsGraph_node27" class="node">
+<title>proc~gradient_corner</title>
+<g id="a_program~~test_grad_curv~~CallsGraph_node27"><a xlink:href="../proc/gradient_corner.html" xlink:title="gradient_corner">
+<polygon fill="#d9534f" stroke="#d9534f" points="757,-545 669,-545 669,-521 757,-521 757,-545"/>
+<text text-anchor="middle" x="713" y="-530.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gradient_corner</text>
+</a>
+</g>
+</g>
+<!-- proc~label_surf_summits&#45;&gt;proc~gradient_corner -->
+<g id="program~~test_grad_curv~~CallsGraph_edge32" class="edge">
+<title>proc~label_surf_summits&#45;&gt;proc~gradient_corner</title>
+<path fill="none" stroke="#0054ff" d="M620.63,-554.09C633.13,-551.2 646.5,-548.11 659.06,-545.22"/>
+<polygon fill="#0054ff" stroke="#0054ff" points="659.97,-548.6 668.93,-542.94 658.39,-541.78 659.97,-548.6"/>
+</g>
+<!-- proc~labelize_point&#45;&gt;proc~deriv_n -->
+<g id="program~~test_grad_curv~~CallsGraph_edge35" class="edge">
+<title>proc~labelize_point&#45;&gt;proc~deriv_n</title>
+<path fill="none" stroke="#0000ff" d="M752.2,-624.28C762.21,-626.18 772.97,-628.23 782.87,-630.12"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="782.33,-633.58 792.81,-632.01 783.64,-626.7 782.33,-633.58"/>
+</g>
+<!-- proc~peaks_and_pits_curvatures&#45;&gt;proc~curvature -->
+<g id="program~~test_grad_curv~~CallsGraph_edge36" class="edge">
+<title>proc~peaks_and_pits_curvatures&#45;&gt;proc~curvature</title>
+<path fill="none" stroke="#5400ff" d="M422.34,-471.83C451.68,-458.28 499.23,-436.31 531.75,-421.29"/>
+<polygon fill="#5400ff" stroke="#5400ff" points="533.3,-424.43 540.91,-417.05 530.36,-418.07 533.3,-424.43"/>
+</g>
+<!-- proc~peaks_and_pits_curvatures&#45;&gt;proc~label_surf_summits -->
+<g id="program~~test_grad_curv~~CallsGraph_edge37" class="edge">
+<title>proc~peaks_and_pits_curvatures&#45;&gt;proc~label_surf_summits</title>
+<path fill="none" stroke="#5400ff" d="M443.22,-496.09C451.28,-498.68 459.48,-501.66 467,-505 493.76,-516.87 522.04,-534.68 541.68,-548"/>
+<polygon fill="#5400ff" stroke="#5400ff" points="539.83,-550.97 550.05,-553.76 543.8,-545.21 539.83,-550.97"/>
+</g>
+<!-- sort_array2 -->
+<g id="program~~test_grad_curv~~CallsGraph_node28" class="node">
+<title>sort_array2</title>
+<polygon fill="#777777" stroke="#777777" points="601.5,-497 534.5,-497 534.5,-473 601.5,-473 601.5,-497"/>
+<text text-anchor="middle" x="568" y="-482.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</g>
+<!-- proc~peaks_and_pits_curvatures&#45;&gt;sort_array2 -->
+<g id="program~~test_grad_curv~~CallsGraph_edge38" class="edge">
+<title>proc~peaks_and_pits_curvatures&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#5400ff" d="M467.03,-484.42C486.34,-484.53 506.65,-484.65 523.89,-484.75"/>
+<polygon fill="#5400ff" stroke="#5400ff" points="524.17,-488.25 534.19,-484.81 524.21,-481.25 524.17,-488.25"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprogramtest_grad_curvCallsGraph = svgPanZoom('#programtest_grad_curvCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    
+    
+    
+
+    
+
+
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">test_grad_curv</span>
+<span class="k">use </span><span class="n">grad_curv</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">test_labelize_point</span><span class="p">,</span><span class="w"> </span><span class="n">test_label_surf_summits</span><span class="p">,</span><span class="w"> </span><span class="n">test_peaks_and_pits_curvatures</span>
+<span class="k">implicit none</span>
+
+<span class="k">call </span><span class="n">test_label_surf_summits</span><span class="p">()</span>
+
+<span class="k">call </span><span class="n">test_labelize_point</span><span class="p">()</span>
+
+<span class="k">call </span><span class="n">test_peaks_and_pits_curvatures</span><span class="p">()</span>
+
+<span class="k">stop</span>
+
+<span class="c">!~  expected output:</span>
+
+<span class="c">!~            9          10           9</span>
+<span class="c">!~  numerical h      :    1.8512999999999997       ; theoretical h      :    1.8512999999999999</span>
+<span class="c">!~  numerical dhdx   :  -0.44879999999999987       ; theoretical dhdx   :  -0.44879999999999992</span>
+<span class="c">!~  numerical dhdy   :   -1.3200000000000001       ; theoretical dhdy   :   -1.3200000000000001</span>
+<span class="c">!~  numerical d2hdx2 :    1.7952000000000008       ; theoretical d2hdx2 :    1.7951999999999999</span>
+<span class="c">!~  numerical d2hdy2 :   -4.1249999999999991       ; theoretical d2hdy2 :   -4.1250000000000000</span>
+<span class="c">!~  numerical d2hdxdy:   0.31999999999999984       ; theoretical d2hdxdy:   0.31999999999999995</span>
+<span class="c">!~  theoretical xx0:  -0.10000000000000001      numerical xx0:   -9.9999999744180723E-002</span>
+<span class="c">!~  theoretical yy0:   0.20000000000000001      numerical yy0:   0.19999999780599384</span>
+<span class="c">!~  theoretical point: S numerical point: S</span>
+<span class="c">!~  nx, ny =         1551        1555</span>
+<span class="c">!~  dx, dy =    1.2899998437499999E-007   1.2899998437499999E-007</span>
+<span class="c">!~  S_param_grad:    9.1818702650203546E-002</span>
+<span class="c">!~  S_param_curv:    32734.346139266941</span>
+<span class="c">!~  peak_curv:   -15965527969.430788</span>
+<span class="c">!~  pits_curv:    66825282090.434196</span>
+
+<span class="k">endprogram </span><span class="n">test_grad_curv</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,786 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>calc_moments &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>calc_moments
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.3% of total for procedures.">44 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_stat_mom.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_stat_mom.f90.html'>mod_stat_mom.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/stat_mom.html'>stat_mom</a></li>
+            <li class="breadcrumb-item active" aria-current="page">calc_moments</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/calc_moments.html#src">calc_moments</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine calc_moments(tab, mask, mx, nb_mom)  
+</h2>
+    
+
+    <div class="alert alert-info">
+<p class="alert-title h4">Note</p>
+<p>Function to calculate the statistical moments of an array with mask, of shape dim. 1 or 2</p>
+<p>
+<script type="math/tex; mode=display">\begin{align*}
+    mu &= \frac{1}{n^2}\sum_{i,j=1}^{n}\eta_{i,j} \\
+    va &= \frac{1}{n^2}\sum_{i,j=1}^{n}(\eta_{i,j}-\mu)^2 \\
+    Sk &= \frac{1}{n^2}\sum_{i,j=1}^{n}\left(\frac{\eta_{i,j}-\mu}{\sigma}\right)^3 \\
+    Ku &= \frac{1}{n^2}\sum_{i,j=1}^{n}\left(\frac{\eta_{i,j}-\mu}{\sigma}\right)^4
+\end{align*}</script>
+</p>
+</div>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~12"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(..)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+                <p><em>1D or 2D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~2"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(..)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+            <td>
+                <p><em>1D or 2D mask</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mx~2"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mx</strong></td>
+            <td>
+                <p><a href="../type/moment_stat.html">moment_stat</a> <em>result</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_mom"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_mom</strong></td>
+            <td>
+                <p><em>number of desired moments</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~calc_moments~~CallsGraph Pages: 1 -->
+<svg id="proccalc_momentsCallsGraph" width="227pt" height="32pt"
+ viewBox="0.00 0.00 227.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~calc_moments~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~calc_moments~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 223,-28 223,4 -4,4"/>
+<!-- proc~calc_moments -->
+<g id="proc~~calc_moments~~CallsGraph_node1" class="node">
+<title>proc~calc_moments</title>
+<polygon fill="none" stroke="black" points="82,-24 0,-24 0,0 82,0 82,-24"/>
+<text text-anchor="middle" x="41" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">calc_moments</text>
+</g>
+<!-- proc~calc_moments_1d -->
+<g id="proc~~calc_moments~~CallsGraph_node2" class="node">
+<title>proc~calc_moments_1d</title>
+<g id="a_proc~~calc_moments~~CallsGraph_node2"><a xlink:href="../proc/calc_moments_1d.html" xlink:title="calc_moments_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="219,-24 118,-24 118,0 219,0 219,-24"/>
+<text text-anchor="middle" x="168.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments_1D</text>
+</a>
+</g>
+</g>
+<!-- proc~calc_moments&#45;&gt;proc~calc_moments_1d -->
+<g id="proc~~calc_moments~~CallsGraph_edge1" class="edge">
+<title>proc~calc_moments&#45;&gt;proc~calc_moments_1d</title>
+<path fill="none" stroke="#ff0000" d="M82.05,-12C90.2,-12 98.94,-12 107.6,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.7,-15.5 117.7,-12 107.7,-8.5 107.7,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~calc_moments~~CalledByGraph Pages: 1 -->
+<svg id="proccalc_momentsCalledByGraph" width="486pt" height="242pt"
+ viewBox="0.00 0.00 486.00 242.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~calc_moments~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 238)">
+<title>proc~~calc_moments~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-238 482,-238 482,4 -4,4"/>
+<!-- proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_node1" class="node">
+<title>proc~calc_moments</title>
+<polygon fill="none" stroke="black" points="478,-129 396,-129 396,-105 478,-105 478,-129"/>
+<text text-anchor="middle" x="437" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50">calc_moments</text>
+</g>
+<!-- proc~abbott_param -->
+<g id="proc~~calc_moments~~CalledByGraph_node2" class="node">
+<title>proc~abbott_param</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node2"><a xlink:href="../proc/abbott_param.html" xlink:title="abbott_param">
+<polygon fill="#d9534f" stroke="#d9534f" points="360,-234 281,-234 281,-210 360,-210 360,-234"/>
+<text text-anchor="middle" x="320.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">abbott_param</text>
+</a>
+</g>
+</g>
+<!-- proc~abbott_param&#45;&gt;proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_edge1" class="edge">
+<title>proc~abbott_param&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M346.71,-209.84C351.31,-207.19 355.93,-204.2 360,-201 383.89,-182.17 406.66,-155.43 420.94,-137.21"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="423.91,-139.08 427.23,-129.02 418.36,-134.82 423.91,-139.08"/>
+</g>
+<!-- proc~acv -->
+<g id="proc~~calc_moments~~CalledByGraph_node3" class="node">
+<title>proc~acv</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node3"><a xlink:href="../proc/acv.html" xlink:title="acv">
+<polygon fill="#d9534f" stroke="#d9534f" points="347.5,-192 293.5,-192 293.5,-168 347.5,-168 347.5,-192"/>
+<text text-anchor="middle" x="320.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">acv</text>
+</a>
+</g>
+</g>
+<!-- proc~acv&#45;&gt;proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_edge2" class="edge">
+<title>proc~acv&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M343.91,-167.81C349.19,-164.92 354.79,-161.86 360,-159 374.82,-150.87 391.23,-141.8 405.01,-134.18"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="407.01,-137.07 414.07,-129.16 403.62,-130.94 407.01,-137.07"/>
+</g>
+<!-- proc~indice_fractal -->
+<g id="proc~~calc_moments~~CalledByGraph_node4" class="node">
+<title>proc~indice_fractal</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node4"><a xlink:href="../proc/indice_fractal.html" xlink:title="indice_fractal">
+<polygon fill="#d9534f" stroke="#d9534f" points="358.5,-150 282.5,-150 282.5,-126 358.5,-126 358.5,-150"/>
+<text text-anchor="middle" x="320.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">indice_fractal</text>
+</a>
+</g>
+</g>
+<!-- proc~indice_fractal&#45;&gt;proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_edge3" class="edge">
+<title>proc~indice_fractal&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M358.67,-131.18C367.31,-129.6 376.64,-127.89 385.74,-126.22"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="386.65,-129.61 395.85,-124.36 385.38,-122.72 386.65,-129.61"/>
+</g>
+<!-- proc~median_filter -->
+<g id="proc~~calc_moments~~CalledByGraph_node5" class="node">
+<title>proc~median_filter</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node5"><a xlink:href="../proc/median_filter.html" xlink:title="median_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="357.5,-108 283.5,-108 283.5,-84 357.5,-84 357.5,-108"/>
+<text text-anchor="middle" x="320.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">median_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~median_filter&#45;&gt;proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_edge4" class="edge">
+<title>proc~median_filter&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M357.73,-102.64C366.58,-104.27 376.21,-106.03 385.6,-107.76"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="385.16,-111.23 395.63,-109.6 386.43,-104.35 385.16,-111.23"/>
+</g>
+<!-- program~test_morpho -->
+<g id="proc~~calc_moments~~CalledByGraph_node6" class="node">
+<title>program~test_morpho</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node6"><a xlink:href="../program/test_morpho.html" xlink:title="test_morpho">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="357,-66 284,-66 284,-42 357,-42 357,-66"/>
+<text text-anchor="middle" x="320.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_morpho</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_edge5" class="edge">
+<title>program~test_morpho&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M343.91,-66.19C349.19,-69.08 354.79,-72.14 360,-75 374.82,-83.13 391.23,-92.2 405.01,-99.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="403.62,-103.06 414.07,-104.84 407.01,-96.93 403.62,-103.06"/>
+</g>
+<!-- program~test_stat -->
+<g id="proc~~calc_moments~~CalledByGraph_node7" class="node">
+<title>program~test_stat</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node7"><a xlink:href="../program/test_stat.html" xlink:title="test_stat">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="347.5,-24 293.5,-24 293.5,0 347.5,0 347.5,-24"/>
+<text text-anchor="middle" x="320.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_stat</text>
+</a>
+</g>
+</g>
+<!-- program~test_stat&#45;&gt;proc~calc_moments -->
+<g id="proc~~calc_moments~~CalledByGraph_edge6" class="edge">
+<title>program~test_stat&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M346.71,-24.16C351.31,-26.81 355.93,-29.8 360,-33 383.89,-51.83 406.66,-78.57 420.94,-96.79"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="418.36,-99.18 427.23,-104.98 423.91,-94.92 418.36,-99.18"/>
+</g>
+<!-- proc~correlation_parameters -->
+<g id="proc~~calc_moments~~CalledByGraph_node8" class="node">
+<title>proc~correlation_parameters</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node8"><a xlink:href="../proc/correlation_parameters.html" xlink:title="correlation_parameters">
+<polygon fill="#d9534f" stroke="#d9534f" points="245,-192 121,-192 121,-168 245,-168 245,-192"/>
+<text text-anchor="middle" x="183" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">correlation_parameters</text>
+</a>
+</g>
+</g>
+<!-- proc~correlation_parameters&#45;&gt;proc~acv -->
+<g id="proc~~calc_moments~~CalledByGraph_edge8" class="edge">
+<title>proc~correlation_parameters&#45;&gt;proc~acv</title>
+<path fill="none" stroke="#ffff00" d="M245.01,-180C258.03,-180 271.38,-180 283.11,-180"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="283.39,-183.5 293.39,-180 283.39,-176.5 283.39,-183.5"/>
+</g>
+<!-- program~test_abbott -->
+<g id="proc~~calc_moments~~CalledByGraph_node9" class="node">
+<title>program~test_abbott</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node9"><a xlink:href="../program/test_abbott.html" xlink:title="test_abbott">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="216,-234 150,-234 150,-210 216,-210 216,-234"/>
+<text text-anchor="middle" x="183" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_abbott</text>
+</a>
+</g>
+</g>
+<!-- program~test_abbott&#45;&gt;proc~abbott_param -->
+<g id="proc~~calc_moments~~CalledByGraph_edge7" class="edge">
+<title>program~test_abbott&#45;&gt;proc~abbott_param</title>
+<path fill="none" stroke="#ff0000" d="M216.11,-222C232.41,-222 252.56,-222 270.73,-222"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="270.86,-225.5 280.86,-222 270.86,-218.5 270.86,-225.5"/>
+</g>
+<!-- program~test_asfc -->
+<g id="proc~~calc_moments~~CalledByGraph_node10" class="node">
+<title>program~test_asfc</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node10"><a xlink:href="../program/test_asfc.html" xlink:title="test_asfc">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="210.5,-150 155.5,-150 155.5,-126 210.5,-126 210.5,-150"/>
+<text text-anchor="middle" x="183" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_asfc</text>
+</a>
+</g>
+</g>
+<!-- program~test_asfc&#45;&gt;proc~indice_fractal -->
+<g id="proc~~calc_moments~~CalledByGraph_edge9" class="edge">
+<title>program~test_asfc&#45;&gt;proc~indice_fractal</title>
+<path fill="none" stroke="#00ff00" d="M210.77,-138C228.25,-138 251.57,-138 272.13,-138"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="272.27,-141.5 282.27,-138 272.27,-134.5 272.27,-141.5"/>
+</g>
+<!-- program~test_smooth -->
+<g id="proc~~calc_moments~~CalledByGraph_node11" class="node">
+<title>program~test_smooth</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node11"><a xlink:href="../program/test_smooth.html" xlink:title="test_smooth">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="218.5,-108 147.5,-108 147.5,-84 218.5,-84 218.5,-108"/>
+<text text-anchor="middle" x="183" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_smooth</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~median_filter -->
+<g id="proc~~calc_moments~~CalledByGraph_edge10" class="edge">
+<title>program~test_smooth&#45;&gt;proc~median_filter</title>
+<path fill="none" stroke="#00ffff" d="M218.54,-96C235.06,-96 255.08,-96 272.92,-96"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="273.12,-99.5 283.12,-96 273.12,-92.5 273.12,-99.5"/>
+</g>
+<!-- program~test_anisotropy -->
+<g id="proc~~calc_moments~~CalledByGraph_node12" class="node">
+<title>program~test_anisotropy</title>
+<g id="a_proc~~calc_moments~~CalledByGraph_node12"><a xlink:href="../program/test_anisotropy.html" xlink:title="test_anisotropy">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="85,-192 0,-192 0,-168 85,-168 85,-192"/>
+<text text-anchor="middle" x="42.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;proc~correlation_parameters -->
+<g id="proc~~calc_moments~~CalledByGraph_edge11" class="edge">
+<title>program~test_anisotropy&#45;&gt;proc~correlation_parameters</title>
+<path fill="none" stroke="#ff0000" d="M85.05,-180C93.13,-180 101.81,-180 110.53,-180"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.76,-183.5 120.76,-180 110.76,-176.5 110.76,-183.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_moments</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">nb_mom</span><span class="p">)</span>
+<span class="w">   </span><span class="c">!================================================================================================</span>
+<span class="w">   </span><span class="c">!&lt; @note Function to calculate the statistical moments of an array with mask, of shape dim. 1 or 2</span>
+<span class="w">   </span><span class="c">!&lt;</span>
+<span class="w">   </span><span class="c">!&lt; \begin{align*}</span>
+<span class="w">   </span><span class="c">!&lt;     mu &amp;= \frac{1}{n^2}\sum_{i,j=1}^{n}\eta_{i,j} \\</span>
+<span class="w">   </span><span class="c">!&lt;     va &amp;= \frac{1}{n^2}\sum_{i,j=1}^{n}(\eta_{i,j}-\mu)^2 \\</span>
+<span class="w">   </span><span class="c">!&lt;     Sk &amp;= \frac{1}{n^2}\sum_{i,j=1}^{n}\left(\frac{\eta_{i,j}-\mu}{\sigma}\right)^3 \\</span>
+<span class="w">   </span><span class="c">!&lt;     Ku &amp;= \frac{1}{n^2}\sum_{i,j=1}^{n}\left(\frac{\eta_{i,j}-\mu}{\sigma}\right)^4</span>
+<span class="w">   </span><span class="c">!&lt; \end{align*}</span>
+<span class="w">   </span><span class="c">!&lt;</span>
+<span class="w">   </span><span class="c">!&lt;  @endnote</span>
+<span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">)</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="n">nb_mom</span><span class="w"> </span><span class="c">!! *number of desired moments*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">    </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(..)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="c">!! *1D or 2D array*</span>
+<span class="w">   </span><span class="kt">logical</span><span class="w"> </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(..),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mask</span><span class="w">   </span><span class="c">!! *1D or 2D mask*</span>
+<span class="w">   </span><span class="k">type</span><span class="p">(</span><span class="n">moment_stat</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="n">mx</span><span class="w">     </span><span class="c">!! [[moment_stat]] *result*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">size_tab</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w">    </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_tmp</span>
+<span class="w">      </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">msk_tmp</span>
+
+<span class="w">      </span><span class="k">select </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+
+<span class="w">         </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">               select </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+
+<span class="w">                  </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="w">                     </span><span class="k">call </span><span class="n">calc_moments_1D</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">nb_mom</span><span class="p">)</span>
+
+<span class="w">                  </span><span class="n">rank</span><span class="w"> </span><span class="n">default</span>
+
+<span class="w">                     </span><span class="k">stop</span><span class="w"> </span><span class="s2">&quot;bad rank in mask &#39;calc_moments&#39;&quot;</span>
+
+<span class="w">               </span><span class="k">endselect</span>
+
+<span class="k">            else</span>
+
+<span class="k">               call </span><span class="n">calc_moments_1D</span><span class="p">(</span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">nb_mom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_mom</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">endif</span>
+
+<span class="k">         </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="w">            </span><span class="n">size_tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">product</span><span class="p">(</span><span class="w"> </span><span class="nb">shape</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">size_tab</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">            </span><span class="n">tab_tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w">  </span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">size_tab</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">               allocate</span><span class="p">(</span><span class="w"> </span><span class="n">msk_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">size_tab</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">               </span><span class="k">select </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+
+<span class="w">                  </span><span class="n">rank</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="w">                     </span><span class="n">msk_tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">size_tab</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">                     </span><span class="k">call </span><span class="n">calc_moments_1D</span><span class="p">(</span><span class="n">tab_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">msk_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">nb_mom</span><span class="p">)</span>
+
+<span class="w">                     </span><span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">msk_tmp</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">                  </span><span class="n">rank</span><span class="w"> </span><span class="n">default</span>
+
+<span class="w">                     </span><span class="k">stop</span><span class="w"> </span><span class="s2">&quot;bad rank in mask &#39;calc_moments&#39;&quot;</span>
+
+<span class="w">               </span><span class="k">endselect</span>
+
+<span class="k">            else</span>
+
+<span class="k">               call </span><span class="n">calc_moments_1D</span><span class="p">(</span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mx</span><span class="p">,</span><span class="w"> </span><span class="n">nb_mom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_mom</span><span class="p">)</span>
+
+<span class="w">            </span><span class="k">endif</span>
+
+<span class="k">            deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">         </span><span class="n">rank</span><span class="w"> </span><span class="n">default</span>
+
+<span class="w">            </span><span class="k">stop</span><span class="w"> </span><span class="s2">&quot;bad rank in &#39;calc_moments&#39;&quot;</span>
+
+<span class="w">      </span><span class="k">endselect</span>
+
+<span class="k">   return</span>
+<span class="k">   endsubroutine </span><span class="n">calc_moments</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

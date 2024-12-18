@@ -1,0 +1,882 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_abbott &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>test_abbott      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> november, 01 2024</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 7.1% of total for programs.">33 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/prg.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/prg.f90~6.html'>prg.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">test_abbott</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/test_abbott.html#variable-heights~5">heights</a>
+            <a class="list-group-item" href="../program/test_abbott.html#variable-nx~16">nx</a>
+            <a class="list-group-item" href="../program/test_abbott.html#variable-ny~16">ny</a>
+            <a class="list-group-item" href="../program/test_abbott.html#variable-res~3">res</a>
+            <a class="list-group-item" href="../program/test_abbott.html#variable-scal_surf~7">scal_surf</a>
+            <a class="list-group-item" href="../program/test_abbott.html#variable-vec_heights">vec_heights</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/test_abbott.html#src">test_abbott</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">surfile</li>
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item"><a href='../module/abbott.html'>abbott</a></li>
+                  <li class="list-inline-item">miscellaneous</li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_abbott~~UsesGraph Pages: 1 -->
+<svg id="programtest_abbottUsesGraph" width="383pt" height="301pt"
+ viewBox="0.00 0.00 383.00 300.79" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_abbott~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 296.79)">
+<title>program~~test_abbott~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-296.79 379,-296.79 379,4 -4,4"/>
+<!-- program~test_abbott -->
+<g id="program~~test_abbott~~UsesGraph_node1" class="node">
+<title>program~test_abbott</title>
+<polygon fill="none" stroke="black" points="375,-151.37 309,-151.37 309,-127.37 375,-127.37 375,-151.37"/>
+<text text-anchor="middle" x="342" y="-136.97" font-family="Helvetica,sans-Serif" font-size="10.50">test_abbott</text>
+</g>
+<!-- data_arch -->
+<g id="program~~test_abbott~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-212.37 3,-212.37 3,-188.37 64,-188.37 64,-212.37"/>
+<text text-anchor="middle" x="33.5" y="-197.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- program~test_abbott&#45;&gt;data_arch -->
+<g id="program~~test_abbott~~UsesGraph_edge1" class="edge">
+<title>program~test_abbott&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245,-280.37C186.12,-304.61 160.87,-287.93 103,-261.37 82.43,-251.93 63.59,-234.17 50.9,-220.24"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="53.39,-217.78 44.17,-212.57 48.13,-222.39 53.39,-217.78"/>
+</g>
+<!-- miscellaneous -->
+<g id="program~~test_abbott~~UsesGraph_node3" class="node">
+<title>miscellaneous</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="183,-252.37 103,-252.37 103,-228.37 183,-228.37 183,-252.37"/>
+<text text-anchor="middle" x="143" y="-237.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">miscellaneous</text>
+</g>
+<!-- program~test_abbott&#45;&gt;miscellaneous -->
+<g id="program~~test_abbott~~UsesGraph_edge2" class="edge">
+<title>program~test_abbott&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M337.81,-151.63C329.24,-181.55 302.5,-257.51 247,-280.37"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M245,-280.37C231.7,-285.84 198.4,-270.6 173.65,-257.37"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.1,-254.18 164.64,-252.45 171.74,-260.32 175.1,-254.18"/>
+</g>
+<!-- module~abbott -->
+<g id="program~~test_abbott~~UsesGraph_node4" class="node">
+<title>module~abbott</title>
+<g id="a_program~~test_abbott~~UsesGraph_node4"><a xlink:href="../module/abbott.html" xlink:title="abbott">
+<polygon fill="#337ab7" stroke="#337ab7" points="273,-151.37 219,-151.37 219,-127.37 273,-127.37 273,-151.37"/>
+<text text-anchor="middle" x="246" y="-136.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">abbott</text>
+</a>
+</g>
+</g>
+<!-- program~test_abbott&#45;&gt;module~abbott -->
+<g id="program~~test_abbott~~UsesGraph_edge3" class="edge">
+<title>program~test_abbott&#45;&gt;module~abbott</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M308.91,-139.37C300.59,-139.37 291.58,-139.37 283.07,-139.37"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="283.03,-135.87 273.03,-139.37 283.03,-142.87 283.03,-135.87"/>
+</g>
+<!-- surfile -->
+<g id="program~~test_abbott~~UsesGraph_node5" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="273,-109.37 219,-109.37 219,-85.37 273,-85.37 273,-109.37"/>
+<text text-anchor="middle" x="246" y="-94.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- program~test_abbott&#45;&gt;surfile -->
+<g id="program~~test_abbott~~UsesGraph_edge4" class="edge">
+<title>program~test_abbott&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M314.06,-127.33C304.26,-122.95 293.02,-117.93 282.59,-113.27"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="283.85,-110 273.29,-109.11 280.99,-116.39 283.85,-110"/>
+</g>
+<!-- module~abbott&#45;&gt;data_arch -->
+<g id="program~~test_abbott~~UsesGraph_edge5" class="edge">
+<title>module~abbott&#45;&gt;data_arch</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M231.3,-151.46C219.39,-161.24 201.24,-174.47 183,-181.37 147.88,-194.64 105.1,-198.98 74.5,-200.25"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="74.1,-196.76 64.22,-200.58 74.32,-203.75 74.1,-196.76"/>
+</g>
+<!-- module~abbott&#45;&gt;miscellaneous -->
+<g id="program~~test_abbott~~UsesGraph_edge8" class="edge">
+<title>module~abbott&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M236.71,-151.46C225.62,-167.1 204.83,-194.67 183,-214.37 179.87,-217.19 176.42,-219.93 172.89,-222.51"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="170.9,-219.63 164.67,-228.2 174.88,-225.39 170.9,-219.63"/>
+</g>
+<!-- gnufor -->
+<g id="program~~test_abbott~~UsesGraph_node6" class="node">
+<title>gnufor</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="170,-172.37 116,-172.37 116,-148.37 170,-148.37 170,-172.37"/>
+<text text-anchor="middle" x="143" y="-157.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gnufor</text>
+</g>
+<!-- module~abbott&#45;&gt;gnufor -->
+<g id="program~~test_abbott~~UsesGraph_edge6" class="edge">
+<title>module~abbott&#45;&gt;gnufor</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M218.99,-144.77C207.18,-147.23 193.02,-150.17 180.2,-152.84"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="179.35,-149.44 170.27,-154.9 180.78,-156.29 179.35,-149.44"/>
+</g>
+<!-- least_squares -->
+<g id="program~~test_abbott~~UsesGraph_node7" class="node">
+<title>least_squares</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="182.5,-130.37 103.5,-130.37 103.5,-106.37 182.5,-106.37 182.5,-130.37"/>
+<text text-anchor="middle" x="143" y="-115.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">least_squares</text>
+</g>
+<!-- module~abbott&#45;&gt;least_squares -->
+<g id="program~~test_abbott~~UsesGraph_edge7" class="edge">
+<title>module~abbott&#45;&gt;least_squares</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M218.99,-133.96C211.01,-132.3 201.95,-130.41 192.95,-128.54"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="193.39,-125.06 182.88,-126.45 191.96,-131.91 193.39,-125.06"/>
+</g>
+<!-- module~stat_mom -->
+<g id="program~~test_abbott~~UsesGraph_node8" class="node">
+<title>module~stat_mom</title>
+<g id="a_program~~test_abbott~~UsesGraph_node8"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="173,-88.37 113,-88.37 113,-64.37 173,-64.37 173,-88.37"/>
+<text text-anchor="middle" x="143" y="-73.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- module~abbott&#45;&gt;module~stat_mom -->
+<g id="program~~test_abbott~~UsesGraph_edge9" class="edge">
+<title>module~abbott&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M228.2,-127.3C215.89,-118.64 198.68,-106.86 183,-97.37 180.81,-96.04 178.54,-94.71 176.23,-93.39"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="177.75,-90.23 167.32,-88.42 174.35,-96.34 177.75,-90.23"/>
+</g>
+<!-- pikaia_oop -->
+<g id="program~~test_abbott~~UsesGraph_node9" class="node">
+<title>pikaia_oop</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="175,-46.37 111,-46.37 111,-22.37 175,-22.37 175,-46.37"/>
+<text text-anchor="middle" x="143" y="-31.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">pikaia_oop</text>
+</g>
+<!-- module~abbott&#45;&gt;pikaia_oop -->
+<g id="program~~test_abbott~~UsesGraph_edge10" class="edge">
+<title>module~abbott&#45;&gt;pikaia_oop</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M228.21,-127.34C224.95,-124.6 221.71,-121.55 219,-118.37 198.1,-93.81 206.09,-77.88 183,-55.37 181.93,-54.33 180.8,-53.32 179.63,-52.36"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="181.55,-49.43 171.36,-46.53 177.52,-55.15 181.55,-49.43"/>
+</g>
+<!-- sort_arrays -->
+<g id="program~~test_abbott~~UsesGraph_node10" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-47.37 0,-47.37 0,-23.37 67,-23.37 67,-47.37"/>
+<text text-anchor="middle" x="33.5" y="-32.97" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~abbott&#45;&gt;sort_arrays -->
+<g id="program~~test_abbott~~UsesGraph_edge11" class="edge">
+<title>module~abbott&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M227.19,-127.25C224.16,-124.59 221.26,-121.6 219,-118.37 190.7,-77.95 223.14,-42.04 183,-13.37 148.5,11.28 97.88,-4.28 65.56,-18.9"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="63.69,-15.91 56.16,-23.36 66.69,-22.24 63.69,-15.91"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="program~~test_abbott~~UsesGraph_edge12" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M115.23,-88.49C110.89,-91.08 106.64,-94.05 103,-97.37 77,-121.05 56.24,-156.58 44.64,-179.11"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="41.45,-177.67 40.11,-188.18 47.72,-180.8 41.45,-177.67"/>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="program~~test_abbott~~UsesGraph_edge13" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M112.91,-65.27C101.53,-60.93 88.26,-55.87 75.91,-51.16"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="76.85,-47.77 66.26,-47.48 74.35,-54.31 76.85,-47.77"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+   <strong>Firestone Abbott&rsquo;s curve. Example of use</strong>
+</span></p>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_abbott~~CallsGraph Pages: 1 -->
+<svg id="programtest_abbottCallsGraph" width="495pt" height="284pt"
+ viewBox="0.00 0.00 495.00 284.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_abbott~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 280)">
+<title>program~~test_abbott~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-280 491,-280 491,4 -4,4"/>
+<!-- program~test_abbott -->
+<g id="program~~test_abbott~~CallsGraph_node1" class="node">
+<title>program~test_abbott</title>
+<polygon fill="none" stroke="black" points="66,-129 0,-129 0,-105 66,-105 66,-129"/>
+<text text-anchor="middle" x="33" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_abbott</text>
+</g>
+<!-- proc~abbott_param -->
+<g id="program~~test_abbott~~CallsGraph_node2" class="node">
+<title>proc~abbott_param</title>
+<g id="a_program~~test_abbott~~CallsGraph_node2"><a xlink:href="../proc/abbott_param.html" xlink:title="abbott_param">
+<polygon fill="#d9534f" stroke="#d9534f" points="181,-150 102,-150 102,-126 181,-126 181,-150"/>
+<text text-anchor="middle" x="141.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">abbott_param</text>
+</a>
+</g>
+</g>
+<!-- program~test_abbott&#45;&gt;proc~abbott_param -->
+<g id="program~~test_abbott~~CallsGraph_edge1" class="edge">
+<title>program~test_abbott&#45;&gt;proc~abbott_param</title>
+<path fill="none" stroke="#ff0000" d="M66.24,-123.36C74.34,-124.95 83.21,-126.7 91.91,-128.42"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="91.5,-131.91 101.99,-130.41 92.86,-125.04 91.5,-131.91"/>
+</g>
+<!-- read_surf -->
+<g id="program~~test_abbott~~CallsGraph_node3" class="node">
+<title>read_surf</title>
+<polygon fill="#777777" stroke="#777777" points="170.5,-108 112.5,-108 112.5,-84 170.5,-84 170.5,-108"/>
+<text text-anchor="middle" x="141.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_surf</text>
+</g>
+<!-- program~test_abbott&#45;&gt;read_surf -->
+<g id="program~~test_abbott~~CallsGraph_edge2" class="edge">
+<title>program~test_abbott&#45;&gt;read_surf</title>
+<path fill="none" stroke="#ff0000" d="M66.24,-110.64C77.61,-108.4 90.49,-105.86 102.3,-103.53"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="103.2,-106.92 112.34,-101.55 101.85,-100.05 103.2,-106.92"/>
+</g>
+<!-- get_unit -->
+<g id="program~~test_abbott~~CallsGraph_node4" class="node">
+<title>get_unit</title>
+<polygon fill="#777777" stroke="#777777" points="310.5,-276 256.5,-276 256.5,-252 310.5,-252 310.5,-276"/>
+<text text-anchor="middle" x="283.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_unit</text>
+</g>
+<!-- proc~abbott_param&#45;&gt;get_unit -->
+<g id="program~~test_abbott~~CallsGraph_edge3" class="edge">
+<title>proc~abbott_param&#45;&gt;get_unit</title>
+<path fill="none" stroke="#ff0000" d="M147.97,-150.34C158.29,-172.23 182.73,-217.91 217,-243 225.67,-249.35 236.34,-253.83 246.53,-256.97"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="245.9,-260.43 256.47,-259.68 247.75,-253.67 245.9,-260.43"/>
+</g>
+<!-- init -->
+<g id="program~~test_abbott~~CallsGraph_node5" class="node">
+<title>init</title>
+<polygon fill="#777777" stroke="#777777" points="310.5,-234 256.5,-234 256.5,-210 310.5,-210 310.5,-234"/>
+<text text-anchor="middle" x="283.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init</text>
+</g>
+<!-- proc~abbott_param&#45;&gt;init -->
+<g id="program~~test_abbott~~CallsGraph_edge4" class="edge">
+<title>proc~abbott_param&#45;&gt;init</title>
+<path fill="none" stroke="#ff0000" d="M154.03,-150.32C167.8,-164.38 192.11,-187.2 217,-201 226.17,-206.08 236.74,-210.14 246.69,-213.29"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="245.77,-216.67 256.35,-216.14 247.74,-209.96 245.77,-216.67"/>
+</g>
+<!-- moindres_carres_lineaire -->
+<g id="program~~test_abbott~~CallsGraph_node6" class="node">
+<title>moindres_carres_lineaire</title>
+<polygon fill="#777777" stroke="#777777" points="350,-192 217,-192 217,-168 350,-168 350,-192"/>
+<text text-anchor="middle" x="283.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">moindres_carres_lineaire</text>
+</g>
+<!-- proc~abbott_param&#45;&gt;moindres_carres_lineaire -->
+<g id="program~~test_abbott~~CallsGraph_edge5" class="edge">
+<title>proc~abbott_param&#45;&gt;moindres_carres_lineaire</title>
+<path fill="none" stroke="#ff0000" d="M181.13,-149.59C196.96,-154.34 215.49,-159.9 232.35,-164.95"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="231.46,-168.34 242.05,-167.86 233.47,-161.64 231.46,-168.34"/>
+</g>
+<!-- proc~calc_moments -->
+<g id="program~~test_abbott~~CallsGraph_node7" class="node">
+<title>proc~calc_moments</title>
+<g id="a_program~~test_abbott~~CallsGraph_node7"><a xlink:href="../proc/calc_moments.html" xlink:title="calc_moments">
+<polygon fill="#d9534f" stroke="#d9534f" points="324.5,-150 242.5,-150 242.5,-126 324.5,-126 324.5,-150"/>
+<text text-anchor="middle" x="283.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
+</a>
+</g>
+</g>
+<!-- proc~abbott_param&#45;&gt;proc~calc_moments -->
+<g id="program~~test_abbott~~CallsGraph_edge6" class="edge">
+<title>proc~abbott_param&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M181.13,-138C196.81,-138 215.14,-138 231.87,-138"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="232.05,-141.5 242.05,-138 232.05,-134.5 232.05,-141.5"/>
+</g>
+<!-- run_gnuplot -->
+<g id="program~~test_abbott~~CallsGraph_node8" class="node">
+<title>run_gnuplot</title>
+<polygon fill="#777777" stroke="#777777" points="318.5,-108 248.5,-108 248.5,-84 318.5,-84 318.5,-108"/>
+<text text-anchor="middle" x="283.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">run_gnuplot</text>
+</g>
+<!-- proc~abbott_param&#45;&gt;run_gnuplot -->
+<g id="program~~test_abbott~~CallsGraph_edge7" class="edge">
+<title>proc~abbott_param&#45;&gt;run_gnuplot</title>
+<path fill="none" stroke="#ff0000" d="M181.13,-126.41C198.96,-121.06 220.23,-114.68 238.66,-109.15"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="239.72,-112.49 248.29,-106.26 237.71,-105.78 239.72,-112.49"/>
+</g>
+<!-- solve -->
+<g id="program~~test_abbott~~CallsGraph_node9" class="node">
+<title>solve</title>
+<polygon fill="#777777" stroke="#777777" points="310.5,-66 256.5,-66 256.5,-42 310.5,-42 310.5,-66"/>
+<text text-anchor="middle" x="283.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">solve</text>
+</g>
+<!-- proc~abbott_param&#45;&gt;solve -->
+<g id="program~~test_abbott~~CallsGraph_edge8" class="edge">
+<title>proc~abbott_param&#45;&gt;solve</title>
+<path fill="none" stroke="#ff0000" d="M167.78,-125.93C172.37,-123.27 176.98,-120.26 181,-117 200.11,-101.53 196.52,-88.6 217,-75 225.88,-69.1 236.53,-64.77 246.63,-61.62"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="247.79,-64.93 256.47,-58.85 245.9,-58.19 247.79,-64.93"/>
+</g>
+<!-- sort_array2 -->
+<g id="program~~test_abbott~~CallsGraph_node10" class="node">
+<title>sort_array2</title>
+<polygon fill="#777777" stroke="#777777" points="317,-24 250,-24 250,0 317,0 317,-24"/>
+<text text-anchor="middle" x="283.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</g>
+<!-- proc~abbott_param&#45;&gt;sort_array2 -->
+<g id="program~~test_abbott~~CallsGraph_edge9" class="edge">
+<title>proc~abbott_param&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#ff0000" d="M170.24,-125.86C174.18,-123.33 177.93,-120.38 181,-117 208.33,-86.96 186.95,-60.33 217,-33 223.48,-27.11 231.62,-22.87 239.93,-19.82"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="241.2,-23.09 249.69,-16.76 239.1,-16.41 241.2,-23.09"/>
+</g>
+<!-- proc~calc_moments_1d -->
+<g id="program~~test_abbott~~CallsGraph_node11" class="node">
+<title>proc~calc_moments_1d</title>
+<g id="a_program~~test_abbott~~CallsGraph_node11"><a xlink:href="../proc/calc_moments_1d.html" xlink:title="calc_moments_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="487,-150 386,-150 386,-126 487,-126 487,-150"/>
+<text text-anchor="middle" x="436.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments_1D</text>
+</a>
+</g>
+</g>
+<!-- proc~calc_moments&#45;&gt;proc~calc_moments_1d -->
+<g id="program~~test_abbott~~CallsGraph_edge10" class="edge">
+<title>proc~calc_moments&#45;&gt;proc~calc_moments_1d</title>
+<path fill="none" stroke="#00ff91" d="M324.57,-138C340.13,-138 358.28,-138 375.34,-138"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="375.79,-141.5 385.79,-138 375.79,-134.5 375.79,-141.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-heights~5"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>heights</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx~16"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny~16"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-res~3"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              dimension(1:11)
+            </td>
+            <td>::</td>
+            <td><strong>res</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal_surf~7"></span>
+              type(SCALE_SURF)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal_surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vec_heights"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>vec_heights</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">test_abbott</span>
+<span class="k">use </span><span class="n">data_arch</span><span class="p">,</span><span class="w">     </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">I4</span><span class="p">,</span><span class="w"> </span><span class="n">R8</span>
+<span class="k">use </span><span class="n">miscellaneous</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">get_unit</span>
+<span class="k">use </span><span class="n">surfile</span><span class="p">,</span><span class="w">       </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">read_surf</span><span class="p">,</span><span class="w"> </span><span class="n">write_surf</span><span class="p">,</span><span class="w"> </span><span class="n">SCALE_SURF</span>
+<span class="k">use </span><span class="n">abbott</span><span class="p">,</span><span class="w">        </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">abbott_param</span>
+
+<span class="k">implicit none</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">vec_heights</span>
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">heights</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">res</span>
+
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span>
+
+<span class="k">type</span><span class="p">(</span><span class="n">SCALE_SURF</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">scal_surf</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/test.sur&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! IN</span>
+<span class="w">                  </span><span class="n">tab_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w">        </span><span class="p">&amp;</span><span class="w">  </span><span class="c">! OUT</span>
+<span class="w">                   </span><span class="n">scal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">        </span><span class="c">! OUT</span>
+
+<span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span>
+<span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">vec_heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="n">vec_heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">nx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">abbott_param</span><span class="p">(</span><span class="w">   </span><span class="n">tab</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">vec_heights</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">),</span><span class="w">      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                     </span><span class="n">lg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                     </span><span class="n">nom</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;out/test&#39;</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                     </span><span class="n">curves</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.],</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                     </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">11</span><span class="p">),</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                     </span><span class="n">omp</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="p">)</span><span class="w">                        </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;smr1, iso 25178.................: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;smr2, iso 25178.................: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;spk , iso 25178.................: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;svk , iso 25178.................: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;off1, ordonnée de spk...........: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;off2, ordonnée de svk...........: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;sk  , iso 25178.................: &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;core slope..................... : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;adjustment factor (tangent fit) : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;coeffa_tan        (tangent fit) : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;coeffb_tan        (tangent fit) : &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;NB: on a reduced Abbott curve, the tangent fit is not so good&#39;</span><span class="w">   </span><span class="o">//</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">            </span><span class="s1">&#39; because the beginning and the end of the data points are kept&#39;</span><span class="w">  </span><span class="o">//</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">            </span><span class="s1">&#39; making the curve too much sharp.&#39;</span><span class="w">                                        </span><span class="c">!</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">heights</span><span class="p">,</span><span class="w"> </span><span class="n">vec_heights</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">stop</span>
+<span class="k">endprogram </span><span class="n">test_abbott</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

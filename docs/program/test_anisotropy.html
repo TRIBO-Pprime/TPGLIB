@@ -1,0 +1,1735 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_anisotropy &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>test_anisotropy      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> november, 01 2024</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="25.5% of total for programs.">118 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/prg.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/prg.f90~3.html'>prg.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">test_anisotropy</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-array">array</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-array_tmp">array_tmp</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-dx~9">dx</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-dy~9">dy</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-ech_param">ech_param</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-ell_param">ell_param</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-lx">lx</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-n_th~3">n_th</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-nnx">nnx</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-nny">nny</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-nx~13">nx</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-nx2~3">nx2</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-ny~13">ny</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-ny2~3">ny2</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-param_acv">param_acv</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-param_ani">param_ani</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-scal_surf~3">scal_surf</a>
+            <a class="list-group-item" href="../program/test_anisotropy.html#variable-scale_xy">scale_xy</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/test_anisotropy.html#proc-fake_acv">fake_acv</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/test_anisotropy.html#src">test_anisotropy</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item">fftw3</li>
+                  <li class="list-inline-item">miscellaneous</li>
+                  <li class="list-inline-item">surfile</li>
+                  <li class="list-inline-item"><a href='../module/anisotropy.html'>anisotropy</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_anisotropy~~UsesGraph Pages: 1 -->
+<svg id="programtest_anisotropyUsesGraph" width="506pt" height="309pt"
+ viewBox="0.00 0.00 506.00 309.10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_anisotropy~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 305.1)">
+<title>program~~test_anisotropy~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-305.1 502,-305.1 502,4 -4,4"/>
+<!-- program~test_anisotropy -->
+<g id="program~~test_anisotropy~~UsesGraph_node1" class="node">
+<title>program~test_anisotropy</title>
+<polygon fill="none" stroke="black" points="498,-186.15 413,-186.15 413,-162.15 498,-162.15 498,-186.15"/>
+<text text-anchor="middle" x="455.5" y="-171.75" font-family="Helvetica,sans-Serif" font-size="10.50">test_anisotropy</text>
+</g>
+<!-- data_arch -->
+<g id="program~~test_anisotropy~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-225.15 3,-225.15 3,-201.15 64,-201.15 64,-225.15"/>
+<text text-anchor="middle" x="33.5" y="-210.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;data_arch -->
+<g id="program~~test_anisotropy~~UsesGraph_edge1" class="edge">
+<title>program~test_anisotropy&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M345,-293.15C300.79,-308.08 285.58,-283.15 240,-293.15"/>
+</g>
+<!-- fftw3 -->
+<g id="program~~test_anisotropy~~UsesGraph_node3" class="node">
+<title>fftw3</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-265.15 106,-265.15 106,-241.15 160,-241.15 160,-265.15"/>
+<text text-anchor="middle" x="133" y="-250.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw3</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;fftw3 -->
+<g id="program~~test_anisotropy~~UsesGraph_edge2" class="edge">
+<title>program~test_anisotropy&#45;&gt;fftw3</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M448.89,-186.19C435.69,-212.73 399.76,-275.34 347,-293.15"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M345,-293.15C297.98,-309.03 289.43,-250.71 240,-255.15"/>
+</g>
+<!-- miscellaneous -->
+<g id="program~~test_anisotropy~~UsesGraph_node4" class="node">
+<title>miscellaneous</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="279,-65.15 199,-65.15 199,-41.15 279,-41.15 279,-65.15"/>
+<text text-anchor="middle" x="239" y="-50.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">miscellaneous</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;miscellaneous -->
+<g id="program~~test_anisotropy~~UsesGraph_edge3" class="edge">
+<title>program~test_anisotropy&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M345,-13.15C331.21,-7.41 296.32,-22.86 270.53,-36.2"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="268.7,-33.21 261.49,-40.98 271.97,-39.4 268.7,-33.21"/>
+</g>
+<!-- module~anisotropy -->
+<g id="program~~test_anisotropy~~UsesGraph_node5" class="node">
+<title>module~anisotropy</title>
+<g id="a_program~~test_anisotropy~~UsesGraph_node5"><a xlink:href="../module/anisotropy.html" xlink:title="anisotropy">
+<polygon fill="#337ab7" stroke="#337ab7" points="377,-186.15 315,-186.15 315,-162.15 377,-162.15 377,-186.15"/>
+<text text-anchor="middle" x="346" y="-171.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">anisotropy</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;module~anisotropy -->
+<g id="program~~test_anisotropy~~UsesGraph_edge4" class="edge">
+<title>program~test_anisotropy&#45;&gt;module~anisotropy</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M412.94,-174.15C404.55,-174.15 395.74,-174.15 387.39,-174.15"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="387.12,-170.65 377.12,-174.15 387.12,-177.65 387.12,-170.65"/>
+</g>
+<!-- surfile -->
+<g id="program~~test_anisotropy~~UsesGraph_node6" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-105.15 106,-105.15 106,-81.15 160,-81.15 160,-105.15"/>
+<text text-anchor="middle" x="133" y="-90.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;surfile -->
+<g id="program~~test_anisotropy~~UsesGraph_edge5" class="edge">
+<title>program~test_anisotropy&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M451.39,-162.13C442.17,-129.51 411.54,-40.01 347,-13.15"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M345,-13.15C284.59,11.99 258.16,-4.19 199,-32.15 179.3,-41.46 161.61,-58.98 149.68,-72.86"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="146.69,-70.99 143.03,-80.93 152.09,-75.44 146.69,-70.99"/>
+</g>
+<!-- module~anisotropy&#45;&gt;data_arch -->
+<g id="program~~test_anisotropy~~UsesGraph_edge6" class="edge">
+<title>module~anisotropy&#45;&gt;data_arch</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M339.97,-186.35C327.76,-213.82 293.61,-279.25 240,-293.15"/>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M238,-293.15C179.35,-308.36 157.98,-299.61 103,-274.15 82.47,-264.64 63.62,-246.89 50.92,-232.98"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="53.41,-230.52 44.18,-225.33 48.16,-235.15 53.41,-230.52"/>
+</g>
+<!-- module~anisotropy&#45;&gt;fftw3 -->
+<g id="program~~test_anisotropy~~UsesGraph_edge7" class="edge">
+<title>module~anisotropy&#45;&gt;fftw3</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M336.6,-186.4C320.69,-208.06 283.8,-251.21 240,-255.15"/>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M238,-255.15C215.59,-257.17 190.35,-256.75 170.36,-255.79"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="170.3,-252.28 160.13,-255.22 169.92,-259.27 170.3,-252.28"/>
+</g>
+<!-- module~anisotropy&#45;&gt;miscellaneous -->
+<g id="program~~test_anisotropy~~UsesGraph_edge8" class="edge">
+<title>module~anisotropy&#45;&gt;miscellaneous</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M338.53,-161.98C327.93,-142.79 305.38,-105.03 279,-79.15 276.14,-76.35 272.94,-73.66 269.63,-71.15"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="271.52,-68.2 261.33,-65.3 267.49,-73.92 271.52,-68.2"/>
+</g>
+<!-- module~anisotropy&#45;&gt;surfile -->
+<g id="program~~test_anisotropy~~UsesGraph_edge12" class="edge">
+<title>module~anisotropy&#45;&gt;surfile</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M238,-93.15C216.96,-83.83 191.09,-83.79 170.41,-86.1"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="169.87,-82.64 160.43,-87.44 170.8,-89.58 169.87,-82.64"/>
+</g>
+<!-- module~filter -->
+<g id="program~~test_anisotropy~~UsesGraph_node7" class="node">
+<title>module~filter</title>
+<g id="a_program~~test_anisotropy~~UsesGraph_node7"><a xlink:href="../module/filter.html" xlink:title="filter">
+<polygon fill="#337ab7" stroke="#337ab7" points="266,-146.15 212,-146.15 212,-122.15 266,-122.15 266,-146.15"/>
+<text text-anchor="middle" x="239" y="-131.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">filter</text>
+</a>
+</g>
+</g>
+<!-- module~anisotropy&#45;&gt;module~filter -->
+<g id="program~~test_anisotropy~~UsesGraph_edge9" class="edge">
+<title>module~anisotropy&#45;&gt;module~filter</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M314.91,-162.69C302.65,-158.02 288.37,-152.58 275.59,-147.71"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="276.76,-144.41 266.17,-144.12 274.27,-150.95 276.76,-144.41"/>
+</g>
+<!-- module~stat_mom -->
+<g id="program~~test_anisotropy~~UsesGraph_node8" class="node">
+<title>module~stat_mom</title>
+<g id="a_program~~test_anisotropy~~UsesGraph_node8"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="163,-185.15 103,-185.15 103,-161.15 163,-161.15 163,-185.15"/>
+<text text-anchor="middle" x="133" y="-170.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- module~anisotropy&#45;&gt;module~stat_mom -->
+<g id="program~~test_anisotropy~~UsesGraph_edge10" class="edge">
+<title>module~anisotropy&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M314.77,-174.01C277.56,-173.83 214.27,-173.53 173.31,-173.34"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="173.17,-169.84 163.16,-173.29 173.14,-176.84 173.17,-169.84"/>
+</g>
+<!-- sort_arrays -->
+<g id="program~~test_anisotropy~~UsesGraph_node9" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-145.15 0,-145.15 0,-121.15 67,-121.15 67,-145.15"/>
+<text text-anchor="middle" x="33.5" y="-130.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~anisotropy&#45;&gt;sort_arrays -->
+<g id="program~~test_anisotropy~~UsesGraph_edge11" class="edge">
+<title>module~anisotropy&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M333.68,-161.86C321.16,-148.72 299.97,-127.81 279,-113.15 263.03,-101.99 257.81,-101.05 240,-93.15"/>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M238,-93.15C182.49,-68.55 159.75,-50.55 103,-72.15 81.6,-80.3 62.63,-98.54 50.11,-112.96"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="47.21,-110.98 43.52,-120.91 52.6,-115.45 47.21,-110.98"/>
+</g>
+<!-- tchebychev -->
+<g id="program~~test_anisotropy~~UsesGraph_node10" class="node">
+<title>tchebychev</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="272.5,-226.15 205.5,-226.15 205.5,-202.15 272.5,-202.15 272.5,-226.15"/>
+<text text-anchor="middle" x="239" y="-211.75" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tchebychev</text>
+</g>
+<!-- module~anisotropy&#45;&gt;tchebychev -->
+<g id="program~~test_anisotropy~~UsesGraph_edge13" class="edge">
+<title>module~anisotropy&#45;&gt;tchebychev</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M314.91,-185.61C304.41,-189.61 292.44,-194.17 281.2,-198.46"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="279.66,-195.3 271.56,-202.13 282.15,-201.84 279.66,-195.3"/>
+</g>
+<!-- module~filter&#45;&gt;data_arch -->
+<g id="program~~test_anisotropy~~UsesGraph_edge14" class="edge">
+<title>module~filter&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M226.61,-146.58C212.96,-160.62 188.68,-182.97 163,-194.15 134.92,-206.38 100.48,-210.98 74.32,-212.61"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="73.83,-209.13 64.02,-213.12 74.18,-216.12 73.83,-209.13"/>
+</g>
+<!-- module~filter&#45;&gt;fftw3 -->
+<g id="program~~test_anisotropy~~UsesGraph_edge15" class="edge">
+<title>module~filter&#45;&gt;fftw3</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M229.11,-146.41C215.64,-164.71 188.84,-199.92 163,-227.15 160.91,-229.36 158.65,-231.59 156.36,-233.78"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="153.6,-231.56 148.59,-240.9 158.33,-236.72 153.6,-231.56"/>
+</g>
+<!-- module~filter&#45;&gt;surfile -->
+<g id="program~~test_anisotropy~~UsesGraph_edge18" class="edge">
+<title>module~filter&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M211.76,-123.81C199.07,-118.81 183.65,-112.72 169.89,-107.3"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="170.82,-103.91 160.24,-103.5 168.25,-110.42 170.82,-103.91"/>
+</g>
+<!-- module~filter&#45;&gt;module~stat_mom -->
+<g id="program~~test_anisotropy~~UsesGraph_edge16" class="edge">
+<title>module~filter&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M211.76,-143.99C199.96,-148.42 185.8,-153.73 172.81,-158.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="171.3,-155.43 163.17,-162.21 173.76,-161.98 171.3,-155.43"/>
+</g>
+<!-- module~filter&#45;&gt;sort_arrays -->
+<g id="program~~test_anisotropy~~UsesGraph_edge17" class="edge">
+<title>module~filter&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M211.81,-134.02C177.84,-133.86 118.13,-133.56 77.47,-133.36"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="77.33,-129.86 67.32,-133.31 77.3,-136.86 77.33,-129.86"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="program~~test_anisotropy~~UsesGraph_edge19" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M102.75,-185.15C93.58,-188.92 83.3,-193.13 73.57,-197.13"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="71.99,-193.99 64.07,-201.02 74.65,-200.46 71.99,-193.99"/>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="program~~test_anisotropy~~UsesGraph_edge20" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M102.75,-161.15C93.58,-157.39 83.3,-153.17 73.57,-149.18"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="74.65,-145.84 64.07,-145.28 71.99,-152.32 74.65,-145.84"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+   <strong>Anisotropy detection. Example of use</strong>
+</span></p>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~test_anisotropy~~CallsGraph Pages: 1 -->
+<svg id="programtest_anisotropyCallsGraph" width="641pt" height="584pt"
+ viewBox="0.00 0.00 641.00 584.36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~test_anisotropy~~CallsGraph" class="graph" transform="scale(0.9 0.9) rotate(0) translate(4 646)">
+<title>program~~test_anisotropy~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-646 709,-646 709,4 -4,4"/>
+<!-- program~test_anisotropy -->
+<g id="program~~test_anisotropy~~CallsGraph_node1" class="node">
+<title>program~test_anisotropy</title>
+<polygon fill="none" stroke="black" points="85,-394 0,-394 0,-370 85,-370 85,-394"/>
+<text text-anchor="middle" x="42.5" y="-379.6" font-family="Helvetica,sans-Serif" font-size="10.50">test_anisotropy</text>
+</g>
+<!-- apod -->
+<g id="program~~test_anisotropy~~CallsGraph_node2" class="node">
+<title>apod</title>
+<polygon fill="#777777" stroke="#777777" points="530,-476 476,-476 476,-452 530,-452 530,-476"/>
+<text text-anchor="middle" x="503" y="-461.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">apod</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;apod -->
+<g id="program~~test_anisotropy~~CallsGraph_edge1" class="edge">
+<title>program~test_anisotropy&#45;&gt;apod</title>
+<path fill="none" stroke="#ff0000" d="M53.82,-394.19C67.45,-409.26 92.99,-434.26 121,-445 240.4,-490.79 396.43,-478.31 465.91,-469.42"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="466.46,-472.88 475.91,-468.08 465.54,-465.94 466.46,-472.88"/>
+</g>
+<!-- end_fftw3 -->
+<g id="program~~test_anisotropy~~CallsGraph_node3" class="node">
+<title>end_fftw3</title>
+<polygon fill="#777777" stroke="#777777" points="214.5,-600 155.5,-600 155.5,-576 214.5,-576 214.5,-600"/>
+<text text-anchor="middle" x="185" y="-585.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">end_fftw3</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;end_fftw3 -->
+<g id="program~~test_anisotropy~~CallsGraph_edge2" class="edge">
+<title>program~test_anisotropy&#45;&gt;end_fftw3</title>
+<path fill="none" stroke="#ff0000" d="M45.12,-394.35C50.1,-427.28 68.16,-517.98 121,-567 127.89,-573.39 136.78,-577.84 145.7,-580.94"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="144.71,-584.3 155.29,-583.8 146.71,-577.59 144.71,-584.3"/>
+</g>
+<!-- fftw_plan_with_nthreads -->
+<g id="program~~test_anisotropy~~CallsGraph_node4" class="node">
+<title>fftw_plan_with_nthreads</title>
+<polygon fill="#777777" stroke="#777777" points="249,-558 121,-558 121,-534 249,-534 249,-558"/>
+<text text-anchor="middle" x="185" y="-543.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw_plan_with_nthreads</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;fftw_plan_with_nthreads -->
+<g id="program~~test_anisotropy~~CallsGraph_edge3" class="edge">
+<title>program~test_anisotropy&#45;&gt;fftw_plan_with_nthreads</title>
+<path fill="none" stroke="#ff0000" d="M46.79,-394.32C54.77,-421.84 77.73,-488.71 121,-525 122.72,-526.44 124.55,-527.79 126.45,-529.05"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="124.78,-532.12 135.21,-533.98 128.22,-526.02 124.78,-532.12"/>
+</g>
+<!-- init_fftw3 -->
+<g id="program~~test_anisotropy~~CallsGraph_node5" class="node">
+<title>init_fftw3</title>
+<polygon fill="#777777" stroke="#777777" points="212.5,-516 157.5,-516 157.5,-492 212.5,-492 212.5,-516"/>
+<text text-anchor="middle" x="185" y="-501.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_fftw3</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;init_fftw3 -->
+<g id="program~~test_anisotropy~~CallsGraph_edge4" class="edge">
+<title>program~test_anisotropy&#45;&gt;init_fftw3</title>
+<path fill="none" stroke="#ff0000" d="M50.55,-394.26C62.63,-414.28 89.08,-454.16 121,-478 129.02,-483.99 138.62,-488.86 147.88,-492.7"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="146.74,-496.01 157.33,-496.33 149.25,-489.47 146.74,-496.01"/>
+</g>
+<!-- init_scal -->
+<g id="program~~test_anisotropy~~CallsGraph_node6" class="node">
+<title>init_scal</title>
+<polygon fill="#777777" stroke="#777777" points="530,-276 476,-276 476,-252 530,-252 530,-276"/>
+<text text-anchor="middle" x="503" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">init_scal</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;init_scal -->
+<g id="program~~test_anisotropy~~CallsGraph_edge5" class="edge">
+<title>program~test_anisotropy&#45;&gt;init_scal</title>
+<path fill="none" stroke="#ff0000" d="M43.22,-369.86C43.06,-330.64 48.52,-206.84 121,-155 239.93,-69.94 302.02,-189.25 438,-243 447.02,-246.57 456.92,-250.03 466.18,-253.08"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="465.31,-256.47 475.9,-256.21 467.46,-249.81 465.31,-256.47"/>
+</g>
+<!-- omp_get_max_threads -->
+<g id="program~~test_anisotropy~~CallsGraph_node7" class="node">
+<title>omp_get_max_threads</title>
+<polygon fill="#777777" stroke="#777777" points="246.5,-436 123.5,-436 123.5,-412 246.5,-412 246.5,-436"/>
+<text text-anchor="middle" x="185" y="-421.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">omp_get_max_threads</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;omp_get_max_threads -->
+<g id="program~~test_anisotropy~~CallsGraph_edge6" class="edge">
+<title>program~test_anisotropy&#45;&gt;omp_get_max_threads</title>
+<path fill="none" stroke="#ff0000" d="M83.76,-394.04C99.34,-398.69 117.34,-404.07 133.75,-408.98"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="133.15,-412.45 143.73,-411.96 135.15,-405.75 133.15,-412.45"/>
+</g>
+<!-- proc~correlation_parameters -->
+<g id="program~~test_anisotropy~~CallsGraph_node8" class="node">
+<title>proc~correlation_parameters</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node8"><a xlink:href="../proc/correlation_parameters.html" xlink:title="correlation_parameters">
+<polygon fill="#d9534f" stroke="#d9534f" points="247,-394 123,-394 123,-370 247,-370 247,-394"/>
+<text text-anchor="middle" x="185" y="-379.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">correlation_parameters</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;proc~correlation_parameters -->
+<g id="program~~test_anisotropy~~CallsGraph_edge7" class="edge">
+<title>program~test_anisotropy&#45;&gt;proc~correlation_parameters</title>
+<path fill="none" stroke="#ff0000" d="M85.27,-382C93.95,-382 103.32,-382 112.71,-382"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="112.88,-385.5 122.88,-382 112.88,-378.5 112.88,-385.5"/>
+</g>
+<!-- proc~ellipse_acf -->
+<g id="program~~test_anisotropy~~CallsGraph_node9" class="node">
+<title>proc~ellipse_acf</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node9"><a xlink:href="../proc/ellipse_acf.html" xlink:title="ellipse_acf">
+<polygon fill="#d9534f" stroke="#d9534f" points="375,-600 312,-600 312,-576 375,-576 375,-600"/>
+<text text-anchor="middle" x="343.5" y="-585.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ellipse_acf</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;proc~ellipse_acf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge8" class="edge">
+<title>program~test_anisotropy&#45;&gt;proc~ellipse_acf</title>
+<path fill="none" stroke="#ff0000" d="M43.22,-394.14C43.06,-433.36 48.52,-557.16 121,-609 176.58,-648.76 261.13,-623.53 308.06,-604.16"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="309.66,-607.28 317.48,-600.14 306.91,-600.84 309.66,-607.28"/>
+</g>
+<!-- proc~fake_acv -->
+<g id="program~~test_anisotropy~~CallsGraph_node10" class="node">
+<title>proc~fake_acv</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node10"><a xlink:href="../proc/fake_acv.html" xlink:title="fake_acv">
+<polygon fill="#d9534f" stroke="#d9534f" points="212.5,-314 157.5,-314 157.5,-290 212.5,-290 212.5,-314"/>
+<text text-anchor="middle" x="185" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fake_acv</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;proc~fake_acv -->
+<g id="program~~test_anisotropy~~CallsGraph_edge9" class="edge">
+<title>program~test_anisotropy&#45;&gt;proc~fake_acv</title>
+<path fill="none" stroke="#ff0000" d="M58.88,-369.78C74.07,-358.08 98.26,-340.42 121,-328 129.46,-323.38 138.93,-319.06 147.89,-315.33"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="149.39,-318.5 157.35,-311.51 146.77,-312 149.39,-318.5"/>
+</g>
+<!-- proc~multiple_anisotropy -->
+<g id="program~~test_anisotropy~~CallsGraph_node11" class="node">
+<title>proc~multiple_anisotropy</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node11"><a xlink:href="../proc/multiple_anisotropy.html" xlink:title="multiple_anisotropy">
+<polygon fill="#d9534f" stroke="#d9534f" points="237.5,-272 132.5,-272 132.5,-248 237.5,-248 237.5,-272"/>
+<text text-anchor="middle" x="185" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">multiple_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;proc~multiple_anisotropy -->
+<g id="program~~test_anisotropy~~CallsGraph_edge10" class="edge">
+<title>program~test_anisotropy&#45;&gt;proc~multiple_anisotropy</title>
+<path fill="none" stroke="#ff0000" d="M49.66,-369.85C60.95,-348.74 86.98,-305.24 121,-281 123.21,-279.42 125.55,-277.96 127.97,-276.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="129.62,-279.69 137.04,-272.13 126.53,-273.41 129.62,-279.69"/>
+</g>
+<!-- read_surf -->
+<g id="program~~test_anisotropy~~CallsGraph_node12" class="node">
+<title>read_surf</title>
+<polygon fill="#777777" stroke="#777777" points="214,-230 156,-230 156,-206 214,-206 214,-230"/>
+<text text-anchor="middle" x="185" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">read_surf</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;read_surf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge11" class="edge">
+<title>program~test_anisotropy&#45;&gt;read_surf</title>
+<path fill="none" stroke="#ff0000" d="M46.79,-369.68C54.77,-342.16 77.73,-275.29 121,-239 128.12,-233.02 137.01,-228.73 145.85,-225.65"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="147.14,-228.91 155.7,-222.66 145.11,-222.21 147.14,-228.91"/>
+</g>
+<!-- unit2iuf -->
+<g id="program~~test_anisotropy~~CallsGraph_node13" class="node">
+<title>unit2iuf</title>
+<polygon fill="#777777" stroke="#777777" points="212,-188 158,-188 158,-164 212,-164 212,-188"/>
+<text text-anchor="middle" x="185" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">unit2iuf</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;unit2iuf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge12" class="edge">
+<title>program~test_anisotropy&#45;&gt;unit2iuf</title>
+<path fill="none" stroke="#ff0000" d="M45.12,-369.65C50.1,-336.72 68.16,-246.02 121,-197 128.46,-190.07 138.28,-185.43 147.93,-182.31"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="149.11,-185.62 157.82,-179.59 147.25,-178.87 149.11,-185.62"/>
+</g>
+<!-- write_surf -->
+<g id="program~~test_anisotropy~~CallsGraph_node14" class="node">
+<title>write_surf</title>
+<polygon fill="#777777" stroke="#777777" points="532.5,-350 473.5,-350 473.5,-326 532.5,-326 532.5,-350"/>
+<text text-anchor="middle" x="503" y="-335.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">write_surf</text>
+</g>
+<!-- program~test_anisotropy&#45;&gt;write_surf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge13" class="edge">
+<title>program~test_anisotropy&#45;&gt;write_surf</title>
+<path fill="none" stroke="#ff0000" d="M81.79,-369.96C94.18,-366.51 108.07,-363.12 121,-361 244.78,-340.71 393.81,-337.85 463.08,-337.74"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="463.1,-341.24 473.1,-337.74 463.1,-334.24 463.1,-341.24"/>
+</g>
+<!-- proc~correlation_parameters&#45;&gt;proc~ellipse_acf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge16" class="edge">
+<title>proc~correlation_parameters&#45;&gt;proc~ellipse_acf</title>
+<path fill="none" stroke="#00ffc4" d="M235.21,-394.05C240.18,-396.51 244.9,-399.46 249,-403 275.79,-426.14 316.62,-522.96 334.09,-566.56"/>
+<polygon fill="#00ffc4" stroke="#00ffc4" points="330.88,-567.95 337.83,-575.96 337.39,-565.37 330.88,-567.95"/>
+</g>
+<!-- least_squares_tcheby -->
+<g id="program~~test_anisotropy~~CallsGraph_node16" class="node">
+<title>least_squares_tcheby</title>
+<polygon fill="#777777" stroke="#777777" points="402,-436 285,-436 285,-412 402,-412 402,-436"/>
+<text text-anchor="middle" x="343.5" y="-421.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">least_squares_tcheby</text>
+</g>
+<!-- proc~correlation_parameters&#45;&gt;least_squares_tcheby -->
+<g id="program~~test_anisotropy~~CallsGraph_edge14" class="edge">
+<title>proc~correlation_parameters&#45;&gt;least_squares_tcheby</title>
+<path fill="none" stroke="#00ffc4" d="M230.85,-394.04C248.61,-398.8 269.2,-404.33 287.82,-409.33"/>
+<polygon fill="#00ffc4" stroke="#00ffc4" points="287.08,-412.75 297.65,-411.96 288.9,-405.99 287.08,-412.75"/>
+</g>
+<!-- proc~acv -->
+<g id="program~~test_anisotropy~~CallsGraph_node18" class="node">
+<title>proc~acv</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node18"><a xlink:href="../proc/acv.html" xlink:title="acv">
+<polygon fill="#d9534f" stroke="#d9534f" points="370.5,-394 316.5,-394 316.5,-370 370.5,-370 370.5,-394"/>
+<text text-anchor="middle" x="343.5" y="-379.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">acv</text>
+</a>
+</g>
+</g>
+<!-- proc~correlation_parameters&#45;&gt;proc~acv -->
+<g id="program~~test_anisotropy~~CallsGraph_edge15" class="edge">
+<title>proc~correlation_parameters&#45;&gt;proc~acv</title>
+<path fill="none" stroke="#00ffc4" d="M247.4,-382C267.26,-382 288.64,-382 306.08,-382"/>
+<polygon fill="#00ffc4" stroke="#00ffc4" points="306.39,-385.5 316.39,-382 306.39,-378.5 306.39,-385.5"/>
+</g>
+<!-- get_unit -->
+<g id="program~~test_anisotropy~~CallsGraph_node15" class="node">
+<title>get_unit</title>
+<polygon fill="#777777" stroke="#777777" points="530,-558 476,-558 476,-534 530,-534 530,-558"/>
+<text text-anchor="middle" x="503" y="-543.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_unit</text>
+</g>
+<!-- proc~ellipse_acf&#45;&gt;get_unit -->
+<g id="program~~test_anisotropy~~CallsGraph_edge17" class="edge">
+<title>proc~ellipse_acf&#45;&gt;get_unit</title>
+<path fill="none" stroke="#00c4ff" d="M375.24,-579.8C401.2,-572.88 438.41,-562.96 465.8,-555.65"/>
+<polygon fill="#00c4ff" stroke="#00c4ff" points="467.02,-558.95 475.78,-552.99 465.21,-552.19 467.02,-558.95"/>
+</g>
+<!-- omp_get_num_procs -->
+<g id="program~~test_anisotropy~~CallsGraph_node17" class="node">
+<title>omp_get_num_procs</title>
+<polygon fill="#777777" stroke="#777777" points="560,-642 446,-642 446,-618 560,-618 560,-642"/>
+<text text-anchor="middle" x="503" y="-627.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">omp_get_num_procs</text>
+</g>
+<!-- proc~ellipse_acf&#45;&gt;omp_get_num_procs -->
+<g id="program~~test_anisotropy~~CallsGraph_edge18" class="edge">
+<title>proc~ellipse_acf&#45;&gt;omp_get_num_procs</title>
+<path fill="none" stroke="#00c4ff" d="M375.24,-596.2C395.62,-601.63 422.93,-608.92 446.99,-615.33"/>
+<polygon fill="#00c4ff" stroke="#00c4ff" points="446.16,-618.73 456.72,-617.93 447.96,-611.97 446.16,-618.73"/>
+</g>
+<!-- sort_array2 -->
+<g id="program~~test_anisotropy~~CallsGraph_node21" class="node">
+<title>sort_array2</title>
+<polygon fill="#777777" stroke="#777777" points="536.5,-600 469.5,-600 469.5,-576 536.5,-576 536.5,-600"/>
+<text text-anchor="middle" x="503" y="-585.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</g>
+<!-- proc~ellipse_acf&#45;&gt;sort_array2 -->
+<g id="program~~test_anisotropy~~CallsGraph_edge19" class="edge">
+<title>proc~ellipse_acf&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#00c4ff" d="M375.24,-588C399.19,-588 432.71,-588 459.27,-588"/>
+<polygon fill="#00c4ff" stroke="#00c4ff" points="459.44,-591.5 469.44,-588 459.44,-584.5 459.44,-591.5"/>
+</g>
+<!-- proc~multiple_anisotropy&#45;&gt;init_scal -->
+<g id="program~~test_anisotropy~~CallsGraph_edge20" class="edge">
+<title>proc~multiple_anisotropy&#45;&gt;init_scal</title>
+<path fill="none" stroke="#2700ff" d="M237.53,-252.56C252.78,-250.68 269.53,-248.93 285,-248 336.91,-244.87 350.16,-243.88 402,-248 423.29,-249.69 446.9,-253.38 465.83,-256.79"/>
+<polygon fill="#2700ff" stroke="#2700ff" points="465.35,-260.26 475.82,-258.64 466.62,-253.38 465.35,-260.26"/>
+</g>
+<!-- proc~multiple_anisotropy&#45;&gt;write_surf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge23" class="edge">
+<title>proc~multiple_anisotropy&#45;&gt;write_surf</title>
+<path fill="none" stroke="#2700ff" d="M237.84,-259.01C282.37,-259.57 347.78,-263.78 402,-281 429.58,-289.76 457.96,-306.85 477.41,-320.04"/>
+<polygon fill="#2700ff" stroke="#2700ff" points="475.47,-322.96 485.68,-325.78 479.46,-317.21 475.47,-322.96"/>
+</g>
+<!-- proc~fft_filter -->
+<g id="program~~test_anisotropy~~CallsGraph_node19" class="node">
+<title>proc~fft_filter</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node19"><a xlink:href="../proc/fft_filter.html" xlink:title="fft_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="370.5,-108 316.5,-108 316.5,-84 370.5,-84 370.5,-108"/>
+<text text-anchor="middle" x="343.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fft_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~multiple_anisotropy&#45;&gt;proc~fft_filter -->
+<g id="program~~test_anisotropy~~CallsGraph_edge21" class="edge">
+<title>proc~multiple_anisotropy&#45;&gt;proc~fft_filter</title>
+<path fill="none" stroke="#2700ff" d="M233.86,-247.93C239.25,-245.47 244.43,-242.52 249,-239 291.21,-206.46 320.23,-149.15 333.78,-117.87"/>
+<polygon fill="#2700ff" stroke="#2700ff" points="337.14,-118.91 337.78,-108.34 330.68,-116.2 337.14,-118.91"/>
+</g>
+<!-- proc~simple_anisotropy -->
+<g id="program~~test_anisotropy~~CallsGraph_node20" class="node">
+<title>proc~simple_anisotropy</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node20"><a xlink:href="../proc/simple_anisotropy.html" xlink:title="simple_anisotropy">
+<polygon fill="#d9534f" stroke="#d9534f" points="393,-314 294,-314 294,-290 393,-290 393,-314"/>
+<text text-anchor="middle" x="343.5" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">simple_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- proc~multiple_anisotropy&#45;&gt;proc~simple_anisotropy -->
+<g id="program~~test_anisotropy~~CallsGraph_edge22" class="edge">
+<title>proc~multiple_anisotropy&#45;&gt;proc~simple_anisotropy</title>
+<path fill="none" stroke="#2700ff" d="M230.85,-272.04C248.61,-276.8 269.2,-282.33 287.82,-287.33"/>
+<polygon fill="#2700ff" stroke="#2700ff" points="287.08,-290.75 297.65,-289.96 288.9,-283.99 287.08,-290.75"/>
+</g>
+<!-- proc~acv&#45;&gt;apod -->
+<g id="program~~test_anisotropy~~CallsGraph_edge24" class="edge">
+<title>proc~acv&#45;&gt;apod</title>
+<path fill="none" stroke="#00ff91" d="M370.69,-388.59C380.99,-391.92 392.58,-396.63 402,-403 421.82,-416.39 417.96,-429.94 438,-443 446.43,-448.5 456.43,-452.67 465.99,-455.79"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="465.13,-459.19 475.71,-458.67 467.12,-452.47 465.13,-459.19"/>
+</g>
+<!-- proc~acv&#45;&gt;init_scal -->
+<g id="program~~test_anisotropy~~CallsGraph_edge27" class="edge">
+<title>proc~acv&#45;&gt;init_scal</title>
+<path fill="none" stroke="#00ff91" d="M360.76,-369.82C388.47,-349.06 444.97,-306.73 477.49,-282.37"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="479.69,-285.09 485.59,-276.29 475.49,-279.49 479.69,-285.09"/>
+</g>
+<!-- proc~acv&#45;&gt;write_surf -->
+<g id="program~~test_anisotropy~~CallsGraph_edge30" class="edge">
+<title>proc~acv&#45;&gt;write_surf</title>
+<path fill="none" stroke="#00ff91" d="M370.51,-374.73C395.83,-367.66 434.62,-356.82 463.51,-348.75"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="464.59,-352.08 473.28,-346.02 462.71,-345.34 464.59,-352.08"/>
+</g>
+<!-- calc_fftw3_real_bwd -->
+<g id="program~~test_anisotropy~~CallsGraph_node22" class="node">
+<title>calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="557.5,-192 448.5,-192 448.5,-168 557.5,-168 557.5,-192"/>
+<text text-anchor="middle" x="503" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~acv&#45;&gt;calc_fftw3_real_bwd -->
+<g id="program~~test_anisotropy~~CallsGraph_edge25" class="edge">
+<title>proc~acv&#45;&gt;calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#00ff91" d="M359.82,-369.99C372.8,-359.04 391.01,-341.76 402,-323 430.57,-274.21 398.63,-241.57 438,-201 439.07,-199.9 440.2,-198.85 441.37,-197.87"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="443.51,-200.65 449.77,-192.1 439.55,-194.87 443.51,-200.65"/>
+</g>
+<!-- calc_fftw3_real_fwd -->
+<g id="program~~test_anisotropy~~CallsGraph_node23" class="node">
+<title>calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="556,-234 450,-234 450,-210 556,-210 556,-234"/>
+<text text-anchor="middle" x="503" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~acv&#45;&gt;calc_fftw3_real_fwd -->
+<g id="program~~test_anisotropy~~CallsGraph_edge26" class="edge">
+<title>proc~acv&#45;&gt;calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#00ff91" d="M359.2,-369.6C371.79,-358.4 389.77,-340.97 402,-323 423.94,-290.77 409.01,-269.07 438,-243 439.47,-241.68 441.02,-240.44 442.64,-239.28"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="444.46,-242.27 451.21,-234.11 440.84,-236.28 444.46,-242.27"/>
+</g>
+<!-- proc~calc_moments -->
+<g id="program~~test_anisotropy~~CallsGraph_node25" class="node">
+<title>proc~calc_moments</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node25"><a xlink:href="../proc/calc_moments.html" xlink:title="calc_moments">
+<polygon fill="#d9534f" stroke="#d9534f" points="544,-434 462,-434 462,-410 544,-410 544,-434"/>
+<text text-anchor="middle" x="503" y="-419.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
+</a>
+</g>
+</g>
+<!-- proc~acv&#45;&gt;proc~calc_moments -->
+<g id="program~~test_anisotropy~~CallsGraph_edge28" class="edge">
+<title>proc~acv&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#00ff91" d="M370.51,-388.61C392.61,-394.22 424.96,-402.44 452.05,-409.31"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="451.21,-412.71 461.76,-411.78 452.93,-405.93 451.21,-412.71"/>
+</g>
+<!-- trans_corner2center -->
+<g id="program~~test_anisotropy~~CallsGraph_node29" class="node">
+<title>trans_corner2center</title>
+<polygon fill="#777777" stroke="#777777" points="557.5,-392 448.5,-392 448.5,-368 557.5,-368 557.5,-392"/>
+<text text-anchor="middle" x="503" y="-377.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">trans_corner2center</text>
+</g>
+<!-- proc~acv&#45;&gt;trans_corner2center -->
+<g id="program~~test_anisotropy~~CallsGraph_edge29" class="edge">
+<title>proc~acv&#45;&gt;trans_corner2center</title>
+<path fill="none" stroke="#00ff91" d="M370.51,-381.67C388.93,-381.44 414.49,-381.11 438.17,-380.81"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="438.22,-384.31 448.18,-380.68 438.14,-377.31 438.22,-384.31"/>
+</g>
+<!-- proc~fft_filter&#45;&gt;calc_fftw3_real_bwd -->
+<g id="program~~test_anisotropy~~CallsGraph_edge31" class="edge">
+<title>proc~fft_filter&#45;&gt;calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#0091ff" d="M370.51,-105.33C380.78,-109.62 392.4,-115.27 402,-122 420.78,-135.18 418.54,-146.85 438,-159 440.78,-160.73 443.71,-162.34 446.74,-163.82"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="445.46,-167.09 456.02,-167.92 448.29,-160.68 445.46,-167.09"/>
+</g>
+<!-- proc~fft_filter&#45;&gt;calc_fftw3_real_fwd -->
+<g id="program~~test_anisotropy~~CallsGraph_edge32" class="edge">
+<title>proc~fft_filter&#45;&gt;calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#0091ff" d="M370.66,-103.31C381.43,-107.39 393.39,-113.41 402,-122 429.32,-149.24 409.25,-175.27 438,-201 439.47,-202.32 441.02,-203.55 442.65,-204.71"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="440.86,-207.71 451.23,-209.87 444.46,-201.72 440.86,-207.71"/>
+</g>
+<!-- extend -->
+<g id="program~~test_anisotropy~~CallsGraph_node24" class="node">
+<title>extend</title>
+<polygon fill="#777777" stroke="#777777" points="530,-66 476,-66 476,-42 530,-42 530,-66"/>
+<text text-anchor="middle" x="503" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">extend</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;extend -->
+<g id="program~~test_anisotropy~~CallsGraph_edge33" class="edge">
+<title>proc~fft_filter&#45;&gt;extend</title>
+<path fill="none" stroke="#0091ff" d="M370.51,-89.06C396.61,-82.1 437.03,-71.33 466.16,-63.56"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="467.19,-66.9 475.95,-60.95 465.39,-60.14 467.19,-66.9"/>
+</g>
+<!-- proc~gaussian_filter -->
+<g id="program~~test_anisotropy~~CallsGraph_node26" class="node">
+<title>proc~gaussian_filter</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node26"><a xlink:href="../proc/gaussian_filter.html" xlink:title="gaussian_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="544,-24 462,-24 462,0 544,0 544,-24"/>
+<text text-anchor="middle" x="503" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">gaussian_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~fft_filter&#45;&gt;proc~gaussian_filter -->
+<g id="program~~test_anisotropy~~CallsGraph_edge34" class="edge">
+<title>proc~fft_filter&#45;&gt;proc~gaussian_filter</title>
+<path fill="none" stroke="#0091ff" d="M359.58,-83.91C377.43,-70.07 408.46,-47.45 438,-33 442.54,-30.78 447.38,-28.7 452.28,-26.8"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="453.54,-30.06 461.72,-23.33 451.13,-23.49 453.54,-30.06"/>
+</g>
+<!-- tab_calc_fftw3_real_bwd -->
+<g id="program~~test_anisotropy~~CallsGraph_node27" class="node">
+<title>tab_calc_fftw3_real_bwd</title>
+<polygon fill="#777777" stroke="#777777" points="568,-150 438,-150 438,-126 568,-126 568,-150"/>
+<text text-anchor="middle" x="503" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_bwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;tab_calc_fftw3_real_bwd -->
+<g id="program~~test_anisotropy~~CallsGraph_edge35" class="edge">
+<title>proc~fft_filter&#45;&gt;tab_calc_fftw3_real_bwd</title>
+<path fill="none" stroke="#0091ff" d="M370.51,-102.94C391.27,-108.47 421.09,-116.42 447.08,-123.35"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="446.26,-126.76 456.83,-125.95 448.07,-120 446.26,-126.76"/>
+</g>
+<!-- tab_calc_fftw3_real_fwd -->
+<g id="program~~test_anisotropy~~CallsGraph_node28" class="node">
+<title>tab_calc_fftw3_real_fwd</title>
+<polygon fill="#777777" stroke="#777777" points="566.5,-108 439.5,-108 439.5,-84 566.5,-84 566.5,-108"/>
+<text text-anchor="middle" x="503" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">tab_calc_fftw3_real_fwd</text>
+</g>
+<!-- proc~fft_filter&#45;&gt;tab_calc_fftw3_real_fwd -->
+<g id="program~~test_anisotropy~~CallsGraph_edge36" class="edge">
+<title>proc~fft_filter&#45;&gt;tab_calc_fftw3_real_fwd</title>
+<path fill="none" stroke="#0091ff" d="M370.51,-96C386.58,-96 408.07,-96 429.01,-96"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="429.22,-99.5 439.22,-96 429.22,-92.5 429.22,-99.5"/>
+</g>
+<!-- proc~calc_moments_1d -->
+<g id="program~~test_anisotropy~~CallsGraph_node30" class="node">
+<title>proc~calc_moments_1d</title>
+<g id="a_program~~test_anisotropy~~CallsGraph_node30"><a xlink:href="../proc/calc_moments_1d.html" xlink:title="calc_moments_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="705,-434 604,-434 604,-410 705,-410 705,-434"/>
+<text text-anchor="middle" x="654.5" y="-419.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments_1D</text>
+</a>
+</g>
+</g>
+<!-- proc~calc_moments&#45;&gt;proc~calc_moments_1d -->
+<g id="program~~test_anisotropy~~CallsGraph_edge37" class="edge">
+<title>proc~calc_moments&#45;&gt;proc~calc_moments_1d</title>
+<path fill="none" stroke="#00ff3f" d="M544.06,-422C559.32,-422 577.05,-422 593.75,-422"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="593.97,-425.5 603.97,-422 593.97,-418.5 593.97,-425.5"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprogramtest_anisotropyCallsGraph = svgPanZoom('#programtest_anisotropyCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-array"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>array</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-array_tmp"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>array_tmp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dx~9"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dy~9"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>dy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ech_param"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>ech_param</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ell_param"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              dimension(1:3)
+            </td>
+            <td>::</td>
+            <td><strong>ell_param</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lx"></span>
+              real(kind=R8)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>lx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_th~3"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>n_th</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nnx"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nnx</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nny"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nny</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx~13"></span>
+              integer(kind=I4),
+            </td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>nx</strong></td>
+<td> =</td>
+                <td>800</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nx2~3"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nx2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny~13"></span>
+              integer(kind=I4),
+            </td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>ny</strong></td>
+<td> =</td>
+                <td>400</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ny2~3"></span>
+              integer(kind=I4)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ny2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-param_acv"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              dimension(1:8)
+            </td>
+            <td>::</td>
+            <td><strong>param_acv</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-param_ani"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              dimension(1:9)
+            </td>
+            <td>::</td>
+            <td><strong>param_ani</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scal_surf~3"></span>
+              type(SCALE_SURF)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>scal_surf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scale_xy"></span>
+              real(kind=R8),
+            </td>
+            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>scale_xy</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    <section>
+    <h2>Subroutines</h2>
+      <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-fake_acv"></span> <h3> subroutine <a href='../proc/fake_acv.html'>fake_acv</a>(acv_array, long, larg, param, ech)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-acv_array"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              allocatable, dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>acv_array</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~9"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~9"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-param"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:3)
+            </td>
+            <td>::</td>
+            <td><strong>param</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ech"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:2)
+            </td>
+            <td>::</td>
+            <td><strong>ech</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+    </section>    
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">test_anisotropy</span>
+<span class="k">use </span><span class="n">data_arch</span><span class="p">,</span><span class="w">     </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">I4</span><span class="p">,</span><span class="w"> </span><span class="n">R8</span><span class="p">,</span><span class="w"> </span><span class="n">PI_R8</span>
+<span class="k">use </span><span class="n">miscellaneous</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">get_unit</span>
+<span class="k">use </span><span class="n">surfile</span><span class="p">,</span><span class="w">       </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">init_scal</span><span class="p">,</span><span class="w"> </span><span class="n">read_surf</span><span class="p">,</span><span class="w"> </span><span class="n">write_surf</span><span class="p">,</span><span class="w"> </span><span class="n">SCALE_SURF</span><span class="p">,</span><span class="w"> </span><span class="n">unit2IUf</span>
+<span class="k">use </span><span class="n">fftw3</span>
+<span class="k">use </span><span class="n">anisotropy</span>
+<span class="c">!$ use omp_lib</span>
+<span class="k">implicit none</span>
+
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">400</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">array_tmp</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ell_param</span>
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">ech_param</span>
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">param_acv</span>
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">param_ani</span>
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">scale_xy</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lx</span><span class="p">,</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span>
+
+<span class="k">type</span><span class="p">(</span><span class="n">SCALE_SURF</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">scal_surf</span>
+
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w"> </span><span class="n">n_th</span><span class="p">,</span><span class="w"> </span><span class="n">nx2</span><span class="p">,</span><span class="w"> </span><span class="n">ny2</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/test1.sur&quot;</span><span class="p">,</span><span class="w">         </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="n">nnx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span>
+<span class="n">nny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span>
+
+<span class="n">scale_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">unit2IUf</span><span class="p">(</span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dx_unit</span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">unit2IUf</span><span class="p">(</span><span class="n">scal_surf</span><span class="p">%</span><span class="n">dy_unit</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w">     </span><span class="c">!</span>
+
+<span class="n">n_th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_max_threads</span><span class="p">()</span>
+<span class="k">call </span><span class="n">fftw_plan_with_nthreads</span><span class="p">(</span><span class="n">nthreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_th</span><span class="p">)</span>
+
+<span class="n">nx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">PAD_FFT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nnx</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+<span class="n">ny2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">PAD_FFT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">init_fftw3</span><span class="p">(</span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx2</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny2</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="c">!</span>
+
+
+<span class="k">call </span><span class="n">multiple_anisotropy</span><span class="p">(</span><span class="w"> </span><span class="n">tabin</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                          </span><span class="nb">long</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                          </span><span class="n">larg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                          </span><span class="n">scale_xy</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">scale_xy</span><span class="p">,</span><span class="w">              </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                          </span><span class="n">multi_fft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                          </span><span class="n">vec_ani</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w">          </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">end_fftw3</span><span class="p">()</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bmp, maximum over [0,179°] of the peaks mean width&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;smp, minimum over [0,179°] of the peaks mean width&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rmp, ratio bmp/smp&#39;</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bml, maximum over [0,179°] of the path length&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sml, minimum over [0,179°] of the path length&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rml, ratio bml/sml&#39;</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bms, maximum over [0,179°] of the standard deviation of slope&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sms, minimum over [0,179°] of the standard deviation of slope&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_ani</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rms, ratio bms/sms&#39;</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------</span>
+
+<span class="n">ell_param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">4</span><span class="mf">0.e-6_R8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="mf">0.e-6_R8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="mf">5._R8</span><span class="w"> </span><span class="p">]</span><span class="w">    </span><span class="c">! big semi-axis, small semi-axis, angle (°)</span>
+
+<span class="n">ech_param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">0.25e-6_R8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25e-6_R8</span><span class="w"> </span><span class="p">]</span><span class="w">          </span><span class="c">! scale x (m/pix), scale_y (m/pix)</span>
+<span class="w">                                                </span><span class="c">! domain is (800 * 0.25e-6) X (400 * 0.25e-6) = 200 µm X 100 µm</span>
+
+<span class="k">call </span><span class="n">fake_acv</span><span class="p">(</span><span class="w"> </span><span class="n">acv_array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">               </span><span class="nb">long</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">               </span><span class="n">larg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">               </span><span class="n">param</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">ell_param</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">),</span><span class="w">      </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">               </span><span class="n">ech</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">ech_param</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w">        </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">init_scal</span><span class="p">(</span><span class="w"> </span><span class="n">scal</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">,</span><span class="w">             </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">nx</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">ny</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">lx</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ech_param</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">ly</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ech_param</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">unit_z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;m &#39;</span><span class="p">)</span><span class="w">                     </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/fake_acv.sur&quot;</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">             </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">ellipse_acf</span><span class="p">(</span><span class="w"> </span><span class="n">tabin</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w"> </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="nb">long</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">larg</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">p_acv</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">cut</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5_R8</span><span class="p">,</span><span class="w">            </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">scale_xy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ech_param</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">),</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                  </span><span class="n">omp</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="p">)</span><span class="w">              </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(    a, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;************&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;*******************************************************************&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;axe_a,                                ellipsis big axis&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;axe_b,                                ellipsis small axis&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;axe_a/axe_b                           another anisotropy factor&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;nint(angle/inc_a),                    main texture orientation&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ray_pente,                            radius of greatest slope&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;max_pente,                            greatest slope&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;max_pente/min_pente                   slope anisotropy factor&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;highest curvature/smallest curvature, curvature anisotropy factor&#39;</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="k">call </span><span class="n">apod</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">          </span><span class="n">tab_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">         </span><span class="n">type_apo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tuckey&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/apod_tuckey.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">apod</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">          </span><span class="n">tab_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">         </span><span class="n">type_apo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blackm&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/apod_blackman.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                   </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">apod</span><span class="p">(</span><span class="w"> </span><span class="n">tab_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">          </span><span class="n">tab_out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">             </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span><span class="w">                     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">         </span><span class="n">type_apo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hann__&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="k">call </span><span class="n">write_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;out/apod_hann.sur&quot;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">),</span><span class="w">     </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                 </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                   </span><span class="c">!</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w"> </span><span class="n">array_tmp</span><span class="w"> </span><span class="p">)</span>
+
+<span class="c">!-----------------------------------------------------------------------------------------------------------------</span>
+
+<span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">array_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">ny</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">read_surf</span><span class="p">(</span><span class="w"> </span><span class="n">nom_fic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;sur/verif_corr.sur&quot;</span><span class="p">,</span><span class="w">    </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">tab_s</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">,</span><span class="w">                   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                </span><span class="n">scal</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="w"> </span><span class="p">)</span><span class="w">                 </span><span class="c">!</span>
+
+<span class="n">nnx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">xres</span>
+<span class="n">nny</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scal_surf</span><span class="p">%</span><span class="n">yres</span>
+
+<span class="c">! let suppose that the length along x is 100 µm</span>
+<span class="n">lx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="mf">0.e-6_R8</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">nnx</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dx</span>
+
+<span class="n">n_th</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">omp_get_max_threads</span><span class="p">()</span>
+<span class="k">call </span><span class="n">fftw_plan_with_nthreads</span><span class="p">(</span><span class="n">nthreads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n_th</span><span class="p">)</span>
+
+<span class="n">nx2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">PAD_FFT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nnx</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ny2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">nint</span><span class="p">(</span><span class="n">PAD_FFT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">nny</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">call </span><span class="n">init_fftw3</span><span class="p">(</span><span class="nb">long</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nx2</span><span class="p">,</span><span class="w">  </span><span class="p">&amp;</span><span class="w"> </span><span class="c">!</span>
+<span class="w">                </span><span class="n">larg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ny2</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="c">!</span>
+
+<span class="c">! results gwyddion : correlation length between 3.7 and 4.2 µm</span>
+<span class="c">!                    no particular angle</span>
+<span class="k">call </span><span class="n">correlation_parameters</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nnx</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">nny</span><span class="p">),</span><span class="w">  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="nb">long</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nnx</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="n">larg</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">nny</span><span class="p">,</span><span class="w">                  </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="n">res</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">),</span><span class="w">       </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="n">cut</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5_R8</span><span class="p">,</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="n">sub_plane</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w">               </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="n">scale_xy</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">dx</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="p">],</span><span class="w">           </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                             </span><span class="n">omp</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w">  </span><span class="p">)</span><span class="w">                </span><span class="c">!</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(    a, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;************&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;*******************************************************************&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;axe_a,                                ellipsis big axis&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;axe_b,                                ellipsis small axis&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;axe_a/axe_b                           another anisotropy factor&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;nint(angle/inc_a),                    main texture orientation&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ray_pente,                            radius of greatest slope&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;max_pente,                            greatest slope&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;max_pente/min_pente                   slope anisotropy factor&#39;</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(e12.4, T20, a)&#39;</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">param_acv</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;highest curvature/smallest curvature, curvature anisotropy factor&#39;</span>
+
+<span class="k">call </span><span class="n">end_fftw3</span><span class="p">()</span>
+
+<span class="k">deallocate</span><span class="p">(</span><span class="w"> </span><span class="k">array</span><span class="w">  </span><span class="p">)</span>
+
+<span class="k">stop</span>
+<span class="k">contains</span>
+
+<span class="k">subroutine </span><span class="n">fake_acv</span><span class="p">(</span><span class="n">acv_array</span><span class="p">,</span><span class="w"> </span><span class="nb">long</span><span class="p">,</span><span class="w"> </span><span class="n">larg</span><span class="p">,</span><span class="w"> </span><span class="n">param</span><span class="p">,</span><span class="w"> </span><span class="n">ech</span><span class="p">)</span>
+<span class="k">implicit none</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:,:)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">acv_array</span>
+<span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">                                </span><span class="kd">::</span><span class="w"> </span><span class="nb">long</span><span class="p">,</span><span class="w"> </span><span class="n">larg</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span><span class="w">                </span><span class="kd">::</span><span class="w"> </span><span class="n">param</span>
+<span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">)</span><span class="w">                </span><span class="kd">::</span><span class="w"> </span><span class="n">ech</span>
+
+<span class="w">   </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">ia</span><span class="p">,</span><span class="w"> </span><span class="n">ib</span><span class="p">,</span><span class="w"> </span><span class="n">i0</span><span class="p">,</span><span class="w"> </span><span class="n">j0</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">ang</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">echx</span><span class="p">,</span><span class="w"> </span><span class="n">echy</span>
+
+<span class="w">   </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">acv_array</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="nb">long</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="n">larg</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">   </span><span class="n">a</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">b</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">   </span><span class="n">ang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="w">   </span><span class="n">echx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ech</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">   </span><span class="n">echy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ech</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="w">   </span><span class="n">ia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">echx</span><span class="w"> </span><span class="p">)</span>
+<span class="w">   </span><span class="n">ib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">echy</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">   </span><span class="n">i0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">long</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">   </span><span class="n">j0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">larg</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+
+<span class="w">   </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="w"> </span><span class="n">ang</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI_R8</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">180</span><span class="w"> </span><span class="p">)</span>
+<span class="w">   </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="w"> </span><span class="n">ang</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI_R8</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">180</span><span class="w"> </span><span class="p">)</span>
+
+<span class="w">   </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">larg</span>
+<span class="w">   </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">long</span>
+
+<span class="nb">      </span><span class="n">acv_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">+</span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j0</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ia</span><span class="w"> </span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w">   </span><span class="p">&amp;</span><span class="w">  </span><span class="c">!</span>
+<span class="w">                                                </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j0</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ib</span><span class="w"> </span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w">    </span><span class="c">!</span>
+
+<span class="w">   </span><span class="k">enddo</span>
+<span class="k">   enddo</span>
+
+<span class="k">return</span>
+<span class="k">endsubroutine </span><span class="n">fake_acv</span>
+
+<span class="k">endprogram </span><span class="n">test_anisotropy</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

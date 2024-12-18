@@ -1,0 +1,1665 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>filter &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>filter
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-author"><i class="fa fa-pencil"></i> Arthur Francisco</li>
+            <li class="list-inline-item" id="meta-date"><i class="fa fa-calendar-o"></i> april, 06 2023</li>
+            <li class="list-inline-item" id="meta-version"><i class="fa fa-barcode"></i> 1.0.0</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="11.6% of total for modules and submodules.">411 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_filter.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_filter.f90.html'>mod_filter.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">filter</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/filter.html#variable-pad_fft_filter">PAD_FFT_FILTER</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/filter.html#proc-fft_filter">fft_filter</a>
+            <a class="list-group-item" href="../module/filter.html#proc-gaussian_filter">gaussian_filter</a>
+            <a class="list-group-item" href="../module/filter.html#proc-median_filter">median_filter</a>
+            <a class="list-group-item" href="../module/filter.html#proc-median_smooth">median_smooth</a>
+            <a class="list-group-item" href="../module/filter.html#proc-morpho_filter">morpho_filter</a>
+            <a class="list-group-item" href="../module/filter.html#proc-roll_smooth">roll_smooth</a>
+            <a class="list-group-item" href="../module/filter.html#proc-soften">soften</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p><span style="color: #337ab7; font-family: cabin; font-size: 1.5em;">
+       <strong>Surface smoothers</strong>
+ </span></p>
+<h3 id="morphological-filter">Morphological Filter</h3>
+<div><button class="collapsible">Expand / reduce</button>
+<div class="content">
+
+The morphological filter is a technique in surface processing used to process geometrical structures within a surface.<br /><br />
+
+Imagine a ball rolling over the surface. Depending on the size and shape of the ball, it modifies the surface differently: larger balls can bridge small gaps, while smaller balls can fall into minor crevices.<br /><br />
+
+This filter is particularly useful in operations such as closing and opening, which can help in joining narrow breaks and eliminating small holes within objects in an image, respectively.
+
+<p style="text-align:center;"><img src="../media/opening_closing.jpg" alt="morpho_filter" width="500px"/></p>
+
+</div>
+</div>
+<p></p>
+
+<h3 id="median-filter-1">Median Filter 1</h3>
+<div><button class="collapsible">Expand / reduce</button>
+<div class="content">
+
+The median filter is a non-linear digital filtering technique, often used to remove noise from surfaces.<br /><br />
+
+It works by moving through each point of the surface, and considering a small neighborhood around that element. The filter then replaces the element with the median of its neighboring values. This method is particularly effective because, unlike mean filtering, it can remove noise while preserving edges in the surfaces.<br /><br />
+
+The median filter maintains sharp edges in surfaces and is robust against the introduction of noise.
+
+</div>
+</div>
+<p></p>
+
+<h3 id="median-filter-2">Median Filter 2</h3>
+<div><button class="collapsible">Expand / reduce</button>
+<div class="content">
+
+This median filter is a bit more complex than the classical median filter.
+
+<p style="text-align:center;"><img src="../media/filter_median.png" alt="median_filter" width="700px"/></p>
+
+An outlying observation, or “outlier”, is one that appears to deviate markedly from other members of the sample in which it occurs.
+Therefore no universal procedure exists to remove extra points: it depends on the kind of outliers and the surrounding data.<br /><br />
+In the present case several procedures have been tested and the one that best suits our need is the following:<br /><br />
+
+<ul>
+    <li> A 5x5 kernel median filter is applied to S1, giving S2.</li>
+    <li> S3 = S1 -S2 represents the S1 deviation from the median.</li>
+    <li> S3 is divided in 10 parts in each direction, and for each part the standard deviation is calculated. The global S3 deviation σ is defined as the median value of the 10x10 standard deviations</li>
+    <li> Inspired by the normal law, the procedure ends with the substitution of heights, for which abs(S1-S2) > 3σ, by median heights. The cleaned surface which is obtained will be called SA in what follows.</li>
+</ul>
+
+Eventhough the procedure is unusual, it provides satisfactory results in cleaning the primary extracted surfaces, without altering “real” points.
+
+</div>
+</div>
+<p></p>
+
+<h3 id="smoothing-filter">Smoothing Filter</h3>
+<div><button class="collapsible">Expand / reduce</button>
+<div class="content">
+
+The 2D smoothing kernel with a stencil of [1 2 1] represents a simple, yet effective method for smoothing a surface. This stencil typically forms a part of a larger convolution kernel applied over an image to average height values, effectively reducing noise and detail.<br /><br />
+
+This kernel is often used in conjunction with a similar vertical stencil to create a two-dimensional convolution mask. In practice, the [1 2 1] stencil is one row of a matrix, with possibly a corresponding column vector [1; 2; 1], used to perform a 2D convolution operation on a surface.<br /><br />
+
+When applied, each height in the resulting surface is a weighted average of its neighbors with the weights given by the kernel:<br /><br />
+
+<ul>
+    <li> The central height in the neighborhood receives the highest weight, typically reflecting higher importance or influence on the resulting height value.</li>
+    <li> The adjacent heights horizontally (and vertically, when combined with the vertical vector) receive a lower weight than the central height but contribute significantly to the smoothing effect.</li>
+    <li> Corner heights, if included by expanding the kernel to a full 2x2 or 3x3 matrix using both horizontal and vertical components, would receive the lowest weights.</li>
+</ul>
+
+In terms of application, the resulting convolution matrix for the two-dimensional case is :
+
+$$
+\begin{matrix}
+1 & 2 & 1 \\
+2 & 4 & 2 \\
+1 & 2 & 1
+\end{matrix}
+$$
+
+This configuration spreads the influence of a single height to its eight neighbors in a weighted manner, with a stronger influence horizontally and vertically, rather than diagonally.<br /><br />
+
+The strength of smoothing is adjusted by normalizing this kernel (dividing all entries by the sum of the entries, which is 16 in the standard case), thereby ensuring that the total influence in the area remains constant, preserving overall height.
+
+</div>
+</div>
+<p></p>
+
+<h3 id="gaussian-filter">Gaussian Filter</h3>
+<div><button class="collapsible">Expand / reduce</button>
+<div class="content">
+
+EN <a href="https://www.iso.org/standard/60813.html">ISO</a> 16610-61 septembre 2015 - Geometrical product specification (GPS) - Filtration - Part 61: Linear areal filters: Gaussian filters
+
+
+
+The weighting function of an areal filter has the formula of a rotationally symmetric Gaussian function with a cut-off wavelength, \(\lambda_c\) , given by :
+
+$$
+S(x,y)=\frac{1}{\alpha^2 \lambda_c^2} \; \exp \left[-\frac{\pi}{\alpha^2} \; \left( \frac{x^2 + y^2}{\lambda_c^2} \right) \right]
+$$
+
+<br />
+
+<ul>
+   <li> \(x\) is the distance from the centre (maximum) of the weighting function in \(X\) direction;</li>
+   <li> \(y\) is the distance from the centre (maximum) of the weighting function in \(Y\) direction;</li>
+   <li> \(\lambda_c\) is the cut-off wavelength;</li>
+   <li> \(\alpha\) is the constant, to provide 50% transmission characteristic at the cut-off \(\lambda_c\). Therefore, \(\displaystyle \alpha = \sqrt{\frac{\log 2}{\pi}}\)</li>
+</ul>
+
+The Gaussian filter is employed in surface processing for reducing detail and noise, effectively smoothing the surface.<br /><br />
+
+This filter utilizes a Gaussian function for calculating the transformation to apply to each point in the surface. It assigns weights to pixels with distances based on the Gaussian function's characteristics, heavily weighting pixels nearer to the central pixel and progressively less to those farther away.<br /><br />
+
+This creates a blurring effect that is very effective at high-frequency noise reduction, leading to a smoother appearance in surfaces.
+
+</div>
+</div>
+<p></p>
+
+<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+</script>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">data_arch</li>
+                  <li class="list-inline-item">fftw3</li>
+                  <li class="list-inline-item">sort_arrays</li>
+                  <li class="list-inline-item">surfile</li>
+                  <li class="list-inline-item"><a href='stat_mom.html'>stat_mom</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~filter~~UsesGraph Pages: 1 -->
+<svg id="modulefilterUsesGraph" width="261pt" height="171pt"
+ viewBox="0.00 0.00 261.00 170.74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~filter~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 166.74)">
+<title>module~~filter~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-166.74 257,-166.74 257,4 -4,4"/>
+<!-- module~filter -->
+<g id="module~~filter~~UsesGraph_node1" class="node">
+<title>module~filter</title>
+<polygon fill="none" stroke="black" points="253,-104 199,-104 199,-80 253,-80 253,-104"/>
+<text text-anchor="middle" x="226" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50">filter</text>
+</g>
+<!-- data_arch -->
+<g id="module~~filter~~UsesGraph_node2" class="node">
+<title>data_arch</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="64,-156 3,-156 3,-132 64,-132 64,-156"/>
+<text text-anchor="middle" x="33.5" y="-141.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">data_arch</text>
+</g>
+<!-- module~filter&#45;&gt;data_arch -->
+<g id="module~~filter~~UsesGraph_edge1" class="edge">
+<title>module~filter&#45;&gt;data_arch</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M217.57,-104.08C207.42,-119.29 187.63,-144.68 163,-155 134.83,-166.8 100.2,-162.9 73.99,-156.69"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="74.59,-153.23 64.04,-154.12 72.84,-160.01 74.59,-153.23"/>
+</g>
+<!-- fftw3 -->
+<g id="module~~filter~~UsesGraph_node3" class="node">
+<title>fftw3</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-146 106,-146 106,-122 160,-122 160,-146"/>
+<text text-anchor="middle" x="133" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">fftw3</text>
+</g>
+<!-- module~filter&#45;&gt;fftw3 -->
+<g id="module~~filter~~UsesGraph_edge2" class="edge">
+<title>module~filter&#45;&gt;fftw3</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M198.68,-104.15C189.53,-108.37 179.11,-113.18 169.35,-117.68"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="167.87,-114.51 160.26,-121.88 170.81,-120.87 167.87,-114.51"/>
+</g>
+<!-- module~stat_mom -->
+<g id="module~~filter~~UsesGraph_node4" class="node">
+<title>module~stat_mom</title>
+<g id="a_module~~filter~~UsesGraph_node4"><a xlink:href="../module/stat_mom.html" xlink:title="stat_mom">
+<polygon fill="#337ab7" stroke="#337ab7" points="163,-104 103,-104 103,-80 163,-80 163,-104"/>
+<text text-anchor="middle" x="133" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stat_mom</text>
+</a>
+</g>
+</g>
+<!-- module~filter&#45;&gt;module~stat_mom -->
+<g id="module~~filter~~UsesGraph_edge3" class="edge">
+<title>module~filter&#45;&gt;module~stat_mom</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M198.68,-92C190.77,-92 181.91,-92 173.35,-92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="173.13,-88.5 163.13,-92 173.13,-95.5 173.13,-88.5"/>
+</g>
+<!-- sort_arrays -->
+<g id="module~~filter~~UsesGraph_node5" class="node">
+<title>sort_arrays</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="67,-84 0,-84 0,-60 67,-60 67,-84"/>
+<text text-anchor="middle" x="33.5" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_arrays</text>
+</g>
+<!-- module~filter&#45;&gt;sort_arrays -->
+<g id="module~~filter~~UsesGraph_edge4" class="edge">
+<title>module~filter&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M198.94,-81.06C188.04,-77.04 175.11,-73 163,-71 134.78,-66.35 102.6,-66.61 77.51,-68.02"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="76.97,-64.55 67.22,-68.69 77.42,-71.54 76.97,-64.55"/>
+</g>
+<!-- surfile -->
+<g id="module~~filter~~UsesGraph_node6" class="node">
+<title>surfile</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-24 106,-24 106,0 160,0 160,-24"/>
+<text text-anchor="middle" x="133" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">surfile</text>
+</g>
+<!-- module~filter&#45;&gt;surfile -->
+<g id="module~~filter~~UsesGraph_edge5" class="edge">
+<title>module~filter&#45;&gt;surfile</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M211.18,-79.85C196.39,-66.85 172.75,-46.07 155.53,-30.92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="157.47,-27.98 147.65,-24 152.85,-33.23 157.47,-27.98"/>
+</g>
+<!-- module~stat_mom&#45;&gt;data_arch -->
+<g id="module~~filter~~UsesGraph_edge6" class="edge">
+<title>module~stat_mom&#45;&gt;data_arch</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M109.39,-104.06C96.56,-110.9 80.3,-119.57 66.21,-127.09"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="64.51,-124.03 57.33,-131.82 67.8,-130.21 64.51,-124.03"/>
+</g>
+<!-- module~stat_mom&#45;&gt;sort_arrays -->
+<g id="module~~filter~~UsesGraph_edge7" class="edge">
+<title>module~stat_mom&#45;&gt;sort_arrays</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M102.75,-86C94.68,-84.35 85.77,-82.52 77.12,-80.74"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="77.64,-77.28 67.14,-78.7 76.24,-84.13 77.64,-77.28"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~filter~~UsedByGraph Pages: 1 -->
+<svg id="modulefilterUsedByGraph" width="290pt" height="116pt"
+ viewBox="0.00 0.00 290.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~filter~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>module~~filter~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-112 286,-112 286,4 -4,4"/>
+<!-- module~filter -->
+<g id="module~~filter~~UsedByGraph_node1" class="node">
+<title>module~filter</title>
+<polygon fill="none" stroke="black" points="54,-66 0,-66 0,-42 54,-42 54,-66"/>
+<text text-anchor="middle" x="27" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50">filter</text>
+</g>
+<!-- module~anisotropy -->
+<g id="module~~filter~~UsedByGraph_node2" class="node">
+<title>module~anisotropy</title>
+<g id="a_module~~filter~~UsedByGraph_node2"><a xlink:href="../module/anisotropy.html" xlink:title="anisotropy">
+<polygon fill="#337ab7" stroke="#337ab7" points="156.5,-108 94.5,-108 94.5,-84 156.5,-84 156.5,-108"/>
+<text text-anchor="middle" x="125.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">anisotropy</text>
+</a>
+</g>
+</g>
+<!-- module~anisotropy&#45;&gt;module~filter -->
+<g id="module~~filter~~UsedByGraph_edge1" class="edge">
+<title>module~anisotropy&#45;&gt;module~filter</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M96.85,-83.96C86.42,-79.43 74.42,-74.2 63.38,-69.4"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.57,-66.1 54,-65.32 61.77,-72.52 64.57,-66.1"/>
+</g>
+<!-- module~grad_curv -->
+<g id="module~~filter~~UsedByGraph_node3" class="node">
+<title>module~grad_curv</title>
+<g id="a_module~~filter~~UsedByGraph_node3"><a xlink:href="../module/grad_curv.html" xlink:title="grad_curv">
+<polygon fill="#337ab7" stroke="#337ab7" points="156,-66 95,-66 95,-42 156,-42 156,-66"/>
+<text text-anchor="middle" x="125.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">grad_curv</text>
+</a>
+</g>
+</g>
+<!-- module~grad_curv&#45;&gt;module~filter -->
+<g id="module~~filter~~UsedByGraph_edge2" class="edge">
+<title>module~grad_curv&#45;&gt;module~filter</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M94.76,-54C85.14,-54 74.37,-54 64.33,-54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.21,-50.5 54.21,-54 64.21,-57.5 64.21,-50.5"/>
+</g>
+<!-- program~test_smooth -->
+<g id="module~~filter~~UsedByGraph_node4" class="node">
+<title>program~test_smooth</title>
+<g id="a_module~~filter~~UsedByGraph_node4"><a xlink:href="../program/test_smooth.html" xlink:title="test_smooth">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="161,-24 90,-24 90,0 161,0 161,-24"/>
+<text text-anchor="middle" x="125.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_smooth</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;module~filter -->
+<g id="module~~filter~~UsedByGraph_edge3" class="edge">
+<title>program~test_smooth&#45;&gt;module~filter</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M96.85,-24.04C86.42,-28.57 74.42,-33.8 63.38,-38.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="61.77,-35.48 54,-42.68 64.57,-41.9 61.77,-35.48"/>
+</g>
+<!-- program~test_anisotropy -->
+<g id="module~~filter~~UsedByGraph_node5" class="node">
+<title>program~test_anisotropy</title>
+<g id="a_module~~filter~~UsedByGraph_node5"><a xlink:href="../program/test_anisotropy.html" xlink:title="test_anisotropy">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="282,-108 197,-108 197,-84 282,-84 282,-108"/>
+<text text-anchor="middle" x="239.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_anisotropy</text>
+</a>
+</g>
+</g>
+<!-- program~test_anisotropy&#45;&gt;module~anisotropy -->
+<g id="module~~filter~~UsedByGraph_edge4" class="edge">
+<title>program~test_anisotropy&#45;&gt;module~anisotropy</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M196.8,-96C187.02,-96 176.62,-96 166.91,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="166.69,-92.5 156.69,-96 166.69,-99.5 166.69,-92.5"/>
+</g>
+<!-- program~test_grad_curv -->
+<g id="module~~filter~~UsedByGraph_node6" class="node">
+<title>program~test_grad_curv</title>
+<g id="a_module~~filter~~UsedByGraph_node6"><a xlink:href="../program/test_grad_curv.html" xlink:title="test_grad_curv">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="281.5,-66 197.5,-66 197.5,-42 281.5,-42 281.5,-66"/>
+<text text-anchor="middle" x="239.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_grad_curv</text>
+</a>
+</g>
+</g>
+<!-- program~test_grad_curv&#45;&gt;module~grad_curv -->
+<g id="module~~filter~~UsedByGraph_edge5" class="edge">
+<title>program~test_grad_curv&#45;&gt;module~grad_curv</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M197.43,-54C187.33,-54 176.53,-54 166.48,-54"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="166.34,-50.5 156.34,-54 166.34,-57.5 166.34,-50.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pad_fft_filter"></span>
+              real(kind=R8),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>PAD_FFT_FILTER</strong></td>
+<td> =</td>
+                <td>PAD_FFT</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-fft_filter"></span> <h3>public  subroutine <a href='../proc/fft_filter.html'>fft_filter</a>(tab, long, larg, cutoff, bf_tab, multi_fft, pad, ext, type_apo)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Classical Gaussian filter</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~17"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>2D array in</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~22"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~22"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array height</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cutoff"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>cutoff</strong></td>
+            <td>
+<p><em>cut-off wavelength</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bf_tab"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>bf_tab</strong></td>
+            <td>
+<p><em>2D array out</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-multi_fft"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>multi_fft</strong></td>
+            <td>
+<p><em>multiple fft at once ?</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pad~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pad</strong></td>
+            <td>
+<p><em>fft padding</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ext"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ext</strong></td>
+            <td>
+<p><em>extension</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-type_apo"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>type_apo</strong></td>
+            <td>
+<p><em>apodization type</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-gaussian_filter"></span> <h3>private  subroutine <a href='../proc/gaussian_filter.html'>gaussian_filter</a>(long, larg, xc, gauss_filt)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Gaussian kernel</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~23"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~23"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xc"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>xc</strong></td>
+            <td>
+<p><em>the cut-off wavelength</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-gauss_filt"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>gauss_filt</strong></td>
+            <td>
+<p><em>2D array out</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-median_filter"></span> <h3>public  subroutine <a href='../proc/median_filter.html'>median_filter</a>(tab, long, larg, snb, kernel, sig, omp)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A bit more complex filter: the overall height standard deviation is taken into account</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~16"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>2D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~20"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~20"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-snb"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>snb</strong></td>
+            <td>
+<p><em>patch number along a direction</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kernel~2"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>kernel</strong></td>
+            <td>
+<p><em>kernel size</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sig"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sig</strong></td>
+            <td>
+<p><em>error std</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omp~7"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omp</strong></td>
+            <td>
+<p><em>if multithreading</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-median_smooth"></span> <h3>public  subroutine <a href='../proc/median_smooth.html'>median_smooth</a>(tab, long, larg, kernel, omp)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Very classical smoothing</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~15"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>2D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~19"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~19"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kernel"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>kernel</strong></td>
+            <td>
+<p><em>kernel size</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omp~6"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omp</strong></td>
+            <td>
+<p><em>if multithreading</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-morpho_filter"></span> <h3>public  subroutine <a href='../proc/morpho_filter.html'>morpho_filter</a>(tabin, tabou, long, larg, scale_xyz, ray, omp, nb_div, mtype)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Morphological filter: uses combinations of <a href="../proc/roll_smooth.html">roll_smooth</a> to provide all kind of transformation :</p><a href="../proc/morpho_filter.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabin"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabin</strong></td>
+            <td>
+<p><em>2D array in</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabou"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabou</strong></td>
+            <td>
+<p><em>2D array out</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~17"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~17"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scale_xyz~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:3)
+            </td>
+            <td>::</td>
+            <td><strong>scale_xyz</strong></td>
+            <td>
+<p><em>lag along x, y and scale z</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ray"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ray</strong></td>
+            <td>
+<p><em>roll radius</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omp~4"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omp</strong></td>
+            <td>
+<p><em>if multithreading</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_div"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_div</strong></td>
+            <td>
+<p><em>number of macro elements along an axis</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mtype"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mtype</strong></td>
+            <td>
+<p><em>closing, opening, dilation or erosion</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-roll_smooth"></span> <h3>private  subroutine <a href='../proc/roll_smooth.html'>roll_smooth</a>(tabin, tabou, long, larg, scale_xyz, sgn, ray, omp, nb_div)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>A ball of radius &ldquo;ray&rdquo; rolls on / below the surface, hence defining a closing or an opening enveloppe.</p><a href="../proc/roll_smooth.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabin~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabin</strong></td>
+            <td>
+<p><em>2D array in</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabou~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabou</strong></td>
+            <td>
+<p><em>2D array out</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~18"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array length</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~18"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-scale_xyz~4"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:3)
+            </td>
+            <td>::</td>
+            <td><strong>scale_xyz</strong></td>
+            <td>
+<p><em>lag along x, y and scale z</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sgn"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sgn</strong></td>
+            <td>
+<p><em>+ 1: dilation, -1:erosion</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ray~2"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ray</strong></td>
+            <td>
+<p><em>roll radius</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-omp~5"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>omp</strong></td>
+            <td>
+<p><em>if multithreading</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nb_div~2"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nb_div</strong></td>
+            <td>
+<p><em>number of macro elements along an axis</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-soften"></span> <h3>public  subroutine <a href='../proc/soften.html'>soften</a>(tabin, mask, tabout, long, larg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Function to smooth out a 2D array: each point is replaced by a weighted mean of its neighbors.</p><a href="../proc/soften.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabin~3"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabin</strong></td>
+            <td>
+<p><em>2D array in</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~5"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+            <td>
+<p><em>mask</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tabout"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              dimension(1:long, 1:larg)
+            </td>
+            <td>::</td>
+            <td><strong>tabout</strong></td>
+            <td>
+<p><em>2D array out</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-long~21"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>long</strong></td>
+            <td>
+<p><em>2D array width</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-larg~21"></span>
+              integer(kind=I4),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>larg</strong></td>
+            <td>
+<p><em>2D array height</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

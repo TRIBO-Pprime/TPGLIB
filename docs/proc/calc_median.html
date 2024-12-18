@@ -1,0 +1,686 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TPGLIB – Tools for surface analyses">
+    <meta name="author" content="Arthur Francisco" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>calc_median &ndash; TPGLIB</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+      <link href="../css/user.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">TPGLIB </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>calc_median
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 1.2% of total for procedures.">42 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/mod_stat_mom.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_stat_mom.f90.html'>mod_stat_mom.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/stat_mom.html'>stat_mom</a></li>
+            <li class="breadcrumb-item active" aria-current="page">calc_median</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/calc_median.html#src">calc_median</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>public  subroutine calc_median(tab, mask, md)  
+</h2>
+    
+
+    <p>Function to calculate the median value of a series.</p>
+<ul>
+<li>Input array containing the values for which the median is to be calculated</li>
+<li>Optional mask to include/exclude certain values from the array</li>
+<li>Output: the calculated median value</li>
+</ul>
+
+
+    <h3>Arguments</h3>
+        <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~14"></span>
+              real(kind=R8),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+                <p><em>series 1D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mask~4"></span>
+              logical(kind=I4),
+            </td>
+<td>intent(in),</td>
+              <td>optional,</td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>mask</strong></td>
+            <td>
+                <p><em>mask</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-md"></span>
+              real(kind=R8),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>md</strong></td>
+            <td>
+                <p><em>result: series median value</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~calc_median~~CallsGraph Pages: 1 -->
+<svg id="proccalc_medianCallsGraph" width="184pt" height="32pt"
+ viewBox="0.00 0.00 184.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~calc_median~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~calc_median~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 180,-28 180,4 -4,4"/>
+<!-- proc~calc_median -->
+<g id="proc~~calc_median~~CallsGraph_node1" class="node">
+<title>proc~calc_median</title>
+<polygon fill="none" stroke="black" points="73,-24 0,-24 0,0 73,0 73,-24"/>
+<text text-anchor="middle" x="36.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">calc_median</text>
+</g>
+<!-- sort_array2 -->
+<g id="proc~~calc_median~~CallsGraph_node2" class="node">
+<title>sort_array2</title>
+<polygon fill="#777777" stroke="#777777" points="176,-24 109,-24 109,0 176,0 176,-24"/>
+<text text-anchor="middle" x="142.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">sort_array2</text>
+</g>
+<!-- proc~calc_median&#45;&gt;sort_array2 -->
+<g id="proc~~calc_median~~CallsGraph_edge1" class="edge">
+<title>proc~calc_median&#45;&gt;sort_array2</title>
+<path fill="none" stroke="#ff0000" d="M73,-12C81.28,-12 90.19,-12 98.75,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="98.96,-15.5 108.96,-12 98.96,-8.5 98.96,-15.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: proc~~calc_median~~CalledByGraph Pages: 1 -->
+<svg id="proccalc_medianCalledByGraph" width="423pt" height="197pt"
+ viewBox="0.00 0.00 423.00 197.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~calc_median~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 193)">
+<title>proc~~calc_median~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-193 419,-193 419,4 -4,4"/>
+<!-- proc~calc_median -->
+<g id="proc~~calc_median~~CalledByGraph_node1" class="node">
+<title>proc~calc_median</title>
+<polygon fill="none" stroke="black" points="415,-86 342,-86 342,-62 415,-62 415,-86"/>
+<text text-anchor="middle" x="378.5" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50">calc_median</text>
+</g>
+<!-- proc~count_cell -->
+<g id="proc~~calc_median~~CalledByGraph_node2" class="node">
+<title>proc~count_cell</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node2"><a xlink:href="../proc/count_cell.html" xlink:title="count_cell">
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-147 231,-147 231,-123 292,-123 292,-147"/>
+<text text-anchor="middle" x="261.5" y="-132.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">count_cell</text>
+</a>
+</g>
+</g>
+<!-- proc~count_cell&#45;&gt;proc~calc_median -->
+<g id="proc~~calc_median~~CalledByGraph_edge1" class="edge">
+<title>proc~count_cell&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#ff0000" d="M285.22,-122.95C302.55,-113.76 326.62,-100.99 345.84,-90.8"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="347.63,-93.8 354.83,-86.03 344.35,-87.62 347.63,-93.8"/>
+</g>
+<!-- proc~median_filter -->
+<g id="proc~~calc_median~~CalledByGraph_node3" class="node">
+<title>proc~median_filter</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node3"><a xlink:href="../proc/median_filter.html" xlink:title="median_filter">
+<polygon fill="#d9534f" stroke="#d9534f" points="181,-105 107,-105 107,-81 181,-81 181,-105"/>
+<text text-anchor="middle" x="144" y="-90.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">median_filter</text>
+</a>
+</g>
+</g>
+<!-- proc~median_filter&#45;&gt;proc~calc_median -->
+<g id="proc~~calc_median~~CalledByGraph_edge2" class="edge">
+<title>proc~median_filter&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#ff0000" d="M181.07,-90.05C221.58,-86.74 287.39,-81.36 331.55,-77.76"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="332.04,-81.23 341.72,-76.92 331.47,-74.25 332.04,-81.23"/>
+</g>
+<!-- proc~median_smooth -->
+<g id="proc~~calc_median~~CalledByGraph_node4" class="node">
+<title>proc~median_smooth</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node4"><a xlink:href="../proc/median_smooth.html" xlink:title="median_smooth">
+<polygon fill="#d9534f" stroke="#d9534f" points="306,-66 217,-66 217,-42 306,-42 306,-66"/>
+<text text-anchor="middle" x="261.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">median_smooth</text>
+</a>
+</g>
+</g>
+<!-- proc~median_filter&#45;&gt;proc~median_smooth -->
+<g id="proc~~calc_median~~CalledByGraph_edge8" class="edge">
+<title>proc~median_filter&#45;&gt;proc~median_smooth</title>
+<path fill="none" stroke="#00ffff" d="M180.6,-80.98C191.57,-77.27 203.81,-73.14 215.34,-69.25"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="216.47,-72.56 224.82,-66.05 214.23,-65.93 216.47,-72.56"/>
+</g>
+<!-- proc~median_smooth&#45;&gt;proc~calc_median -->
+<g id="proc~~calc_median~~CalledByGraph_edge3" class="edge">
+<title>proc~median_smooth&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#ff0000" d="M306.3,-61.62C314.61,-63.06 323.32,-64.58 331.68,-66.03"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="331.21,-69.5 341.66,-67.77 332.41,-62.61 331.21,-69.5"/>
+</g>
+<!-- program~test_stat -->
+<g id="proc~~calc_median~~CalledByGraph_node5" class="node">
+<title>program~test_stat</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node5"><a xlink:href="../program/test_stat.html" xlink:title="test_stat">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="288.5,-24 234.5,-24 234.5,0 288.5,0 288.5,-24"/>
+<text text-anchor="middle" x="261.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_stat</text>
+</a>
+</g>
+</g>
+<!-- program~test_stat&#45;&gt;proc~calc_median -->
+<g id="proc~~calc_median~~CalledByGraph_edge4" class="edge">
+<title>program~test_stat&#45;&gt;proc~calc_median</title>
+<path fill="none" stroke="#ff0000" d="M288.41,-24.14C294.24,-26.97 300.36,-30.03 306,-33 320.16,-40.46 335.59,-49.23 348.49,-56.74"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="346.97,-59.91 357.37,-61.95 350.51,-53.87 346.97,-59.91"/>
+</g>
+<!-- proc~topology -->
+<g id="proc~~calc_median~~CalledByGraph_node6" class="node">
+<title>proc~topology</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node6"><a xlink:href="../proc/topology.html" xlink:title="topology">
+<polygon fill="#d9534f" stroke="#d9534f" points="171,-189 117,-189 117,-165 171,-165 171,-189"/>
+<text text-anchor="middle" x="144" y="-174.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">topology</text>
+</a>
+</g>
+</g>
+<!-- proc~topology&#45;&gt;proc~count_cell -->
+<g id="proc~~calc_median~~CalledByGraph_edge5" class="edge">
+<title>proc~topology&#45;&gt;proc~count_cell</title>
+<path fill="none" stroke="#ff0000" d="M171.21,-167.47C186.01,-162.09 204.79,-155.26 221.31,-149.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="222.53,-152.53 230.73,-145.83 220.14,-145.95 222.53,-152.53"/>
+</g>
+<!-- program~test_morpho -->
+<g id="proc~~calc_median~~CalledByGraph_node7" class="node">
+<title>program~test_morpho</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node7"><a xlink:href="../program/test_morpho.html" xlink:title="test_morpho">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="180.5,-147 107.5,-147 107.5,-123 180.5,-123 180.5,-147"/>
+<text text-anchor="middle" x="144" y="-132.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_morpho</text>
+</a>
+</g>
+</g>
+<!-- program~test_morpho&#45;&gt;proc~count_cell -->
+<g id="proc~~calc_median~~CalledByGraph_edge6" class="edge">
+<title>program~test_morpho&#45;&gt;proc~count_cell</title>
+<path fill="none" stroke="#ff0000" d="M180.6,-135C193.25,-135 207.58,-135 220.58,-135"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="220.66,-138.5 230.66,-135 220.66,-131.5 220.66,-138.5"/>
+</g>
+<!-- program~test_smooth -->
+<g id="proc~~calc_median~~CalledByGraph_node8" class="node">
+<title>program~test_smooth</title>
+<g id="a_proc~~calc_median~~CalledByGraph_node8"><a xlink:href="../program/test_smooth.html" xlink:title="test_smooth">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-85 0,-85 0,-61 71,-61 71,-85"/>
+<text text-anchor="middle" x="35.5" y="-70.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_smooth</text>
+</a>
+</g>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~median_filter -->
+<g id="proc~~calc_median~~CalledByGraph_edge7" class="edge">
+<title>program~test_smooth&#45;&gt;proc~median_filter</title>
+<path fill="none" stroke="#7fff00" d="M71.08,-79.49C79.28,-81.03 88.17,-82.7 96.8,-84.32"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="96.29,-87.79 106.77,-86.2 97.58,-80.91 96.29,-87.79"/>
+</g>
+<!-- program~test_smooth&#45;&gt;proc~median_smooth -->
+<g id="proc~~calc_median~~CalledByGraph_edge9" class="edge">
+<title>program~test_smooth&#45;&gt;proc~median_smooth</title>
+<path fill="none" stroke="#00ffff" d="M71.01,-70.07C107.18,-67.01 164.49,-62.14 206.62,-58.57"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="207.04,-62.05 216.71,-57.71 206.45,-55.07 207.04,-62.05"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">calc_median</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="n">mask</span><span class="p">,</span><span class="w"> </span><span class="n">md</span><span class="p">)</span>
+<span class="w">   </span><span class="c">!================================================================================================</span>
+<span class="w">   </span><span class="c">!! Function to calculate the median value of a series.</span>
+<span class="w">   </span><span class="c">!!</span>
+<span class="w">   </span><span class="c">!! + Input array containing the values for which the median is to be calculated</span>
+<span class="w">   </span><span class="c">!! + Optional mask to include/exclude certain values from the array</span>
+<span class="w">   </span><span class="c">!! + Output: the calculated median value</span>
+<span class="w">   </span><span class="c">!------------------------------------------------------------------------------------------------</span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w">            </span><span class="kd">::</span><span class="w"> </span><span class="n">tab</span><span class="w">  </span><span class="c">!! *series 1D array*</span>
+<span class="w">   </span><span class="kt">logical</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:),</span><span class="w"> </span><span class="k">optional</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="c">!! *mask*</span>
+<span class="w">   </span><span class="kt">real</span><span class="w">   </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">                          </span><span class="kd">::</span><span class="w"> </span><span class="n">md</span><span class="w">   </span><span class="c">!! *result: series median value*</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lg</span><span class="p">,</span><span class="w"> </span><span class="n">nz</span><span class="w"> </span><span class="c">! lg: size of the tab array; nz: number of elements to consider</span>
+<span class="w">      </span><span class="kt">integer</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ii</span><span class="w">  </span><span class="c">! i: loop counter; ii: counter for tab_tmp</span>
+
+<span class="w">      </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab_tmp</span><span class="w"> </span><span class="c">! Temporary array to store filtered values</span>
+
+<span class="w">      </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0._R8</span><span class="w">                    </span><span class="c">! Initialize the median value to 0</span>
+
+<span class="w">      </span><span class="n">lg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="p">)</span><span class="w">              </span><span class="c">! Get the size of the input array</span>
+<span class="w">      </span><span class="n">nz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lg</span><span class="w">                       </span><span class="c">! Initialize the number of elements to lg</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">     </span><span class="c">! Check if a mask is provided</span>
+
+<span class="w">         </span><span class="n">nz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">count</span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="p">)</span><span class="w">         </span><span class="c">! Count the number of true elements in the mask</span>
+<span class="w">         </span><span class="k">allocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nz</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="c">! Allocate memory for the temporary array based on the number of elements to consider</span>
+
+<span class="w">         </span><span class="n">ii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">                     </span><span class="c">! Initialize the counter for tab_tmp</span>
+<span class="w">         </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">lg</span><span class="w">               </span><span class="c">! Loop through each element of the input array</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">mask</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">     </span><span class="c">! If the element is included in the mask</span>
+<span class="w">               </span><span class="n">ii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ii</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w">          </span><span class="c">! Increment the counter</span>
+<span class="w">               </span><span class="n">tab_tmp</span><span class="p">(</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c">! Copy the corresponding value into the temporary array</span>
+<span class="w">            </span><span class="k">endif</span>
+<span class="k">         enddo</span>
+<span class="k">         if</span><span class="w"> </span><span class="p">(</span><span class="n">ii</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">nz</span><span class="p">)</span><span class="w"> </span><span class="k">stop</span><span class="w"> </span><span class="s1">&#39;error calc_median&#39;</span><span class="w"> </span><span class="c">! Check if the number of copied elements matches nz; if not, stop the program</span>
+
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="c">! If no mask is provided</span>
+
+<span class="w">         </span><span class="n">tab_tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="w"> </span><span class="c">! Copy the input array into tab_tmp</span>
+
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">nz</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">             </span><span class="c">! If only one element is present</span>
+<span class="w">         </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">            </span><span class="c">! The median is the single element</span>
+<span class="w">         </span><span class="k">return</span><span class="w">                     </span><span class="c">! Exit the subroutine</span>
+<span class="w">      </span><span class="k">endif</span>
+<span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="n">nz</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">                            </span><span class="c">! If two elements are present</span>
+<span class="w">         </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5_R8</span><span class="o">*</span><span class="p">(</span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="w">     </span><span class="c">! The median is the average of the two elements</span>
+<span class="w">         </span><span class="k">return</span><span class="w">                                    </span><span class="c">! Exit the subroutine</span>
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      call </span><span class="n">sort_array2</span><span class="p">(</span><span class="n">tab_inout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">nz</span><span class="p">),</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nz</span><span class="p">)</span><span class="w">         </span><span class="c">! Call a subroutine to sort the temporary array</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">mod</span><span class="p">(</span><span class="n">nz</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">                                 </span><span class="c">! Check if the number of elements is even</span>
+<span class="w">         </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5_R8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="w"> </span><span class="n">nz</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="w"> </span><span class="n">nz</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w">   </span><span class="c">! The median is the average of the two middle elements</span>
+<span class="w">      </span><span class="k">else</span><span class="w">                                                        </span><span class="c">! If the number of elements is odd</span>
+<span class="w">         </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab_tmp</span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">nz</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w">                                 </span><span class="c">! The median is the middle element</span>
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      deallocate</span><span class="p">(</span><span class="w"> </span><span class="n">tab_tmp</span><span class="w"> </span><span class="p">)</span><span class="w">                                       </span><span class="c">! Free the allocated memory for tab_tmp</span>
+
+<span class="w">   </span><span class="k">return</span><span class="w">                                                         </span><span class="c">! Exit the subroutine</span>
+<span class="w">   </span><span class="k">endsubroutine </span><span class="n">calc_median</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              TPGLIB
+ was developed by Arthur Francisco<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-12-18 17:14              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
