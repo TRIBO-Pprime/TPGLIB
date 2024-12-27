@@ -16,8 +16,7 @@ exclude_dir:./ABBOT/src/arch
             ./ANISO/src/arch
             ./ASFC2/src/arch
 include:
-external: lmder1=../TOOLIB/docs
-          SCALE_SURF=../TOOLIB/docs
+external: = https://tribo-pprime.github.io/TOOLIB
 externalize: true
 favicon: ./img/tpglib.png
 project_github: https://github.com/TRIBO-Pprime/TPGLIB
