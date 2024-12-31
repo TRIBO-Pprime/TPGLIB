@@ -10,7 +10,9 @@ use data_arch,     only : I4, R4, R8, PI_R8, EPS_R8, UN
 use miscellaneous, only : trans_corner2center, trans_center2corner, get_unit
 use sort_arrays,   only : sort_array2
 use tchebychev,    only : least_squares_tcheby
-use fftw3,         only : apod, fftw_plan_with_nthreads, PAD_FFT, extend, calc_fftw3_real_fwd, calc_fftw3_real_bwd
+use fftw3,         only : apod, fftw_plan_with_nthreads, PAD_FFT, extend,     &  !
+                          calc_fftw3_real_fwd, calc_fftw3_real_bwd,           &  !
+                          tab_calc_fftw3_real_fwd, tab_calc_fftw3_real_bwd
 use stat_mom,      only : calc_moments, MOMENT_STAT
 use filter,        only : fft_filter
 use surfile,       only : init_scal, write_surf, SCALE_SURF
@@ -645,7 +647,7 @@ contains
    endsubroutine ellipse_acf
 
 
-   subroutine acv(tab_in, tab_out, long, larg)
+   subroutine acv(tab_in, tab_out, long, larg, sub_samp)
    !================================================================================================
    !< @note Function that returns the *acf* of an array.
    !<
@@ -662,6 +664,7 @@ contains
    implicit none
    integer(kind=I4), intent(in )                            :: long        !! *2D array length*
    integer(kind=I4), intent(in )                            :: larg        !! *2D array width*
+   logical(kind=I4), intent(in )                            :: sub_samp    !! *sampling?*
    real   (kind=R8), intent(in ), dimension(1:long, 1:larg) :: tab_in      !! *input array*
    real   (kind=R8), intent(out), dimension(1:long, 1:larg) :: tab_out     !! *acf of the input array*
 
@@ -725,19 +728,41 @@ contains
 
       !----------------
 
-      call calc_fftw3_real_fwd( tab_in = tab_ext2(1:nx2, 1:ny2),     &  !
-                                tab_ou = cmpl(1:nx2, 1:ny2),         &  !
-                                  long = nx2,                        &  !
-                                  larg = ny2)                           !
+      if (sub_samp) then
+
+         call tab_calc_fftw3_real_fwd( tab_in = tab_ext2(1:nx2, 1:ny2),     &  !
+                                       tab_ou =     cmpl(1:nx2, 1:ny2),     &  !
+                                         long = nx2,                        &  !
+                                         larg = ny2)                           !
+
+      else
+
+         call calc_fftw3_real_fwd( tab_in = tab_ext2(1:nx2, 1:ny2),     &  !
+                                   tab_ou =     cmpl(1:nx2, 1:ny2),     &  !
+                                     long = nx2,                        &  !
+                                     larg = ny2)                           !
+
+      endif
 
       cmpl(1:nx2, 1:ny2) = cmplx( abs( cmpl(1:nx2, 1:ny2) )**2, 0, kind = R8 )
 
       ! théorème de wiener
 
-      call calc_fftw3_real_bwd( tab_in =     cmpl(1:nx2, 1:ny2),        &  !
-                                tab_ou = tab_ext1(1:nx2, 1:ny2),        &  !
-                                  long = nx2,                        &  !
-                                  larg = ny2)                           !
+      if (sub_samp) then
+
+         call tab_calc_fftw3_real_bwd( tab_in =     cmpl(1:nx2, 1:ny2),     &  !
+                                       tab_ou = tab_ext1(1:nx2, 1:ny2),     &  !
+                                         long = nx2,                        &  !
+                                         larg = ny2)                           !
+
+      else
+
+         call calc_fftw3_real_bwd( tab_in =     cmpl(1:nx2, 1:ny2),        &  !
+                                   tab_ou = tab_ext1(1:nx2, 1:ny2),        &  !
+                                     long = nx2,                           &  !
+                                     larg = ny2)                              !
+
+      endif
 
       call trans_corner2center(  tab_in  = tab_ext1(1:nx2, 1:ny2),  &  !
                                  tab_out = tab_ext2(1:nx2, 1:ny2),  &  !
@@ -755,7 +780,7 @@ contains
 
       tab_out(1:long, 1:larg) = tab_out(1:long, 1:larg) / tmp
 
-      if (.true.) then
+      if (.false.) then
          call init_scal( scal   = scal_surf,    &  !
                          nx     = long,         &  !
                          ny     = larg,         &  !
@@ -763,7 +788,7 @@ contains
                          ly     = 1._R8,        &  !
                          unit_z = 'm ')            !
 
-         call write_surf( nom_fic = "test_acv.sur",        &  !
+         call write_surf( nom_fic = "test_acv.sur",            &  !
                           tab_s   = tab_out(1:long, 1:larg),   &  !
                           scal    = scal_surf )                   !
       endif
@@ -784,7 +809,7 @@ contains
    implicit none
    integer(kind=I4), intent(in )                             :: long       !! *2D array length*
    integer(kind=I4), intent(in )                             :: larg       !! *2D array height*
-   logical(kind=I4), intent(in )                             :: sub_plane  !! *subtract least square plane ?*
+   logical(kind=I4), intent(in )                             :: sub_plane  !! *subtract least square plane (sampling)?*
    logical(kind=I4), intent(in )                             :: omp        !! *multithreaded ?*
    real   (kind=R8), intent(in ), optional                   :: cut        !! *cut height*
    real   (kind=R8), intent(in ), dimension(1:2)             :: scale_xy   !! *lag along x and y in micrometers*
@@ -815,7 +840,8 @@ contains
       call acv( tab_in    = tab_tmp1(1:long, 1:larg),  &  ! IN
                 tab_out   = tab_tmp2(1:long, 1:larg),  &  ! OUT
                 long      = long,                      &  ! IN
-                larg      = larg )                        ! IN
+                larg      = larg,                      &  ! IN
+                sub_samp  = sub_plane )                   ! IN
 
       call ellipse_acf( tabin = tab_tmp2(1:long, 1:larg),   &  ! IN
                          long = long,                       &  ! IN
