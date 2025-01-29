@@ -11,8 +11,7 @@ use miscellaneous, only : trans_corner2center, trans_center2corner, get_unit
 use sort_arrays,   only : sort_array2
 use tchebychev,    only : least_squares_tcheby
 use fftw3,         only : apod, fftw_plan_with_nthreads, PAD_FFT, extend,     &  !
-                          calc_fftw3_real_fwd, calc_fftw3_real_bwd,           &  !
-                          tab_calc_fftw3_real_fwd, tab_calc_fftw3_real_bwd
+                          calc_fftw3, tab_calc_fftw3, FORWARD, BACKWARD
 use stat_mom,      only : calc_moments, MOMENT_STAT
 use filter,        only : fft_filter
 use surfile,       only : init_scal, write_surf, SCALE_SURF
@@ -673,7 +672,7 @@ contains
 
       integer(kind=I4), dimension(1:2) :: loc_max
 
-      complex(kind=R8), dimension(:,:), allocatable :: cmpl
+      complex(kind=R8), dimension(:,:), allocatable :: cmpl1, cmpl2
       real   (kind=R8), dimension(:,:), allocatable :: tab_ext1, tab_ext2
 
       type(SCALE_SURF)  :: scal_surf
@@ -702,7 +701,8 @@ contains
       allocate( tab_ext1(1:nx2, 1:ny2),   &  !
                 tab_ext2(1:nx2, 1:ny2) )     !
 
-      allocate(     cmpl(1:nx2, 1:ny2) )     !
+      allocate(    cmpl1(1:nx2, 1:ny2),   &  !
+                   cmpl2(1:nx2, 1:ny2) )     !
 
       tab_ext1(1:nx2, 1:ny2) = 0
 
@@ -728,41 +728,51 @@ contains
 
       !----------------
 
+      cmpl1(1:nx2, 1:ny2) = cmplx( tab_ext2(1:nx2, 1:ny2), 0, kind = R8 )
+
+      !----------------
+
       if (sub_samp) then
 
-         call tab_calc_fftw3_real_fwd( tab_in = tab_ext2(1:nx2, 1:ny2),     &  !
-                                       tab_ou =     cmpl(1:nx2, 1:ny2),     &  !
-                                         long = nx2,                        &  !
-                                         larg = ny2)                           !
+         call tab_calc_fftw3(   sens = FORWARD,                  &  !
+                              tab_in = cmpl1(1:nx2, 1:ny2),      &  !
+                              tab_ou = cmpl2(1:nx2, 1:ny2),      &  !
+                                long = nx2,                      &  !
+                                larg = ny2)                         !
 
       else
 
-         call calc_fftw3_real_fwd( tab_in = tab_ext2(1:nx2, 1:ny2),     &  !
-                                   tab_ou =     cmpl(1:nx2, 1:ny2),     &  !
-                                     long = nx2,                        &  !
-                                     larg = ny2)                           !
+         call calc_fftw3(   sens = FORWARD,                    &  !
+                          tab_in = cmpl1(1:nx2, 1:ny2),        &  !
+                          tab_ou = cmpl2(1:nx2, 1:ny2),        &  !
+                            long = nx2,                        &  !
+                            larg = ny2)                           !
 
       endif
 
-      cmpl(1:nx2, 1:ny2) = cmplx( abs( cmpl(1:nx2, 1:ny2) )**2, 0, kind = R8 )
+      cmpl1(1:nx2, 1:ny2) = cmplx( abs( cmpl2(1:nx2, 1:ny2) )**2, 0, kind = R8 )
 
       ! théorème de wiener
 
       if (sub_samp) then
 
-         call tab_calc_fftw3_real_bwd( tab_in =     cmpl(1:nx2, 1:ny2),     &  !
-                                       tab_ou = tab_ext1(1:nx2, 1:ny2),     &  !
-                                         long = nx2,                        &  !
-                                         larg = ny2)                           !
+         call tab_calc_fftw3(   sens = BACKWARD,               &  !
+                              tab_in = cmpl1(1:nx2, 1:ny2),    &  !
+                              tab_ou = cmpl2(1:nx2, 1:ny2),    &  !
+                                long = nx2,                    &  !
+                                larg = ny2)                       !
 
       else
 
-         call calc_fftw3_real_bwd( tab_in =     cmpl(1:nx2, 1:ny2),        &  !
-                                   tab_ou = tab_ext1(1:nx2, 1:ny2),        &  !
-                                     long = nx2,                           &  !
-                                     larg = ny2)                              !
+         call calc_fftw3(   sens = BACKWARD,                   &  !
+                          tab_in = cmpl1(1:nx2, 1:ny2),        &  !
+                          tab_ou = cmpl2(1:nx2, 1:ny2),        &  !
+                            long = nx2,                        &  !
+                            larg = ny2)                           !
 
       endif
+
+      tab_ext1(1:nx2, 1:ny2) = real(cmpl2(1:nx2, 1:ny2), kind=R8)
 
       call trans_corner2center(  tab_in  = tab_ext1(1:nx2, 1:ny2),  &  !
                                  tab_out = tab_ext2(1:nx2, 1:ny2),  &  !
@@ -793,14 +803,14 @@ contains
                           scal    = scal_surf )                   !
       endif
 
-      deallocate(cmpl)
+      deallocate(cmpl1, cmpl2)
       deallocate(tab_ext1, tab_ext2)
 
    return
    endsubroutine acv
 
 
-   subroutine correlation_parameters(tab, long, larg, res, cut, sub_plane, scale_xy, omp)
+   subroutine correlation_parameters(tab, long, larg, res, cut, sub_plane, sub_sampl, scale_xy, omp)
    !================================================================================================
    !< @note Function that returns [[ellipse_acf]] parameters calculated on the autocorrelation
    !< function. But prior to the acf calculation, the mean plane is subtracted.
@@ -809,7 +819,8 @@ contains
    implicit none
    integer(kind=I4), intent(in )                             :: long       !! *2D array length*
    integer(kind=I4), intent(in )                             :: larg       !! *2D array height*
-   logical(kind=I4), intent(in )                             :: sub_plane  !! *subtract least square plane (sampling)?*
+   logical(kind=I4), intent(in )                             :: sub_plane  !! *subtract least square plane?*
+   logical(kind=I4), intent(in )                             :: sub_sampl  !! *subsampling?*
    logical(kind=I4), intent(in )                             :: omp        !! *multithreaded ?*
    real   (kind=R8), intent(in ), optional                   :: cut        !! *cut height*
    real   (kind=R8), intent(in ), dimension(1:2)             :: scale_xy   !! *lag along x and y in micrometers*
@@ -817,7 +828,6 @@ contains
    real   (kind=R8), intent(out), dimension(1:8)             :: res        !! *correlation parameters*
 
       real(kind=R8), dimension(1:long, 1:larg) :: tab_tmp1, tab_tmp2
-
 
       if ( sub_plane ) then
 
@@ -829,7 +839,7 @@ contains
                                     nvarx = 1,                         &  ! IN
                                     nvary = 1)                            ! IN
 
-         tab_tmp1(1:long, 1:larg) = tab(1:long, 1:larg) -tab_tmp1(1:long, 1:larg)
+         tab_tmp1(1:long, 1:larg) = tab(1:long, 1:larg) - tab_tmp1(1:long, 1:larg)
 
       else
 
@@ -841,7 +851,7 @@ contains
                 tab_out   = tab_tmp2(1:long, 1:larg),  &  ! OUT
                 long      = long,                      &  ! IN
                 larg      = larg,                      &  ! IN
-                sub_samp  = sub_plane )                   ! IN
+                sub_samp  = sub_sampl )                   ! IN
 
       call ellipse_acf( tabin = tab_tmp2(1:long, 1:larg),   &  ! IN
                          long = long,                       &  ! IN

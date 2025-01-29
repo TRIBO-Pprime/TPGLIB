@@ -10,9 +10,8 @@ module filter
 use data_arch,   only: I4, R8, HIG_R8, PI_R8
 use stat_mom,    only: calc_median, moment_stat, calc_moments
 use sort_arrays, only: sort_array2
-use fftw3,       only: calc_fftw3_real_fwd, tab_calc_fftw3_real_fwd,                 &  !
-                       calc_fftw3_real_bwd, tab_calc_fftw3_real_bwd, PAD_FFT, extend
-use surfile,     only: read_surf, write_surf, init_scal, SCALE_SURF, unit2IUf
+use fftw3,       only: calc_fftw3, tab_calc_fftw3, extend, &  !
+                       PAD_FFT, FORWARD, BACKWARD
 !$ use omp_lib
 implicit none
 
@@ -486,7 +485,6 @@ contains
    !================================================================================================
    !! Classical Gaussian filter
    !------------------------------------------------------------------------------------------------
-   use surfile, only : init_scal, write_surf, SCALE_SURF
    implicit none
    integer(kind=I4), intent(in ) :: long                                !! *2D array width*
    integer(kind=I4), intent(in ) :: larg                                !! *2D array height*
@@ -505,8 +503,9 @@ contains
       character(len=:), allocatable :: o_ext
       character(len=:), allocatable :: o_type_apo
 
-      complex(kind=R8), dimension(:,:), allocatable :: cmple
-      real   (kind=R8), dimension(:,:), allocatable :: tab_ext, gauss_tab, tab_tmp
+      real   (kind=R8), dimension(:,:), allocatable :: tab_ext, gauss_tab
+
+      complex(kind=R8), dimension(:,:), allocatable :: cmpl1, cmpl2
 
       with_pad = .true.
 
@@ -561,9 +560,9 @@ contains
       endif
 
       allocate( tab_ext(1:nx2, 1:ny2)  )     !
-      allocate( tab_tmp(1:nx2, 1:ny2)  )     !
 
-      allocate( cmple(1:nx2, 1:ny2) )        !
+      allocate( cmpl1(1:nx2, 1:ny2),      &  !
+                cmpl2(1:nx2, 1:ny2) )        !
 
       if ( nx2 > long ) then
 
@@ -585,19 +584,23 @@ contains
 
       endif
 
+      cmpl1(1:nx2, 1:ny2) = cmplx( tab_ext(1:nx2, 1:ny2), 0, kind = R8 )
+
       if (multi_fft) then
 
-         call tab_calc_fftw3_real_fwd( tab_in = tab_ext(1:nx2, 1:ny2),    &  !
-                                       tab_ou = cmple(1:nx2, 1:ny2),      &  !
-                                         long = nx2,                      &  !
-                                         larg = ny2)                         !
+         call tab_calc_fftw3(   sens = FORWARD,                  &  !
+                              tab_in = cmpl1(1:nx2, 1:ny2),      &  !
+                              tab_ou = cmpl2(1:nx2, 1:ny2),      &  !
+                                long = nx2,                      &  !
+                                larg = ny2)                         !
 
       else
 
-         call calc_fftw3_real_fwd( tab_in = tab_ext(1:nx2, 1:ny2),        &  !
-                                   tab_ou = cmple(1:nx2, 1:ny2),          &  !
-                                     long = nx2,                          &  !
-                                     larg = ny2)                             !
+         call calc_fftw3(   sens = FORWARD,                    &  !
+                          tab_in = cmpl1(1:nx2, 1:ny2),        &  !
+                          tab_ou = cmpl2(1:nx2, 1:ny2),        &  !
+                            long = nx2,                        &  !
+                            larg = ny2)                           !
 
       endif
 
@@ -608,25 +611,29 @@ contains
                             xc         = cutoff,                  &  !
                             gauss_filt = gauss_tab(1:nx2, 1:ny2) )   !
 
-      cmple(1:nx2, 1:ny2) = cmple(1:nx2, 1:ny2) * gauss_tab(1:nx2, 1:ny2)
+      cmpl1(1:nx2, 1:ny2) = cmpl2(1:nx2, 1:ny2) * gauss_tab(1:nx2, 1:ny2)
 
       deallocate( gauss_tab )
 
       if (multi_fft) then
 
-         call tab_calc_fftw3_real_bwd( tab_in = cmple(1:nx2, 1:ny2),    &  !
-                                       tab_ou = tab_ext(1:nx2, 1:ny2),  &  !
-                                         long = nx2,                    &  !
-                                         larg = ny2)                       !
+         call tab_calc_fftw3(   sens = BACKWARD,               &  !
+                              tab_in = cmpl1(1:nx2, 1:ny2),    &  !
+                              tab_ou = cmpl2(1:nx2, 1:ny2),    &  !
+                                long = nx2,                    &  !
+                                larg = ny2)                       !
 
       else
 
-         call calc_fftw3_real_bwd( tab_in = cmple(1:nx2, 1:ny2),        &  !
-                                   tab_ou = tab_ext(1:nx2, 1:ny2),      &  !
-                                     long = nx2,                        &  !
-                                     larg = ny2)                           !
+         call calc_fftw3(   sens = BACKWARD,                   &  !
+                          tab_in = cmpl1(1:nx2, 1:ny2),        &  !
+                          tab_ou = cmpl2(1:nx2, 1:ny2),        &  !
+                            long = nx2,                        &  !
+                            larg = ny2)                           !
 
       endif
+
+      tab_ext(1:nx2, 1:ny2) = real(cmpl2(1:nx2, 1:ny2), kind=R8)
 
       if ( nx2 > long ) then
 
@@ -638,8 +645,8 @@ contains
 
       endif
 
-      deallocate(cmple)
-      deallocate(tab_ext, tab_tmp)
+      deallocate(cmpl1, cmpl2)
+      deallocate(tab_ext)
 
    return
    endsubroutine fft_filter

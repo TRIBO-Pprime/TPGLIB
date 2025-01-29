@@ -9,7 +9,7 @@ program test_anisotropy
 use data_arch,     only : I4, R8, PI_R8
 use miscellaneous, only : get_unit
 use surfile,       only : init_scal, read_surf, write_surf, SCALE_SURF, unit2IUf
-use fftw3
+use fftw3,         only : init_fftw3, end_fftw3, PAD_FFT
 use anisotropy
 !$ use omp_lib
 implicit none
@@ -181,12 +181,18 @@ call init_fftw3(long = nx2,  & !
 
 ! results gwyddion : correlation length between 3.7 and 4.2 µm
 !                    no particular angle
+
+PAD_FFT_ANI = PAD_FFT
+
+APO_FFT_ANI = "no_apo"
+
 call correlation_parameters( tab       = array(1:nnx, 1:nny),  &  !
                              long      = nnx,                  &  !
                              larg      = nny,                  &  !
                              res       = param_acv(1:8),       &  !
                              cut       = 0.5_R8,               &  !
                              sub_plane = .true.,               &  !
+                             sub_sampl = .false.,              &  !
                              scale_xy  = [ dx, dy ],           &  !
                              omp       = .true.  )                !
 

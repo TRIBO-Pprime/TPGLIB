@@ -77,8 +77,8 @@ ny2 = 2 * ( nint(PAD_FFT_FILTER * ny)/2 )
 
 fft_cutoff = dx / 5.e-6
 
-call init_fftw3(long = nx2,  & !
-                larg = ny2 )   !
+call init_fftw3 (long      = nx2, & !
+                 larg      = ny2)   !
 
 call fft_filter(tab       = heights(1:nx, 1:ny),      & !
                 long      = nx,                       & !

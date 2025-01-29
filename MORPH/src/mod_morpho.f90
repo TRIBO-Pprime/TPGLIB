@@ -301,7 +301,7 @@ o:    do i = 1, nx
 
       if (.not.present(med_cell)) return
 
-      if (k > 0) then
+      if (nbr_cell > 0) then
 
          call calc_median(  tab = cell(1:nbr_cell),   &  ! IN
                              md = med_cell )             ! OUT
