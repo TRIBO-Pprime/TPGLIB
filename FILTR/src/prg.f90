@@ -50,11 +50,13 @@ call write_surf( nom_fic = "out/test_extend.sur",        &  !
 
 deallocate( ext_heights )
 
-!========================================================================= fft_filter 5 µm
+write(*,*) 'top hat filter cutoff = 20 µm'
 
-call read_surf( nom_fic = "sur/AB-Zinv-ART-8-21-200x200.sur", &  ! IN
-                  tab_s = heights,                            &  ! OUT
-                   scal = scal_surf )                            ! OUT
+!========================================================================= fft_filter 20 µm
+
+call read_surf( nom_fic = "sur/test.sur", &  ! IN
+                  tab_s = heights,        &  ! OUT
+                   scal = scal_surf )        ! OUT
 
 nx = scal_surf%xres
 ny = scal_surf%yres
@@ -68,6 +70,50 @@ write(*,*) 'dx, dy = ', dx, dy
 
 allocate( heights_out(1:nx, 1:ny) )
 
+
+n_th = omp_get_max_threads()
+call fftw_plan_with_nthreads(nthreads = n_th)
+
+nx2 = 2 * ( nint(PAD_FFT_FILTER * nx)/2 )
+ny2 = 2 * ( nint(PAD_FFT_FILTER * ny)/2 )
+
+fft_cutoff = dx / 20.e-6
+
+call init_fftw3 (long      = nx2,                     &  !
+                 larg      = ny2)                        !
+
+call fft_filter(tab       = heights(1:nx, 1:ny),      &  !
+                long      = nx,                       &  !
+                larg      = ny,                       &  !
+                cutoff    = -fft_cutoff,              &  !
+                bf_tab    = heights_out(1:nx, 1:ny),  &  !
+                multi_fft = .FALSE.)
+
+call write_surf( nom_fic = "out/test_20µm.sur",    &  !
+                 tab_s   = heights_out(1:nx, 1:ny),            &  !
+                 scal    = scal_surf )                            !
+
+deallocate( heights_out )
+
+write(*,*) 'gaussian filter cutoff = 5 µm'
+
+!========================================================================= fft_filter 5 µm
+
+call read_surf( nom_fic = "sur/AB-Zinv-ART-8-21-200x200.sur", &  ! IN
+                  tab_s = heights,                            &  ! OUT
+                   scal = scal_surf )                            ! OUT
+
+nx = scal_surf%xres
+ny = scal_surf%yres
+
+allocate( heights_out(1:nx, 1:ny) )
+
+dx = scal_surf%dx * unit2IUf(scal_surf%dx_unit)
+dy = scal_surf%dy * unit2IUf(scal_surf%dy_unit)
+dz = 0
+
+write(*,*) 'nx, ny = ', nx, ny
+write(*,*) 'dx, dy = ', dx, dy
 
 n_th = omp_get_max_threads()
 call fftw_plan_with_nthreads(nthreads = n_th)

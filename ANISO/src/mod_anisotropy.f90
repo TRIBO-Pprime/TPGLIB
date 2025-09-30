@@ -410,7 +410,7 @@ contains
       real   (kind=R8) :: c, s
 
       integer(kind=I4), dimension(0:179) :: p_min, e_angle
-      integer(kind=I4), dimension(1:2)   :: loc_max!, imax_acv
+      integer(kind=I4), dimension(1:2)   :: loc_max
       real   (kind=R8), dimension(0:179) :: pente_max
       real   (kind=R8), dimension(0:359) :: ellipse
 
@@ -432,9 +432,6 @@ contains
       allocate( courbure(      0:359) )
       tabou    = EPS_R8
       courbure = EPS_R8
-
-!~       ! avec fftw, il faut mettre le max de l'acv en (lo2,la2)
-!~       imax_acv = maxloc( tabin(1:long, 1:larg) )
 
       allocate( tab_tmp(1:long, 1:larg) )
 

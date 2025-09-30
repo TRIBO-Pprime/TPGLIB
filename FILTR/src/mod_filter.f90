@@ -7,11 +7,12 @@
 !<  </span>
 
 module filter
-use data_arch,   only: I4, R8, HIG_R8, PI_R8
-use stat_mom,    only: calc_median, moment_stat, calc_moments
-use sort_arrays, only: sort_array2
-use fftw3,       only: calc_fftw3, tab_calc_fftw3, extend, &  !
-                       PAD_FFT, FORWARD, BACKWARD
+use data_arch,     only: I4, R8, HIG_R8, PI_R8
+use miscellaneous, only: trans_center2corner
+use stat_mom,      only: calc_median, moment_stat, calc_moments
+use sort_arrays,   only: sort_array2
+use fftw3,         only: calc_fftw3, tab_calc_fftw3, extend, &  !
+                         PAD_FFT, FORWARD, BACKWARD
 !$ use omp_lib
 implicit none
 
@@ -481,7 +482,7 @@ contains
    endsubroutine soften
 
 
-   subroutine fft_filter(tab, long, larg, cutoff, bf_tab, multi_fft, pad, ext, type_apo)
+   subroutine fft_filter(tab, long, larg, cutoff, bf_tab, multi_fft, pad, ext, type_apo, shift)
    !================================================================================================
    !! Classical Gaussian filter
    !------------------------------------------------------------------------------------------------
@@ -493,19 +494,22 @@ contains
    real   (kind=R8), intent(in ), optional :: pad                       !! *fft padding*
    character(len=*), intent(in ), optional :: ext                       !! *extension*
    character(len=*), intent(in ), optional :: type_apo                  !! *apodization type*
+   real   (kind=R8), intent(in ), dimension(2), optional    :: shift    !! *surface shift fraction along x and y*
    real   (kind=R8), intent(in ), dimension(1:long, 1:larg) :: tab      !! *2D array in*
    real   (kind=R8), intent(out), dimension(1:long, 1:larg) :: bf_tab   !! *2D array out*
 
-      integer(kind=I4) :: nx2, ny2, iex, iey, ibx, iby
+      integer(kind=I4) :: i, j, nx2, ny2, iex, iey, ibx, iby
       real   (kind=R8) :: o_pad
       logical(kind=I4) :: with_pad
 
       character(len=:), allocatable :: o_ext
       character(len=:), allocatable :: o_type_apo
 
-      real   (kind=R8), dimension(:,:), allocatable :: tab_ext, gauss_tab
+      complex(kind=R8) :: cdx, cdy
 
-      complex(kind=R8), dimension(:,:), allocatable :: cmpl1, cmpl2
+      real   (kind=R8), dimension(:,:), allocatable :: tab_ext, gauss_tab, top_tab
+
+      complex(kind=R8), dimension(:,:), allocatable :: cmpl1, cmpl2, shift_tab
 
       with_pad = .true.
 
@@ -531,10 +535,12 @@ contains
 
       if ( .not.present( pad ) ) then
 
+         ! default padding
          o_pad = PAD_FFT_FILTER
 
       else
 
+         ! no padding
          if ( pad < 0. ) then
 
             o_pad = 1
@@ -546,6 +552,7 @@ contains
 
          else
 
+            ! padding with argument
             o_pad = pad
 
          endif
@@ -554,8 +561,21 @@ contains
 
       if ( with_pad ) then
 
+         ! make even surface dimensions
+
          nx2 = 2 * ( nint(o_pad * long)/2 )
          ny2 = 2 * ( nint(o_pad * larg)/2 )
+
+      endif
+
+      allocate( shift_tab(1:nx2, 1:ny2) )
+
+      shift_tab(1:nx2, 1:ny2) = 1
+
+      if ( present( shift ) ) then
+
+         ! shift surface with frequencies rotation
+         call shifting(nx2, ny2, shift, shift_tab)
 
       endif
 
@@ -604,16 +624,35 @@ contains
 
       endif
 
-      allocate( gauss_tab(1:nx2, 1:ny2) )
+      if ( cutoff < 0. ) then
 
-      call gaussian_filter( long       = nx2,                     &  !
-                            larg       = ny2,                     &  !
-                            xc         = cutoff,                  &  !
-                            gauss_filt = gauss_tab(1:nx2, 1:ny2) )   !
+         ! TOP HAT FILTER
+         allocate( top_tab(1:nx2, 1:ny2) )
 
-      cmpl1(1:nx2, 1:ny2) = cmpl2(1:nx2, 1:ny2) * gauss_tab(1:nx2, 1:ny2)
+         call top_hat_filter(  long     = nx2,                     &  !
+                               larg     = ny2,                     &  !
+                               xc       = -cutoff,                 &  !
+                               top_filt = top_tab(1:nx2, 1:ny2) )     !
 
-      deallocate( gauss_tab )
+         cmpl1(1:nx2, 1:ny2) = cmpl2(1:nx2, 1:ny2) * top_tab(1:nx2, 1:ny2) * shift_tab(1:nx2, 1:ny2)
+
+         deallocate( top_tab )
+
+      else
+
+         ! GAUSSIAN FILTER
+         allocate( gauss_tab(1:nx2, 1:ny2) )
+
+         call gaussian_filter( long       = nx2,                     &  !
+                               larg       = ny2,                     &  !
+                               xc         = cutoff,                  &  !
+                               gauss_filt = gauss_tab(1:nx2, 1:ny2) )   !
+
+         cmpl1(1:nx2, 1:ny2) = cmpl2(1:nx2, 1:ny2) * gauss_tab(1:nx2, 1:ny2)
+
+         deallocate( gauss_tab )
+
+      endif
 
       if (multi_fft) then
 
@@ -645,11 +684,45 @@ contains
 
       endif
 
-      deallocate(cmpl1, cmpl2)
+      deallocate(cmpl1, cmpl2, shift_tab)
       deallocate(tab_ext)
 
    return
    endsubroutine fft_filter
+
+
+   subroutine shifting(long, larg, shift, shift_tab)
+   !================================================================================================
+   !! Rotation matrix for frequencies -> results in surface shifting
+   !------------------------------------------------------------------------------------------------
+   implicit none
+   integer(kind=I4), intent(in )                            :: long        !! *2D array length*
+   integer(kind=I4), intent(in )                            :: larg        !! *2D array width*
+   real   (kind=R8), intent(in ), dimension(2), optional    :: shift       !! *surface shift fraction along x and y*
+   complex(kind=R8), intent(out), dimension(1:long, 1:larg) :: shift_tab   !! *2D array out*
+
+      integer(kind=I4) :: i, j
+      real   (kind=R8) :: x, y
+
+      complex(kind=R8) :: eixi, tmp
+
+      x = - shift(1) * ( 2 * pi_r8 / (long - 1) )
+      y = - shift(2) * ( 2 * pi_r8 / (larg - 1) )
+
+      do i = 1, long
+
+         eixi = cmplx( cos((i - 1) * x), sin((i - 1) * x), kind=r8 )
+
+         do j = 1, larg
+
+            shift_tab(i, j) = eixi * cmplx( cos((j - 1) * y), sin((j - 1) * y), kind=r8 )
+
+         enddo
+
+      enddo
+
+   return
+   endsubroutine shifting
 
 
    subroutine gaussian_filter(long, larg, xc, gauss_filt)
@@ -708,12 +781,82 @@ contains
       real(kind=R8), intent(in) :: xj
       real(kind=R8), intent(in) :: xc ! fréquence de coupure, plus exactement proportion : (freq coup) / (nb points)
 
-         gaussian_function = exp( -PI_R8 * const**2 * ( xi**2 + xj**2 ) / (xc**2) ) ! sqrt(ln(2)/pi)=0.47
+         gaussian_function = exp( -PI_R8 * const**2 * (xi /  xc                           ) **2 ) *   &  ! const = sqrt(ln(2)/pi)=0.47
+                             exp( -PI_R8 * const**2 * (xj / (xc * (long - 1) / (larg - 1))) **2 )        !
 
       return
       endfunction gaussian_function
       !-----------------------------------------
    endsubroutine gaussian_filter
+
+
+   subroutine top_hat_filter(long, larg, xc, top_filt)
+   !================================================================================================
+   !! Top-hat kernel
+   !------------------------------------------------------------------------------------------------
+   implicit none
+   integer(kind=I4), intent(in )                            :: long        !! *2D array length*
+   integer(kind=I4), intent(in )                            :: larg        !! *2D array width*
+   real   (kind=R8), intent(in )                            :: xc          !! *the cut-off wavelength*
+   real   (kind=R8), intent(out), dimension(1:long, 1:larg) :: top_filt    !! *2D array out*
+
+      integer(kind=I4) :: i, j
+      real   (kind=R8) :: tmp, xi, xj
+
+      real   (kind=R8), parameter :: const = sqrt( log(2._R8)/PI_R8 )
+
+      do j = 2, larg/2 +1
+      do i = 2, long/2 +1
+         xi = (i-1) ; xj = (j-1)
+         xi = xi/(long -1) ; xj = xj/(larg -1)
+         tmp = top_hat_function(xi, xj, xc)
+         top_filt(       +i,        +j) = tmp
+         top_filt(long+2 -i,        +j) = tmp
+         top_filt(       +i, larg+2 -j) = tmp
+         top_filt(long+2 -i, larg+2 -j) = tmp
+      enddo
+      enddo
+      do j = 2, larg/2 +1
+         i = 1
+         xi = (i-1) ; xj = (j-1)
+         xi = xi/(long -1) ; xj = xj/(larg -1)
+         tmp = top_hat_function(xi, xj, xc)
+         top_filt(i,         j) = tmp
+         top_filt(i, larg+2 -j) = tmp
+      enddo
+      do i = 2, long/2 +1
+         j = 1
+         xi = (i-1) ; xj = (j-1)
+         xi = xi/(long -1) ; xj = xj/(larg -1)
+         tmp = top_hat_function(xi, xj, xc)
+         top_filt(        i, j) = tmp
+         top_filt(long+2 -i, j) = tmp
+      enddo
+      i = 1
+      j = 1
+      xi = (i-1) ; xj = (j-1)
+      xi = xi/(long -1) ; xj = xj/(larg -1)
+      top_filt(i, j) = top_hat_function(xi, xj, xc)
+
+   contains
+      !-----------------------------------------
+      real(kind=R8) function top_hat_function(xi, xj, xc)
+      implicit none
+      real(kind=R8), intent(in) :: xi
+      real(kind=R8), intent(in) :: xj
+      real(kind=R8), intent(in) :: xc ! fréquence de coupure, plus exactement proportion : (freq coup) / (nb points)
+
+         real(kind=R8) :: val
+
+         val = (xi / xc) **2 + (xj / (xc * (long - 1) / (larg - 1))) **2
+
+         top_hat_function = 0
+         if ( val < 1. ) top_hat_function = 1
+
+      return
+      endfunction top_hat_function
+      !-----------------------------------------
+   endsubroutine top_hat_filter
 
 
 

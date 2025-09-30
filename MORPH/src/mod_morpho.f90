@@ -150,7 +150,7 @@ o:    do i = 1, nx
             p = i
             q = j + k
 
-            if ( q > nx  ) exit
+            if ( q > ny  ) exit
             if (    masque(p, q) == 0 ) exit
             if ( deja_fait(p, q) == 0 ) then
                ind = ind + 1
