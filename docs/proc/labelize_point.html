@@ -77,7 +77,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 1.8% of total for procedures.">61 statements</a>
+                 title=" 1.7% of total for procedures.">61 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -162,7 +162,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-height~6"></span>
+              <span class="anchor" id="variable-height~5"></span>
               real(kind=R8),
             </td>
 <td>intent(in),</td>
@@ -192,7 +192,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-x~18"></span>
+              <span class="anchor" id="variable-x~13"></span>
               real(kind=R8),
             </td>
 <td>intent(out),</td>
@@ -207,7 +207,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-y~9"></span>
+              <span class="anchor" id="variable-y~5"></span>
               real(kind=R8),
             </td>
 <td>intent(out),</td>
@@ -662,7 +662,7 @@ large graphs.</div>
 <span class="w">         </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sum</span><span class="p">(</span><span class="w"> </span><span class="n">derivatives</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tab</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 
 <span class="w">         </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w">     </span><span class="k">all</span><span class="p">(</span><span class="n">tab</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;V&#39;</span><span class="w"> </span><span class="c">! valley or pit</span>
-<span class="w">         </span><span class="n">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">all</span><span class="p">(</span><span class="n">tab</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;P&#39;</span><span class="w"> </span><span class="c">! hill or peak</span>
+<span class="w">         </span><span class="k">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">all</span><span class="p">(</span><span class="n">tab</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;P&#39;</span><span class="w"> </span><span class="c">! hill or peak</span>
 <span class="w">         </span><span class="k">else</span><span class="w"> </span><span class="p">;</span><span class="w">                               </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;S&#39;</span><span class="w"> </span><span class="c">! saddle</span>
 <span class="w">         </span><span class="k">endif</span>
 
@@ -695,14 +695,14 @@ large graphs.</div>
           <div class="col">
             <p>
               TPGLIB
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-31 18:39              </p>
+ on 2025-09-30 16:11 +0200             </p>
           </div>
         </div>
         <br>

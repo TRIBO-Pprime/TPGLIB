@@ -25,7 +25,7 @@ private
       real(kind=R8) :: Kk  !! *sixth moment*
    endtype moment_stat
 
-public :: moment_stat, calc_moments, calc_median, rnorm_vec, rnorm, scramble, random_normal
+public :: moment_stat, calc_moments, calc_median, rnorm_vec, rnorm, scramble, random_normal, std_array2D, std_array
 
 contains
 
@@ -111,6 +111,89 @@ contains
 
    return
    endfunction random_normal
+
+
+   subroutine std_array(tab, mx)
+   implicit none
+   real(kind=R8), intent(inout), dimension(..) :: tab    !! *1D array*
+   type(moment_stat), intent(out), optional    :: mx     !! [[moment_stat]] *statistical moments*
+
+      select rank (tab)
+
+         rank (1)
+
+            call std_array1D(tab, mx)
+
+         rank (2)
+
+            call std_array2D(tab, mx)
+
+         rank default
+
+            stop "bad rank in 'std_array'"
+
+      endselect
+
+   return
+   endsubroutine std_array
+
+
+   subroutine std_array1D(tab, mx)
+   implicit none
+   real(kind=R8), intent(inout), dimension(:) :: tab    !! *1D array*
+   type(moment_stat), intent(out), optional   :: mx     !! [[moment_stat]] *statistical moments*
+
+      type(moment_stat) :: mx_tmp
+
+      integer (kind=I4) :: nb_m
+
+      if ( present(mx) ) then
+
+         nb_m = 4
+
+      else
+
+         nb_m = 2
+
+      endif
+
+      call calc_moments(tab = tab, mx = mx_tmp, nb_mom = nb_m)
+
+      tab = (tab - mx_tmp%mu) / mx_tmp%si
+
+      if ( present(mx) ) mx = mx_tmp
+
+   return
+   endsubroutine std_array1D
+
+
+   subroutine std_array2D(tab, mx)
+   implicit none
+   real(kind=R8), intent(inout), dimension(:,:) :: tab    !! *2D array*
+   type(moment_stat), intent(out), optional     :: mx     !! [[moment_stat]] *statistical moments*
+
+      type(moment_stat) :: mx_tmp
+
+      integer (kind=I4) :: nb_m
+
+      if ( present(mx) ) then
+
+         nb_m = 4
+
+      else
+
+         nb_m = 2
+
+      endif
+
+      call calc_moments(tab = tab, mx = mx_tmp, nb_mom = nb_m)
+
+      tab = (tab - mx_tmp%mu) / mx_tmp%si
+
+      if ( present(mx) ) mx = mx_tmp
+
+   return
+   endsubroutine std_array2D
 
 
    subroutine calc_moments(tab, mask, mx, nb_mom)

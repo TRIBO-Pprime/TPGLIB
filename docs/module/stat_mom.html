@@ -80,7 +80,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 6.6% of total for modules and submodules.">234 statements</a>
+                 title=" 7.6% of total for modules and submodules.">280 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -158,6 +158,9 @@
             <a class="list-group-item" href="../module/stat_mom.html#proc-calc_moments">calc_moments</a>
             <a class="list-group-item" href="../module/stat_mom.html#proc-calc_moments_1d">calc_moments_1D</a>
             <a class="list-group-item" href="../module/stat_mom.html#proc-scramble">scramble</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-std_array">std_array</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-std_array1d">std_array1D</a>
+            <a class="list-group-item" href="../module/stat_mom.html#proc-std_array2d">std_array2D</a>
         </div>
       </div>
     </div>
@@ -726,7 +729,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mu"></span>
+              <span class="anchor" id="variable-mu~2"></span>
               real(kind=R8),
             </td>
               <td>public</td>
@@ -866,7 +869,7 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-n~6"></span>
+              <span class="anchor" id="variable-n~7"></span>
               integer(kind=I4),
             </td>
 <td>intent(in)</td>
@@ -881,7 +884,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mu~2"></span>
+              <span class="anchor" id="variable-mu~3"></span>
               real(kind=R8),
             </td>
 <td>intent(in),</td>
@@ -896,7 +899,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-sigma"></span>
+              <span class="anchor" id="variable-sigma~2"></span>
               real(kind=R8),
             </td>
 <td>intent(in),</td>
@@ -946,7 +949,7 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-tab~10"></span>
+              <span class="anchor" id="variable-tab~17"></span>
               real(kind=R8),
             </td>
 <td>intent(in),</td>
@@ -961,7 +964,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mask~5"></span>
+              <span class="anchor" id="variable-mask~4"></span>
               logical(kind=I4),
             </td>
 <td>intent(in),</td>
@@ -1016,7 +1019,7 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-tab~8"></span>
+              <span class="anchor" id="variable-tab~15"></span>
               real(kind=R8),
             </td>
 <td>intent(in),</td>
@@ -1031,7 +1034,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mask~3"></span>
+              <span class="anchor" id="variable-mask~2"></span>
               logical(kind=I4),
             </td>
 <td>intent(in),</td>
@@ -1046,7 +1049,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mx"></span>
+              <span class="anchor" id="variable-mx~4"></span>
               type(<a href='../type/moment_stat.html'>moment_stat</a>),
             </td>
 <td>intent(out)</td>
@@ -1101,7 +1104,7 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-tab~9"></span>
+              <span class="anchor" id="variable-tab~16"></span>
               real(kind=R8),
             </td>
 <td>intent(in),</td>
@@ -1116,7 +1119,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mask~4"></span>
+              <span class="anchor" id="variable-mask~3"></span>
               logical(kind=I4),
             </td>
 <td>intent(in),</td>
@@ -1131,7 +1134,7 @@ large graphs.</div>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-mx~2"></span>
+              <span class="anchor" id="variable-mx~5"></span>
               type(<a href='../type/moment_stat.html'>moment_stat</a>),
             </td>
 <td>intent(out)</td>
@@ -1186,7 +1189,7 @@ large graphs.</div>
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-tab~7"></span>
+              <span class="anchor" id="variable-tab~11"></span>
               real(kind=r8),
             </td>
 <td>intent(inout),</td>
@@ -1221,6 +1224,171 @@ large graphs.</div>
     </div>
   </div>
 
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-std_array"></span> <h3>public  subroutine <a href='../proc/std_array.html'>std_array</a>(tab, mx)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~12"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(..)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>1D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mx"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mx</strong></td>
+            <td>
+<p><a href="../type/moment_stat.html">moment_stat</a> <em>statistical moments</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-std_array1d"></span> <h3>private  subroutine <a href='../proc/std_array1d.html'>std_array1D</a>(tab, mx)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~13"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(:)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>1D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mx~2"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mx</strong></td>
+            <td>
+<p><a href="../type/moment_stat.html">moment_stat</a> <em>statistical moments</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-std_array2d"></span> <h3>public  subroutine <a href='../proc/std_array2d.html'>std_array2D</a>(tab, mx)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tab~14"></span>
+              real(kind=R8),
+            </td>
+<td>intent(inout),</td>
+              <td></td>            <td>
+              dimension(:,:)
+            </td>
+            <td>::</td>
+            <td><strong>tab</strong></td>
+            <td>
+<p><em>2D array</em></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-mx~3"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>mx</strong></td>
+            <td>
+<p><a href="../type/moment_stat.html">moment_stat</a> <em>statistical moments</em></p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
         </section>
         <br>
 
@@ -1237,14 +1405,14 @@ large graphs.</div>
           <div class="col">
             <p>
               TPGLIB
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-31 18:39              </p>
+ on 2025-09-30 16:11 +0200             </p>
           </div>
         </div>
         <br>

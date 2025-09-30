@@ -10,7 +10,7 @@
     <meta name="author" content="Arthur Francisco" >
     <link rel="icon" href="../favicon.png">
 
-    <title>dnq_xi_i &ndash; TPGLIB</title>
+    <title>std_array1D &ndash; TPGLIB</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -66,8 +66,8 @@
 
     <div class="container">
   <div class="row">
-    <h1>dnq_xi_i
-      <small>Function</small>
+    <h1>std_array1D
+      <small>Subroutine</small>
       
     </h1>
       <div class="container p-2 mb-4 bg-light border rounded-3">
@@ -77,21 +77,21 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title=" 1.2% of total for procedures.">44 statements</a>
+                 title=" 0.4% of total for procedures.">16 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/mod_asfc.f90"> Source File</a>
+              <a href="../src/mod_stat_mom.f90"> Source File</a>
             </li>
         </ul>
       </div>
       <div class="col">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb justify-content-end mb-0">
-                <li class="breadcrumb-item"><a href='../sourcefile/mod_asfc.f90.html'>mod_asfc.f90</a></li>
-                <li class="breadcrumb-item"><a href='../module/asfc.html'>asfc</a></li>
-            <li class="breadcrumb-item active" aria-current="page">dnq_xi_i</li>
+                <li class="breadcrumb-item"><a href='../sourcefile/mod_stat_mom.f90.html'>mod_stat_mom.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/stat_mom.html'>stat_mom</a></li>
+            <li class="breadcrumb-item active" aria-current="page">std_array1D</li>
           </ol>
         </nav>
       </div>
@@ -129,6 +129,12 @@
   
   
   
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/std_array1d.html#src">std_array1D</a>
+      </div>
+    </div>
 
 
   </div>
@@ -136,11 +142,10 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>private  function dnq_xi_i(xi, et, i, j)  
+    <h2>private  subroutine std_array1D(tab, mx)  
 </h2>
     
 
-    <p>2D shape function <script type="math/tex">\xi</script> derivative, quadratic case.</p>
 
 
     <h3>Arguments</h3>
@@ -156,74 +161,37 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-xi~7"></span>
+              <span class="anchor" id="variable-tab~13"></span>
               real(kind=R8),
             </td>
-<td>intent(in)</td>
+<td>intent(inout),</td>
               <td></td>            <td>
-              
+              dimension(:)
             </td>
             <td>::</td>
-            <td><strong>xi</strong></td>
+            <td><strong>tab</strong></td>
             <td>
-                
+                <p><em>1D array</em></p>
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-et~2"></span>
-              real(kind=R8),
+              <span class="anchor" id="variable-mx~2"></span>
+              type(<a href='../type/moment_stat.html'>moment_stat</a>),
             </td>
-<td>intent(in)</td>
-              <td></td>            <td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
               
             </td>
             <td>::</td>
-            <td><strong>et</strong></td>
+            <td><strong>mx</strong></td>
             <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-i~18"></span>
-              integer(kind=I4),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>i</strong></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-j~11"></span>
-              integer(kind=I4),
-            </td>
-<td>intent(in)</td>
-              <td></td>            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>j</strong></td>
-            <td>
-                
+                <p><a href="../type/moment_stat.html">moment_stat</a> <em>statistical moments</em></p>
             </td>
         </tr>
     </tbody>
   </table>
 
-      <h3>Return Value
-        <small>
-          <span class="anchor" id="variable-dnq_xi_i"></span>
-          real(kind=r8)
-        </small>
-      </h3>
-      
     <br>
     <div class="card">
       <div class="card-header">
@@ -235,47 +203,47 @@
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
-<!-- Title: proc~~dnq_xi_i~~CallsGraph Pages: 1 -->
-<svg id="procdnq_xi_iCallsGraph" width="152pt" height="74pt"
- viewBox="0.00 0.00 152.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~dnq_xi_i~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
-<title>proc~~dnq_xi_i~~CallsGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 148,-70 148,4 -4,4"/>
-<!-- proc~dnq_xi_i -->
-<g id="proc~~dnq_xi_i~~CallsGraph_node1" class="node">
-<title>proc~dnq_xi_i</title>
-<polygon fill="none" stroke="black" points="54,-45 0,-45 0,-21 54,-21 54,-45"/>
-<text text-anchor="middle" x="27" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">dnq_xi_i</text>
+<!-- Title: proc~~std_array1d~~CallsGraph Pages: 1 -->
+<svg id="procstd_array1dCallsGraph" width="334pt" height="32pt"
+ viewBox="0.00 0.00 334.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~std_array1d~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~std_array1d~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 330,-28 330,4 -4,4"/>
+<!-- proc~std_array1d -->
+<g id="proc~~std_array1d~~CallsGraph_node1" class="node">
+<title>proc~std_array1d</title>
+<polygon fill="none" stroke="black" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">std_array1D</text>
 </g>
-<!-- proc~dn_i -->
-<g id="proc~~dnq_xi_i~~CallsGraph_node2" class="node">
-<title>proc~dn_i</title>
-<g id="a_proc~~dnq_xi_i~~CallsGraph_node2"><a xlink:href="../proc/dn_i.html" xlink:title="dn_i">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
-<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dn_i</text>
+<!-- proc~calc_moments -->
+<g id="proc~~std_array1d~~CallsGraph_node2" class="node">
+<title>proc~calc_moments</title>
+<g id="a_proc~~std_array1d~~CallsGraph_node2"><a xlink:href="../proc/calc_moments.html" xlink:title="calc_moments">
+<polygon fill="#d9534f" stroke="#d9534f" points="189,-24 107,-24 107,0 189,0 189,-24"/>
+<text text-anchor="middle" x="148" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments</text>
 </a>
 </g>
 </g>
-<!-- proc~dnq_xi_i&#45;&gt;proc~dn_i -->
-<g id="proc~~dnq_xi_i~~CallsGraph_edge1" class="edge">
-<title>proc~dnq_xi_i&#45;&gt;proc~dn_i</title>
-<path fill="none" stroke="#ff0000" d="M54.4,-39.3C62.48,-41.23 71.51,-43.38 80.1,-45.43"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="79.38,-48.86 89.92,-47.78 81,-42.05 79.38,-48.86"/>
+<!-- proc~std_array1d&#45;&gt;proc~calc_moments -->
+<g id="proc~~std_array1d~~CallsGraph_edge1" class="edge">
+<title>proc~std_array1d&#45;&gt;proc~calc_moments</title>
+<path fill="none" stroke="#ff0000" d="M71.16,-12C79.26,-12 88.04,-12 96.67,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="96.67,-15.5 106.67,-12 96.67,-8.5 96.67,-15.5"/>
 </g>
-<!-- proc~n_i -->
-<g id="proc~~dnq_xi_i~~CallsGraph_node3" class="node">
-<title>proc~n_i</title>
-<g id="a_proc~~dnq_xi_i~~CallsGraph_node3"><a xlink:href="../proc/n_i.html" xlink:title="n_i">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
-<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">n_i</text>
+<!-- proc~calc_moments_1d -->
+<g id="proc~~std_array1d~~CallsGraph_node3" class="node">
+<title>proc~calc_moments_1d</title>
+<g id="a_proc~~std_array1d~~CallsGraph_node3"><a xlink:href="../proc/calc_moments_1d.html" xlink:title="calc_moments_1D">
+<polygon fill="#d9534f" stroke="#d9534f" points="326,-24 225,-24 225,0 326,0 326,-24"/>
+<text text-anchor="middle" x="275.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calc_moments_1D</text>
 </a>
 </g>
 </g>
-<!-- proc~dnq_xi_i&#45;&gt;proc~n_i -->
-<g id="proc~~dnq_xi_i~~CallsGraph_edge2" class="edge">
-<title>proc~dnq_xi_i&#45;&gt;proc~n_i</title>
-<path fill="none" stroke="#ff0000" d="M54.4,-26.7C62.48,-24.77 71.51,-22.62 80.1,-20.57"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="81,-23.95 89.92,-18.22 79.38,-17.14 81,-23.95"/>
+<!-- proc~calc_moments&#45;&gt;proc~calc_moments_1d -->
+<g id="proc~~std_array1d~~CallsGraph_edge2" class="edge">
+<title>proc~calc_moments&#45;&gt;proc~calc_moments_1d</title>
+<path fill="none" stroke="#ff0000" d="M189.05,-12C197.2,-12 205.94,-12 214.6,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="214.7,-15.5 224.7,-12 214.7,-8.5 214.7,-15.5"/>
 </g>
 </g>
 </svg>
@@ -370,62 +338,32 @@ large graphs.</div>
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
-<!-- Title: proc~~dnq_xi_i~~CalledByGraph Pages: 1 -->
-<svg id="procdnq_xi_iCalledByGraph" width="306pt" height="74pt"
- viewBox="0.00 0.00 306.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~dnq_xi_i~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
-<title>proc~~dnq_xi_i~~CalledByGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 302,-70 302,4 -4,4"/>
-<!-- proc~dnq_xi_i -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_node1" class="node">
-<title>proc~dnq_xi_i</title>
-<polygon fill="none" stroke="black" points="298,-45 244,-45 244,-21 298,-21 298,-45"/>
-<text text-anchor="middle" x="271" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">dnq_xi_i</text>
+<!-- Title: proc~~std_array1d~~CalledByGraph Pages: 1 -->
+<svg id="procstd_array1dCalledByGraph" width="173pt" height="32pt"
+ viewBox="0.00 0.00 173.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~std_array1d~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~std_array1d~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 169,-28 169,4 -4,4"/>
+<!-- proc~std_array1d -->
+<g id="proc~~std_array1d~~CalledByGraph_node1" class="node">
+<title>proc~std_array1d</title>
+<polygon fill="none" stroke="black" points="165,-24 94,-24 94,0 165,0 165,-24"/>
+<text text-anchor="middle" x="129.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">std_array1D</text>
 </g>
-<!-- proc~calcul_asfc_hermite -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_node2" class="node">
-<title>proc~calcul_asfc_hermite</title>
-<g id="a_proc~~dnq_xi_i~~CalledByGraph_node2"><a xlink:href="../proc/calcul_asfc_hermite.html" xlink:title="calcul_asfc_hermite">
-<polygon fill="#d9534f" stroke="#d9534f" points="208,-45 101,-45 101,-21 208,-21 208,-45"/>
-<text text-anchor="middle" x="154.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calcul_asfc_hermite</text>
+<!-- proc~std_array -->
+<g id="proc~~std_array1d~~CalledByGraph_node2" class="node">
+<title>proc~std_array</title>
+<g id="a_proc~~std_array1d~~CalledByGraph_node2"><a xlink:href="../proc/std_array.html" xlink:title="std_array">
+<polygon fill="#d9534f" stroke="#d9534f" points="58,-24 0,-24 0,0 58,0 58,-24"/>
+<text text-anchor="middle" x="29" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">std_array</text>
 </a>
 </g>
 </g>
-<!-- proc~calcul_asfc_hermite&#45;&gt;proc~dnq_xi_i -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_edge1" class="edge">
-<title>proc~calcul_asfc_hermite&#45;&gt;proc~dnq_xi_i</title>
-<path fill="none" stroke="#ff0000" d="M208.06,-33C216.72,-33 225.53,-33 233.69,-33"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="233.96,-36.5 243.96,-33 233.96,-29.5 233.96,-36.5"/>
-</g>
-<!-- proc~calcul_asfc -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_node3" class="node">
-<title>proc~calcul_asfc</title>
-<g id="a_proc~~dnq_xi_i~~CalledByGraph_node3"><a xlink:href="../proc/calcul_asfc.html" xlink:title="calcul_asfc">
-<polygon fill="#d9534f" stroke="#d9534f" points="65,-66 0,-66 0,-42 65,-42 65,-66"/>
-<text text-anchor="middle" x="32.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">calcul_asfc</text>
-</a>
-</g>
-</g>
-<!-- proc~calcul_asfc&#45;&gt;proc~calcul_asfc_hermite -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_edge2" class="edge">
-<title>proc~calcul_asfc&#45;&gt;proc~calcul_asfc_hermite</title>
-<path fill="none" stroke="#ff0000" d="M65.03,-48.48C73,-47.09 81.84,-45.54 90.77,-43.98"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="91.59,-47.39 100.84,-42.22 90.39,-40.49 91.59,-47.39"/>
-</g>
-<!-- program~test_asfc -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_node4" class="node">
-<title>program~test_asfc</title>
-<g id="a_proc~~dnq_xi_i~~CalledByGraph_node4"><a xlink:href="../program/test_asfc.html" xlink:title="test_asfc">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="60,-24 5,-24 5,0 60,0 60,-24"/>
-<text text-anchor="middle" x="32.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_asfc</text>
-</a>
-</g>
-</g>
-<!-- program~test_asfc&#45;&gt;proc~calcul_asfc_hermite -->
-<g id="proc~~dnq_xi_i~~CalledByGraph_edge3" class="edge">
-<title>program~test_asfc&#45;&gt;proc~calcul_asfc_hermite</title>
-<path fill="none" stroke="#ff0000" d="M60.13,-16.66C69.33,-18.27 80.06,-20.15 90.91,-22.05"/>
-<polygon fill="#ff0000" stroke="#ff0000" points="90.41,-25.51 100.86,-23.79 91.61,-18.62 90.41,-25.51"/>
+<!-- proc~std_array&#45;&gt;proc~std_array1d -->
+<g id="proc~~std_array1d~~CalledByGraph_edge1" class="edge">
+<title>proc~std_array&#45;&gt;proc~std_array1d</title>
+<path fill="none" stroke="#ff0000" d="M58.23,-12C66.23,-12 75.16,-12 83.88,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="83.97,-15.5 93.97,-12 83.97,-8.5 83.97,-15.5"/>
 </g>
 </g>
 </svg>
@@ -522,6 +460,39 @@ large graphs.</div>
 
 
     
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">   </span><span class="k">subroutine </span><span class="n">std_array1D</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="p">)</span>
+<span class="w">   </span><span class="k">implicit none</span>
+<span class="k">   </span><span class="kt">real</span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">R8</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">),</span><span class="w"> </span><span class="k">dimension</span><span class="p">(:)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tab</span><span class="w">    </span><span class="c">!! *1D array*</span>
+<span class="w">   </span><span class="k">type</span><span class="p">(</span><span class="n">moment_stat</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">mx</span><span class="w">     </span><span class="c">!! [[moment_stat]] *statistical moments*</span>
+
+<span class="w">      </span><span class="k">type</span><span class="p">(</span><span class="n">moment_stat</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mx_tmp</span>
+
+<span class="w">      </span><span class="kt">integer</span><span class="w"> </span><span class="p">(</span><span class="nb">kind</span><span class="o">=</span><span class="n">I4</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nb_m</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+
+<span class="k">         </span><span class="n">nb_m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="w">      </span><span class="k">else</span>
+
+<span class="k">         </span><span class="n">nb_m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+
+<span class="w">      </span><span class="k">endif</span>
+
+<span class="k">      call </span><span class="n">calc_moments</span><span class="p">(</span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tab</span><span class="p">,</span><span class="w"> </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mx_tmp</span><span class="p">,</span><span class="w"> </span><span class="n">nb_mom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nb_m</span><span class="p">)</span>
+
+<span class="w">      </span><span class="n">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">tab</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mx_tmp</span><span class="p">%</span><span class="n">mu</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">mx_tmp</span><span class="p">%</span><span class="n">si</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">present</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">mx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mx_tmp</span>
+
+<span class="w">   </span><span class="k">return</span>
+<span class="k">   endsubroutine </span><span class="n">std_array1D</span>
+</pre></div>
+
+    </section>
+    <br>
     
     </div>
   </div>

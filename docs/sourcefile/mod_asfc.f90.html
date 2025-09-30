@@ -77,7 +77,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title="31.8% of total for source files.">1274 statements</a>
+                 title="30.6% of total for source files.">1274 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -262,18 +262,18 @@ large graphs.</div>
 <polygon fill="none" stroke="black" points="77,-24 0,-24 0,0 77,0 77,-24"/>
 <text text-anchor="middle" x="38.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">mod_asfc.f90</text>
 </g>
-<!-- sourcefile~prg.f90~4 -->
+<!-- sourcefile~prg.f90~5 -->
 <g id="sourcefile~~mod_asfc.f90~~AfferentGraph_node2" class="node">
-<title>sourcefile~prg.f90~4</title>
-<g id="a_sourcefile~~mod_asfc.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/prg.f90~4.html" xlink:title="prg.f90">
+<title>sourcefile~prg.f90~5</title>
+<g id="a_sourcefile~~mod_asfc.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/prg.f90~5.html" xlink:title="prg.f90">
 <polygon fill="#f0ad4e" stroke="#f0ad4e" points="167,-24 113,-24 113,0 167,0 167,-24"/>
 <text text-anchor="middle" x="140" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prg.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~prg.f90~4&#45;&gt;sourcefile~mod_asfc.f90 -->
+<!-- sourcefile~prg.f90~5&#45;&gt;sourcefile~mod_asfc.f90 -->
 <g id="sourcefile~~mod_asfc.f90~~AfferentGraph_edge1" class="edge">
-<title>sourcefile~prg.f90~4&#45;&gt;sourcefile~mod_asfc.f90</title>
+<title>sourcefile~prg.f90~5&#45;&gt;sourcefile~mod_asfc.f90</title>
 <path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M112.86,-12C104.99,-12 96.11,-12 87.3,-12"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="87.07,-8.5 77.07,-12 87.07,-15.5 87.07,-8.5"/>
 </g>
@@ -1889,7 +1889,7 @@ large graphs.</div>
 <a id="ln-1555" name="ln-1555" href="#ln-1555"></a><span class="k">      enddo</span>
 <a id="ln-1556" name="ln-1556" href="#ln-1556"></a><span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">xx</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">                 </span><span class="c">! then set the output, being careful with the endpoints.</span>
 <a id="ln-1557" name="ln-1557" href="#ln-1557"></a><span class="w">         </span><span class="n">locate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
-<a id="ln-1558" name="ln-1558" href="#ln-1558"></a><span class="w">      </span><span class="n">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">xx</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-1558" name="ln-1558" href="#ln-1558"></a><span class="w">      </span><span class="k">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">xx</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <a id="ln-1559" name="ln-1559" href="#ln-1559"></a><span class="k">         </span><span class="n">locate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
 <a id="ln-1560" name="ln-1560" href="#ln-1560"></a><span class="w">      </span><span class="k">else</span>
 <a id="ln-1561" name="ln-1561" href="#ln-1561"></a><span class="k">         </span><span class="n">locate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jl</span>
@@ -1933,7 +1933,7 @@ large graphs.</div>
 <a id="ln-1599" name="ln-1599" href="#ln-1599"></a><span class="k">      enddo</span>
 <a id="ln-1600" name="ln-1600" href="#ln-1600"></a><span class="k">      if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="n">xx</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w">          </span><span class="c">! then set the output, being careful with the endpoints.</span>
 <a id="ln-1601" name="ln-1601" href="#ln-1601"></a><span class="w">         </span><span class="n">locate2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
-<a id="ln-1602" name="ln-1602" href="#ln-1602"></a><span class="w">      </span><span class="n">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="n">xx</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<a id="ln-1602" name="ln-1602" href="#ln-1602"></a><span class="w">      </span><span class="k">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="n">xx</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="o">&lt;</span><span class="n">eps</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <a id="ln-1603" name="ln-1603" href="#ln-1603"></a><span class="k">         </span><span class="n">locate2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
 <a id="ln-1604" name="ln-1604" href="#ln-1604"></a><span class="w">      </span><span class="k">else</span>
 <a id="ln-1605" name="ln-1605" href="#ln-1605"></a><span class="k">         </span><span class="n">locate2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jl</span>
@@ -2432,14 +2432,14 @@ large graphs.</div>
           <div class="col">
             <p>
               TPGLIB
- was developed by Arthur Francisco<br>              &copy; 2024 
+ was developed by Arthur Francisco<br>              &copy; 2025 
 </p>
           </div>
           <div class="col">
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-31 18:39              </p>
+ on 2025-09-30 16:11 +0200             </p>
           </div>
         </div>
         <br>
